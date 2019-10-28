@@ -22,7 +22,17 @@ export const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/" component={Home} />
+						<Route exact path="/" component={Home} /> {/*to be landing page*/}
+						<Route path="/SignUp" />
+						<Route path="/LogIn" />
+						<Route path="/HomePage" />
+						<Route path="/Stamps" />
+						<Route path="/AddStamp" />
+						<Route path="/TravelDoc" />
+						<Route path="/AddTravelDoc" />
+						<Route path="/Map" />
+						<Route path="/TripPlanner" />
+						<Route path="/AddTrip" />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
