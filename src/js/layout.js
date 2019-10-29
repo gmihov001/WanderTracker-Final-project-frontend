@@ -32,7 +32,6 @@ export const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter>
 				<ScrollToTop>
-					<Navbar />
 					<Switch>
 						<Route exact path="/" component={MainGate} />
 						<Route path="/LogIn" component={LogIn} />
