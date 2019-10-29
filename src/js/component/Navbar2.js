@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 
-export const Navbar = () => {
+export const Navbar2 = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">

@@ -44,7 +44,13 @@ button:hover {
 height: 3.5rem;
 }
 
+<<<<<<< HEAD
 /*------- Log IN ---------*/
+=======
+/*------- Log IN / Sign Up ---------*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
+
+>>>>>>> c26b2f3dda0c35bfb08f2c8cacf941a8ffff9973
 
 .title h1 {
   font-size: 3.5em;
@@ -63,7 +69,14 @@ height: 3.5rem;
 .main {
   background: #fe5000;
   margin-top:auto;
+<<<<<<< HEAD
   margin-bottom:auto;
+=======
+  margin-bottom:90px;
+  //width: 500px;
+  font-size: 8px;
+
+>>>>>>> c26b2f3dda0c35bfb08f2c8cacf941a8ffff9973
 }
 
 input[type=text], input[type=password] {
@@ -140,15 +153,28 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
 }
 
 .signup {
-  font-size: 1em;
+  font-size: .5em;
   position: relative;
   left: 1.5em;
 }
 
 h1, h2 h3, h4, h5, h6, input {
+<<<<<<< HEAD
   font-family: 'Lato';
   font-weight: 300;
+=======
+  font: Lato;
+  font-weight: 100;
+
 }
+
+.input-cont2{
+
+    margin-bottom: 30px;
+
+>>>>>>> c26b2f3dda0c35bfb08f2c8cacf941a8ffff9973
+}
+
 
 
 /*------Footer--------*/
@@ -157,8 +183,11 @@ footer {
 
     background-color: #40474e;
     color: white;
+<<<<<<< HEAD
 
     //margin-top: 8px;
+=======
+>>>>>>> c26b2f3dda0c35bfb08f2c8cacf941a8ffff9973
 }
 
 footer img {
