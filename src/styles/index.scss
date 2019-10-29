@@ -5,7 +5,44 @@
     font-weight: 700;
     font-size: .9rem;
     letter-spacing: .1rem;
-    background: rgba(0, 0, 0, 0.6) !important;
 }
+
+.logo{
+    width: 250px;
+    height: 70px;
+}
+
+
+/*------Footer--------*/
+
+    footer {
+    background-color: #40474e;
+    color: white;
+    padding: 2rem 0 2rem;
+    margin-top: 1rem;
+}
+
+footer img {
+    height: 3rem;
+    margin: 1.5rem 0;
+}
+
+footer a {
+    color: lightgrey;
+}
+
+
+
+footer svg.svg-inline--fa:hover {
+    color: salmon;
+}
+
+hr.socket {
+    width: 100%;
+    border-top: .2rem solid #666b71;
+    margin-top: 3rem;
+}
+
+
 
 
