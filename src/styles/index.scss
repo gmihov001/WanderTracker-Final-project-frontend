@@ -1,3 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
+
+.pageTitle {
+    color: #fe5000;
+    border: solid 1px #fe5000;
+    border-radius: 5px;
+}
+
+.pageEntry {
+    color: #fe5000;
+}
+
+.smallButton {
+    color:darkgrey;
+    border-radius: 15px;
+    border: solid 1px lightgrey;
+}
+
+.smallButton:hover {
+    background-color: lightgrey !important;
+}
+
+.createTrip:hover {
+    border-radius: 10px;
+    box-shadow: 2px 2px 50px 10px lightgreen;
+}
+
+img >
+
 /*------Navigation--------*/
 
 .navbar-login, .navbar-signup {
@@ -16,8 +45,6 @@ height: 3.5rem;
 }
 
 /*------- Log IN ---------*/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
-
 
 .title h1 {
   font-size: 3.5em;
@@ -34,11 +61,9 @@ height: 3.5rem;
     margin: auto;
 }
 .main {
-  background: rgba(245, 132, 33, 0.87);
+  background: #fe5000;
   margin-top:auto;
   margin-bottom:auto;
-
-
 }
 
 input[type=text], input[type=password] {
@@ -121,8 +146,8 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
 }
 
 h1, h2 h3, h4, h5, h6, input {
-  font: Lato;
-  font-weight: 100;
+  font-family: 'Lato';
+  font-weight: 300;
 }
 
 
@@ -134,8 +159,6 @@ footer {
     color: white;
 
     //margin-top: 8px;
-
-
 }
 
 footer img {
@@ -159,10 +182,10 @@ footer p {
 
 /*-----Main-----*/
 .icon {
-  display:inline-block;
+  display: inline-block;
 }
 .icon img {
-  display:block;
+  display: block;
 }
 
 

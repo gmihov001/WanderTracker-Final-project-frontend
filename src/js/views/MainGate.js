@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/home.scss";
+import "../../styles/index.scss";
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const MainGate = () => (
@@ -11,8 +12,8 @@ export const MainGate = () => (
 				height="500px"
 			/>
 		</div>
-		<div className="bg-warning text-white mx-auto shadow-lg w-75">
-			<h2 className="text-center p-3">Plan Trips. Make Memories. Save Memories</h2>
+		<div className="main text-white mx-auto shadow-lg w-75 rounded">
+			<h1 className="text-center p-3 rounded">Plan Trips. Make Memories. Save Memories</h1>
 		</div>
 		<div className="d-flex justify-content-around m-5 text-secondary">
 			<span className="icon mx-auto">
