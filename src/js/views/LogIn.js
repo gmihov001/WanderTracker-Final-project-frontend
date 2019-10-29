@@ -5,13 +5,13 @@ export const LogIn = () => {
 	return (
 		<div className="container main ">
 			<div className="row">
-				<div className="col-md-8 col-md-offset-3 align-center text-center title">
+				<div className="col-md-4 col-md-offset-3  text-center title">
 					<h1>Want to Connect?</h1>
 					<div className="bar" />
 				</div>
 			</div>
 			<div className="row">
-				<div className="col-md-8 col-md-offset-3 form">
+				<div className="col-md-4 col-md-offset-3 form">
 					<h2>Login</h2>
 					<input type="text" name="username" placeholder="username" />
 					<br />

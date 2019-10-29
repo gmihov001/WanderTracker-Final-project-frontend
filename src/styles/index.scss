@@ -26,7 +26,7 @@ height: 3.5rem;
 
 .bar {
   height: .25em;
-  width: 150%;
+  width: 100%;
   background: #fff;
   margin: 1.5em auto 0;
 }
@@ -36,8 +36,9 @@ height: 3.5rem;
 .main {
   background: rgba(245, 132, 33, 0.87);
   margin-top:auto;
-  margin-bottom:auto;
-  width: 100%;
+  margin-bottom:90px;
+  //width: 500px;
+  font-size: 8px;
 
 }
 
@@ -115,7 +116,7 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
 }
 
 .signup {
-  font-size: 1em;
+  font-size: .5em;
   position: relative;
   left: 1.5em;
 }
@@ -129,6 +130,7 @@ h1, h2 h3, h4, h5, h6, input {
 .input-cont2{
 
     margin-bottom: 30px;
+
 }
 
 
