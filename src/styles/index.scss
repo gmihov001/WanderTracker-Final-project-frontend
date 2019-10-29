@@ -26,7 +26,7 @@ height: 3.5rem;
 
 .bar {
   height: .25em;
-  width: 100%;
+  width: 150%;
   background: #fff;
   margin: 1.5em auto 0;
 }
@@ -37,6 +37,7 @@ height: 3.5rem;
   background: rgba(245, 132, 33, 0.87);
   margin-top:auto;
   margin-bottom:auto;
+  width: 100%;
 
 }
 
@@ -122,6 +123,7 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
 h1, h2 h3, h4, h5, h6, input {
   font: Lato;
   font-weight: 100;
+
 }
 
 .input-cont2{
