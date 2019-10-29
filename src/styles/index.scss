@@ -18,8 +18,8 @@
     footer {
     background-color: #40474e;
     color: white;
-    padding: 2rem 0 2rem;
-    margin-top: 1rem;
+    //padding: 1rem 0 1rem;
+    margin-top: .2rem;
 }
 
 footer img {
@@ -29,19 +29,17 @@ footer img {
 
 footer a {
     color: lightgrey;
+    margin-left: 10px;
+    font-size: 25px;
 }
 
-
-
-footer svg.svg-inline--fa:hover {
+footer a:hover {
     color: salmon;
 }
 
-hr.socket {
-    width: 100%;
-    border-top: .2rem solid #666b71;
-    margin-top: 3rem;
-}
+
+
+
 
 
 

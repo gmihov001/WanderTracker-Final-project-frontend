@@ -6,15 +6,15 @@ export const Footer = () => (
 		<div className="row justify-content-center">
 			<div className="col-md-5 text-center text-secondary">
 				<img src={wtLogo} />
-				<p>
-					Made with <i className="fa fa-heart text-danger" /> by Georgi and Fernando
-				</p>
 
-				<strong>Contact Info</strong>
 				<p>
+					<strong>Contact Info</strong>
+					<br />
 					(888) 888-8888
 					<br />
 					email@wandertracker.com
+					<br />
+					Made with <i className="fa fa-heart text-danger" /> by Georgi and Fernando
 				</p>
 				<a href="#" target="_blank">
 					<i className="fab fa-facebook-square" />
