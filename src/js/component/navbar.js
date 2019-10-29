@@ -9,7 +9,9 @@ export const Navbar = () => {
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 			</Link>
 			<div className="ml-auto">
-				<button className="navbar-login btn text-secondary">LOGIN</button>
+				<Link to="/LogIn">
+					<button className="navbar-login btn text-secondary">LOGIN</button>
+				</Link>
 				<button className="navbar-signup btn text-secondary ml-1">SIGN UP</button>
 			</div>
 		</nav>
