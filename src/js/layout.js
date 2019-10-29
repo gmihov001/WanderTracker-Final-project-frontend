@@ -35,12 +35,8 @@ export const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-<<<<<<< HEAD
-						<Route exact path="/" component={Home} /> {/*to be MainGate*/}
-						<Route path="/LogIn" component={LogIn} />
-=======
 						<Route exact path="/" component={MainGate} />
->>>>>>> 0fa4da1b88ea5278ee3c219b00034bb9d3b5d460
+						<Route path="/LogIn" component={LogIn} />
 						<Route path="/SignUp" />
 						<Route path="/HomePage" />
 						<Route path="/Stamps" />
