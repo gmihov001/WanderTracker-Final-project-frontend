@@ -8,7 +8,8 @@ export const Navbar = () => {
 				<span className="navbar-brand mb-0 h1">WanderTracker</span>
 			</Link>
 			<div className="ml-auto">
-				<button className="btn btn-primary">Log In</button>
+				<button className="btn text-light">Log In</button>
+				<button className="btn text-light ml-1">Sign Up</button>
 			</div>
 		</nav>
 	);
