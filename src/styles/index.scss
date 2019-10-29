@@ -8,7 +8,6 @@
 button:hover {
     background-color: rgb(60, 196, 60);
     color: white !important;
-    font-weight: bold;
 }
 
 
@@ -159,6 +158,13 @@ footer p {
     font-size: 12px;
 }
 
+/*-----Main-----*/
+.icon {
+  display:inline-block;
+}
+.icon img {
+  display:block;
+}
 
 
 
