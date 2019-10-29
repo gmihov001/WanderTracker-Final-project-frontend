@@ -36,7 +36,7 @@ export const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={MainGate} />
 						<Route path="/LogIn" component={LogIn} />
-						<Route path="/SignUp" />
+						<Route path="/SignUp" component={SignUp} />
 						<Route path="/HomePage" />
 						<Route path="/Stamps" />
 						<Route path="/AddStamp" />

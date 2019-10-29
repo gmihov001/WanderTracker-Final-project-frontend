@@ -16,7 +16,7 @@ button:hover {
 height: 3.5rem;
 }
 
-/*------- Log IN ---------*/
+/*------- Log IN / Sign Up ---------*/
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
 
 
@@ -38,7 +38,6 @@ height: 3.5rem;
   background: rgba(245, 132, 33, 0.87);
   margin-top:auto;
   margin-bottom:auto;
-
 
 }
 
@@ -126,6 +125,12 @@ h1, h2 h3, h4, h5, h6, input {
   font-weight: 100;
 }
 
+.input-cont2{
+
+    margin-bottom: 30px;
+}
+
+
 
 /*------Footer--------*/
 
@@ -133,10 +138,6 @@ footer {
 
     background-color: #40474e;
     color: white;
-
-    //margin-top: 8px;
-
-
 }
 
 footer img {
