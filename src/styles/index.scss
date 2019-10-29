@@ -1,18 +1,14 @@
 /*------Navigation--------*/
 
-.navbar {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: .9rem;
-    letter-spacing: .1rem;
+.navbar-login, .navbar-signup{
+    font-size: 12px;
 }
 
-.logo{
-    //width: 250px;
-    //height: 70px;
-    height: 3.5rem;
-
+.logo-navbar{
+height: 3.5rem;
 }
+
+
 
 
 /*------Footer--------*/
@@ -20,7 +16,6 @@
     footer {
     background-color: #40474e;
     color: white;
-    //padding: 1rem 0 1rem;
     margin-top: .2rem;
 }
 
@@ -36,7 +31,11 @@ footer a {
 }
 
 footer a:hover {
-    color: salmon;
+    color: #fe5000;
+}
+
+footer p {
+    font-size: 12px;
 }
 
 

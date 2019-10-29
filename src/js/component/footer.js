@@ -5,7 +5,7 @@ export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center footer-light bg-light ">
 		<div className="row justify-content-center">
 			<div className="col-md-5 text-center text-secondary">
-				<img src={wtLogo} />
+				<img className="logo-footer" src={wtLogo} />
 
 				<p>
 					<strong>Contact Info</strong>
