@@ -3,6 +3,18 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
+import { MainGate } from "./views/MainGate";
+import { SignUp } from "./views/SignUp";
+import { LogIn } from "./views/LogIn";
+import { HomePage } from "./views/HomePage";
+import { Stamps } from "./views/Stamps";
+import { AddStamp } from "./views/AddStamp";
+import { TravelDoc } from "./views/TravelDoc";
+import { AddTravelDoc } from "./views/AddTravelDoc";
+import { Map } from "./views/Map";
+import { TripPlanner } from "./views/TripPlanner";
+import { AddTrip } from "./views/AddTrip";
+
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
@@ -22,7 +34,7 @@ export const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/" component={Home} /> {/*to be MainGate*/}
+						<Route exact path="/" component={MainGate} />
 						<Route path="/SignUp" />
 						<Route path="/LogIn" />
 						<Route path="/HomePage" />

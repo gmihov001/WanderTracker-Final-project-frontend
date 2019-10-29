@@ -1,14 +1,19 @@
 /*------Navigation--------*/
 
-.navbar-login, .navbar-signup{
+.navbar-login, .navbar-signup {
     font-size: 12px;
+
+}
+
+button:hover {
+    background-color: rgb(60, 196, 60);
+    color: white !important;
+    font-weight: bold;
 }
 
 .logo-navbar{
 height: 3.5rem;
 }
-
-
 
 
 /*------Footer--------*/
