@@ -1,7 +1,14 @@
 /*------Navigation--------*/
 
-.navbar-login, .navbar-signup{
+.navbar-login, .navbar-signup {
     font-size: 12px;
+
+}
+
+button:hover {
+    background-color: rgb(60, 196, 60);
+    color: white !important;
+    font-weight: bold;
 }
 
 
@@ -118,8 +125,6 @@ h1, h2 h3, h4, h5, h6, input {
   font: Lato;
   font-weight: 100;
 }
-
-
 
 
 /*------Footer--------*/
