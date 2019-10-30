@@ -1,6 +1,7 @@
 import React from "react";
-import "../../styles/home.scss";
+
 import { Navbar } from "../component/navbar";
+import { Link } from "react-router-dom";
 
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
@@ -16,7 +17,7 @@ export const MainGate = () => (
 					height="500px"
 				/>
 			</div>
-			<div className="bg-warning text-white mx-auto shadow-lg w-75">
+			<div className="main rounded text-white mx-auto shadow w-75">
 				<h2 className="text-center p-3">Plan Trips. Make Memories. Save Memories</h2>
 			</div>
 			<div className="d-flex justify-content-around m-5 text-secondary">

@@ -6,7 +6,7 @@ export const LogIn = () => {
 	return (
 		<div>
 			<Navbar />
-			<div className="container main ">
+			<div className="container main rounded shadow p-3">
 				<div className="row">
 					<div className="col-md-4 col-md-offset-3  text-center title">
 						<h1>Want to Connect?</h1>
@@ -20,7 +20,7 @@ export const LogIn = () => {
 						<br />
 						<input type="password" name="password" placeholder="password" />
 						<a className="btn btn-default login" href="#0">
-							login
+							Login
 						</a>
 						<span className="signup-cont">
 							<h4 className="signup-text">

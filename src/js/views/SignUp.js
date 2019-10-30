@@ -6,7 +6,7 @@ export const SignUp = () => {
 	return (
 		<div>
 			<Navbar />
-			<div className="container main ">
+			<div className="container main rounded shadow p-3">
 				<div className="text-cont row">
 					<div className="col-md-4 col-md-offset-3 align-center text-center title">
 						<h1>Want to Connect?</h1>
