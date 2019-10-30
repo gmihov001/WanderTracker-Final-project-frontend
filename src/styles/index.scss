@@ -22,12 +22,33 @@
 }
 
 .smallButton:hover {
-    background-color: lightslategrey !important;
+    background-color: lightgray !important;
+    color:orangered !important;
+    box-shadow: 0px 5px 20px 0px orangered;
+}
+
+.addButton {
+    color: rgb(46, 196, 46);
+    border-radius: 15px;
+    border: solid 1px rgb(46, 196, 46);
+}
+
+.addButton:hover {
+    background-color: lightgreen !important;
+    font-weight: 600;
 }
 
 .createTrip:hover {
     border-radius: 10px;
-    box-shadow: 0px 5px 30px 5px greenyellow;
+    box-shadow: 0px 5px 20px 5px greenyellow;
+}
+
+.entry {
+    background-color:lightgoldenrodyellow;
+    border-radius: 10px;
+    padding: 3px;
+    padding-left: 3px;
+
 }
 
 /*------Navigation--------*/
@@ -197,7 +218,10 @@ footer p {
 }
 
 .textfield {
+    border: solid 1px lightgray !important;
+    border-radius: 15px;
     padding: 1px !important;
+    padding-left: 5px !important;
     margin: 1px !important;
     font-size: 1.2em !important;
 }

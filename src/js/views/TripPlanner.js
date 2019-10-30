@@ -28,7 +28,9 @@ export const TripPlanner = () => (
 				<h4 className="pageEntry">Trip Greece 2019</h4>
 			</div>
 			<div>
-				<button className="smallButton bg-white px-2 mx-2">Edit</button>
+				<Link to="/TripDetails">
+					<button className="smallButton bg-white px-2 mx-2">Edit</button>
+				</Link>
 				<button className="smallButton bg-white px-2 mx-2">Delete</button>
 			</div>
 		</div>

@@ -13,6 +13,7 @@ import { AddTravelDoc } from "./views/AddTravelDoc";
 import { Map } from "./views/Map";
 import { TripPlanner } from "./views/TripPlanner";
 import { AddTrip } from "./views/AddTrip";
+import { TripDetails } from "./views/TripDetails";
 
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
@@ -42,6 +43,7 @@ export const Layout = () => {
 						<Route path="/Map" />
 						<Route path="/TripPlanner" component={TripPlanner} />
 						<Route path="/AddTrip" component={AddTrip} />
+						<Route path="/TripDetails" component={TripDetails} />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
