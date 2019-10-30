@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../component/navbar";
+import { Navbar2 } from "../component/Navbar2";
 
 export const SignUp = () => {
 	return (
 		<div>
-			<Navbar />
+			<Navbar2 />
 			<div className="container main rounded shadow p-3">
 				<div className="text-cont row">
 					<div className="col-md-4 col-md-offset-3 align-center text-center title">
