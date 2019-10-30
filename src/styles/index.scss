@@ -1,8 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
 
+#app {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
 .pageTitle {
     color: #fe5000;
-    border: solid 1px #fe5000;
+    border: solid 2px #fe5000;
     border-radius: 5px;
 }
 
@@ -11,18 +16,18 @@
 }
 
 .smallButton {
-    color:darkgrey;
+    color: darkslategrey;
     border-radius: 15px;
-    border: solid 1px lightgrey;
+    border: solid 1px darkslategrey;
 }
 
 .smallButton:hover {
-    background-color: lightgrey !important;
+    background-color: lightslategrey !important;
 }
 
 .createTrip:hover {
     border-radius: 10px;
-    box-shadow: 2px 2px 50px 10px lightgreen;
+    box-shadow: 0px 5px 30px 5px greenyellow;
 }
 
 /*------Navigation--------*/
@@ -58,17 +63,12 @@ height: 3.5rem;
     margin: auto;
 }
 .main {
-  background: #fe5000;
+  background: #fd6e2b;
   margin-top:auto;
-<<<<<<< HEAD
-  margin-bottom:auto;
-=======
   margin-bottom:90px;
   //max-width: 100%;
   //height: 100vh;
-  font-size: 8px;
-
->>>>>>> c26b2f3dda0c35bfb08f2c8cacf941a8ffff9973
+  font-size: 10px;
 }
 
 input[type=text], input[type=password] {
@@ -117,12 +117,12 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
 
 .form h2 {
   text-align: left;
-  font-weight: 100;
+  font-weight: 300;
   color: #fff;
   margin-bottom: .5em;
 }
 .form h4 {
-  font-weight: 100;
+  font-weight: 300;
   color: #fff;
   margin-top: 2em;
 }
@@ -130,8 +130,8 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
 .login, .signup {
   color: white;
   width: 6em;
-  font-family: Lato;
-  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   font-size: 1.75em;
   border: 1px solid rgba(255, 255, 255, 0.75);
   background: transparent;
@@ -150,36 +150,23 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
   left: 1.5em;
 }
 
-h1, h2 h3, h4, h5, h6, input {
-<<<<<<< HEAD
-  font-family: 'Lato';
+h1, h2, h3, h4, h5, h6, input {
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
-=======
-  font: Lato;
-  font-weight: 100;
-
 }
 
 .input-cont2{
-
     margin-bottom: 30px;
-
->>>>>>> c26b2f3dda0c35bfb08f2c8cacf941a8ffff9973
 }
-
 
 
 /*------Footer--------*/
 
 footer {
-
     background-color: #40474e;
     color: white;
-<<<<<<< HEAD
 
     //margin-top: 8px;
-=======
->>>>>>> c26b2f3dda0c35bfb08f2c8cacf941a8ffff9973
 }
 
 footer img {
@@ -209,6 +196,11 @@ footer p {
   display: block;
 }
 
+.textfield {
+    padding: 1px !important;
+    margin: 1px !important;
+    font-size: 1.2em !important;
+}
 
 
 
