@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/home.scss";
+import { Link } from "react-router-dom";
+
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const TripPlanner = () => (
@@ -12,11 +14,13 @@ export const TripPlanner = () => (
 		<div className="row my-4 d-flex justify-content-center">
 			<div className="col-md-4 text-center">
 				<p className="text-center py-2 px-3">
-					<img
-						src="https://img.icons8.com/dusk/96/000000/calendar-plus.png"
-						className="createTrip m-2"
-						title="Create A New Trip"
-					/>
+					<Link to="/AddTrip">
+						<img
+							src="https://img.icons8.com/dusk/96/000000/calendar-plus.png"
+							className="createTrip m-2"
+							title="Create A New Trip"
+						/>
+					</Link>
 				</p>
 			</div>
 		</div>

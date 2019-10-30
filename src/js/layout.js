@@ -41,7 +41,7 @@ export const Layout = () => {
 						<Route path="/AddTravelDoc" />
 						<Route path="/Map" />
 						<Route path="/TripPlanner" component={TripPlanner} />
-						<Route path="/AddTrip" />
+						<Route path="/AddTrip" component={AddTrip} />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
