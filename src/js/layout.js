@@ -35,10 +35,10 @@ export const Layout = () => {
 						<Route exact path="/" component={MainGate} />
 						<Route path="/LogIn" component={LogIn} />
 						<Route path="/SignUp" component={SignUp} />
-						<Route path="/HomePage" />
+						<Route path="/HomePage" component={HomePage} />
 						<Route path="/Stamps" component={Stamps} />
 						<Route path="/AddStamp" />
-						<Route path="/TravelDoc" />
+						<Route path="/TravelDoc" component={TravelDoc} />
 						<Route path="/AddTravelDoc" />
 						<Route path="/Map" />
 						<Route path="/TripPlanner" component={TripPlanner} />

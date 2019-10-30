@@ -5,6 +5,10 @@
     font-weight: 300;
 }
 
+.wrapper {
+    background-color:rgb(253, 253, 253);
+}
+
 .pageTitle {
     color: #fe5000;
     border: solid 2px #fe5000;
@@ -15,6 +19,21 @@
     color: #fe5000;
 }
 
+.xlButton {
+    background-color: #fe5000;
+    color:white;
+    border: solid 2px white;
+    border-radius: 5px;
+}
+
+.xlButton:hover {
+    background-color: white;
+    color: #fe5000;
+    border: solid 2px #fe5000;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px lightgreen;
+}
+
 .smallButton {
     color: darkslategrey;
     border-radius: 15px;
@@ -23,8 +42,9 @@
 
 .smallButton:hover {
     background-color: lightgray !important;
-    color:orangered !important;
-    box-shadow: 0px 5px 20px 0px orangered;
+    color:white !important;
+    box-shadow: 0px 1px 15px orange;
+    font-weight: 500;
 }
 
 .addButton {
@@ -35,26 +55,28 @@
 
 .addButton:hover {
     background-color: lightgreen !important;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .createTrip:hover {
     border-radius: 10px;
-    box-shadow: 0px 5px 20px 5px greenyellow;
+    box-shadow: 5px 10px 15px lightgreen;
+    background-color: white;
 }
 
 .entry {
-    background-color:lightgoldenrodyellow;
-    border-radius: 10px;
+    background-color:rgb(241, 241, 241);
+    border-radius: 5px;
     padding: 3px;
     padding-left: 3px;
+    margin-left: 3px;
 
 }
 
 /*------Navigation--------*/
 
 .navbar-login, .navbar-signup {
-    font-size: 12px;
+    font-size: 1.0em;
 }
 
 button:hover {

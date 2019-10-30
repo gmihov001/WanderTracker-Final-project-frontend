@@ -5,12 +5,12 @@ import { Navbar2 } from "../component/Navbar2";
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const TripPlanner = () => (
-	<div>
+	<div className="wrapper">
 		<Navbar2 />
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3 shadow-lg">Trip Planner</h1>
+					<h1 className="pageTitle text-center py-2 px-3">Trip Planner</h1>
 				</div>
 			</div>
 			<div className="row my-4 d-flex justify-content-center">
@@ -26,7 +26,7 @@ export const TripPlanner = () => (
 					</p>
 				</div>
 			</div>
-			<div className="row py-4 my-4 d-flex justify-content-between shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex justify-content-between">
 					<h4 className="pageEntry">Trip Greece 2019</h4>
 				</div>
@@ -37,7 +37,7 @@ export const TripPlanner = () => (
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
 				</div>
 			</div>
-			<div className="row py-4 my-4 d-flex justify-content-between shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex justify-content-between">
 					<h4 className="pageEntry">Trip Spain 2020</h4>
 				</div>
