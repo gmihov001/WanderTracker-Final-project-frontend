@@ -6,12 +6,12 @@ import StampPic from "../../img/stamp.jpg";
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const Stamps = () => (
-	<div>
+	<div className="wrapper">
 		<Navbar2 />
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3 shadow-lg">Stamps</h1>
+					<h1 className="pageTitle text-center py-2 px-3">Stamps</h1>
 				</div>
 			</div>
 			<div className="row my-4 d-flex justify-content-center">
@@ -19,15 +19,15 @@ export const Stamps = () => (
 					<p className="text-center py-2 px-3">
 						<Link to="/AddStamp">
 							<img
-								src="https://img.icons8.com/dusk/96/000000/calendar-plus.png"
+								src="https://img.icons8.com/color/96/000000/postcard.png"
 								className="createTrip m-2"
-								title="Create A New Stamp"
+								title="Save New Stamp"
 							/>
 						</Link>
 					</p>
 				</div>
 			</div>
-			<div className="row py-4 my-4 d-flex justify-content-between shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex ">
 					<img
 						className="logo-navbar navbar-brand mb-0 h1"
@@ -43,7 +43,7 @@ export const Stamps = () => (
 					<button className="smallButton bg-white px-2 mx-2">Share</button>
 				</div>
 			</div>
-			<div className="row py-4 my-4 d-flex justify-content-between shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex">
 					<img
 						className="logo-navbar navbar-brand mb-0 h1"
