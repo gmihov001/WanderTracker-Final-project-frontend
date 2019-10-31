@@ -9,41 +9,29 @@ export const HomePage = () => (
 		<Navbar2 />
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
+				<div className="col-md-3 px-0">
+					<img
+						src="https://cdn2.vectorstock.com/i/1000x1000/72/96/emotion-avatar-man-happy-successful-face-vector-13577296.jpg"
+						className="rounded-circle mx-auto d-block img-fluid"
+					/>
+				</div>
 				<div className="col text-center">
-					<h1 className="text-center py-2 px-3">[PHOTO] | Personal Information | Emergency Contacts</h1>
+					<h3 className="text-center py-2 px-3">Personal Information | Emergency Contacts</h3>
 				</div>
 			</div>
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<p className="text-center py-2 px-3">
-						<Link to="/AddTrip">
-							<img
-								src="https://img.icons8.com/dusk/96/000000/calendar-plus.png"
-								className="createTrip m-2"
-								title="Create A New Trip"
-							/>
-						</Link>
-					</p>
+					<p className="text-center py-2 px-3">&nbsp;</p>
 				</div>
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex justify-content-between">
-					<h4 className="pageEntry">Trip Greece 2019</h4>
-				</div>
-				<div>
-					<Link to="/TripDetails">
-						<button className="smallButton bg-white px-2 mx-2">Edit</button>
-					</Link>
-					<button className="smallButton bg-white px-2 mx-2">Delete</button>
+					<h4 className="pageEntry">Travel Tip 1</h4>
 				</div>
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex justify-content-between">
-					<h4 className="pageEntry">Trip Spain 2020</h4>
-				</div>
-				<div>
-					<button className="smallButton bg-white px-2 mx-2">Edit</button>
-					<button className="smallButton bg-white px-2 mx-2">Delete</button>
+					<h4 className="pageEntry">Travel Tip 2</h4>
 				</div>
 			</div>
 		</div>
