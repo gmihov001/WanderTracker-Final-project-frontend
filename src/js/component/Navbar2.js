@@ -1,30 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import wtLogo from "../../img/wanderTrackerLogo.png";
+import CalIcon from "../../img/Calendar.png";
+import DocIcon from "../../img/Documents.png";
+import StampsIcon from "../../img/StampsLocation.png";
+import MapIcon from "../../img/MapLocation.png";
 
 export const Navbar2 = () => {
 	return (
-		<nav className="navbar  navbar-light bg-white mb-3">
-			<Link to="/HomePage">
-				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
-			</Link>
-			<div className="ml-auto">
-				<Link to="/Stamps">
-					<button className="navbar-login btn text-secondary">Stamps</button>
-				</Link>
-				<Link to="/TravelDoc">
-					<button className="navbar-signup btn text-secondary ml-1">Travel Docs</button>
-				</Link>
-				<Link to="/SignUp">
-					<button className="navbar-signup btn text-secondary ml-1">Map</button>
-				</Link>
-				<Link to="/TripPlanner">
-					<button className="navbar-signup btn text-secondary ml-1">Trip PLanner</button>
-				</Link>
-				<Link to="/">
-					<button className="navbar-signup btn text-danger ml-1">Sign Out</button>
-				</Link>
-			</div>
-		</nav>
+		<div>
+			<nav className="navbar  navbar-light bg-white  d-flex justify-content-center">
+				<div className="container text-center">
+					<div className="center">
+						<Link to="/Stamps">
+							<img className="icons-navbar navbar-brand mb-0 h1" title="Go Stamps" src={StampsIcon} />
+							<p>Stamps</p>
+						</Link>
+					</div>
+					<Link to="/TravelDoc">
+						<img
+							className="icons-navbar navbar-brand mb-0 h1"
+							title="Go To Travel Documets"
+							src={DocIcon}
+						/>
+						<p>Travel Documents</p>
+					</Link>
+					<Link to="/Map">
+						<img className="icons-navbar navbar-brand mb-0 h1" title="Go To Maps" src={MapIcon} />
+						<p>Map</p>
+					</Link>
+					<Link to="/TripPlanner">
+						<img
+							className="icons-navbar navbar-brand mb-0 h1 "
+							title="Go To Travel Planner"
+							src={CalIcon}
+						/>
+						<p>Travel Planner</p>
+					</Link>
+				</div>
+			</nav>
+		</div>
 	);
 };

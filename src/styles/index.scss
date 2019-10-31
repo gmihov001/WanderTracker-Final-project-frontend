@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
 
+
 #app {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -73,6 +74,11 @@
 
 }
 
+hr {
+    border: solid 1px #fd6e2b;
+    width: 100%
+}
+
 /*------Navigation--------*/
 
 .navbar-login, .navbar-signup {
@@ -89,6 +95,9 @@ button:hover {
 height: 3.5rem;
 }
 
+.icons-navbar{
+    width:70px;
+}
 /*------- Log IN ---------*/
 
 .title h1 {
@@ -203,6 +212,13 @@ h1, h2, h3, h4, h5, h6, input {
 
 }
 
+/*------Main gate--------*/
+
+#worldMap{
+    max-width: 100%;
+    height: auto;
+    //margin-bottom: 10px;
+}
 
 /*------Footer--------*/
 

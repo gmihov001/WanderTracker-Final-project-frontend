@@ -26,9 +26,9 @@ export const LogIn = () => {
 							<h4 className="signup-text">
 								Dont have an account? We can fix that!
 								<Link to="/SignUp">
-									<a className="btn btn-default signup" href="#0">
+									<span className="btn btn-default signup" href="#0">
 										Signup
-									</a>
+									</span>
 								</Link>
 							</h4>
 						</span>
