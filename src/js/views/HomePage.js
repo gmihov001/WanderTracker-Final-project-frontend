@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar2 } from "../component/Navbar2";
+import wtLogo from "../../img/wanderTrackerLogo.png";
 
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const HomePage = () => (
 	<div className="wrapper">
-		<Navbar2 />
+		<div className="container-fluid">
+			<Link to="/HomePage">
+				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
+			</Link>
+		</div>
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col text-center">
@@ -26,6 +31,7 @@ export const HomePage = () => (
 					</p>
 				</div>
 			</div>
+			<Navbar2 />
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex justify-content-between">
 					<h4 className="pageEntry">Trip Greece 2019</h4>
