@@ -8,12 +8,16 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export const TravelDoc = () => (
 	<div className="wrapper">
-		<div className="container-fluid">
+		<div className="container-fluid d-flex justify-content-between">
 			<Link to="/HomePage">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 			</Link>
+			<Link to="/">
+				<button className="navbar-signup btn text-danger ">Sign Out</button>
+			</Link>
 		</div>
 		<div className="container">
+			<Navbar2 />
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
 					<h1 className="pageTitle text-center py-2 px-3">Documents</h1>
@@ -24,7 +28,7 @@ export const TravelDoc = () => (
 					<p className="text-center py-2 px-3">
 						<Link to="/AddStamp">
 							<img
-								src="https://img.icons8.com/dusk/96/000000/passport.png"
+								src="https://img.icons8.com/cotton/64/000000/plus--v3.png"
 								className="createTrip m-2"
 								title="Save New Document"
 							/>
@@ -32,7 +36,7 @@ export const TravelDoc = () => (
 					</p>
 				</div>
 			</div>
-			<Navbar2 />
+
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex ">
 					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />

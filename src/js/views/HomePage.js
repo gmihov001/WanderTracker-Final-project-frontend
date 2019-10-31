@@ -7,9 +7,12 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export const HomePage = () => (
 	<div className="wrapper">
-		<div className="container-fluid">
+		<div className="container-fluid d-flex justify-content-between">
 			<Link to="/HomePage">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
+			</Link>
+			<Link to="/">
+				<button className="navbar-signup btn text-danger ">Sign Out</button>
 			</Link>
 		</div>
 		<div className="container">
