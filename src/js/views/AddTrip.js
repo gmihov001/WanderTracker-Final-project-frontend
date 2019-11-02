@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar2 } from "../component/Navbar2";
+import UserIcon from "../../img/user-03.png";
+import wtLogo from "../../img/wanderTrackerLogo.png";
 
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const AddTrip = () => (
 	<div className="wrapper">
-		<Navbar2 />
+		<div className="container-fluid d-flex justify-content-between">
+			<Link to="/HomePage">
+				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
+			</Link>
+			<Link to="/HomePage">
+				<img className="logo-navbar navbar-brand mb-0 h1" src={UserIcon} />
+			</Link>
+		</div>
 		<div className="container">
 			<div className="row my-5 d-flex justify-content-center">
 				<div className="col-md-4 text-center">

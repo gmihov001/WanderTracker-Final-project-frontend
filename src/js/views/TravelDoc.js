@@ -4,6 +4,7 @@ import { Navbar2 } from "../component/Navbar2";
 import passport from "../../img/passport.jpg";
 import BoardingPass from "../../img/BoardingPass.jpg";
 import wtLogo from "../../img/wanderTrackerLogo.png";
+import UserIcon from "../../img/user-03.png";
 
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
@@ -13,8 +14,8 @@ export const TravelDoc = () => (
 			<Link to="/HomePage">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 			</Link>
-			<Link to="/">
-				<button className="navbar-signup btn text-danger ">Sign Out</button>
+			<Link to="/HomePage">
+				<img className="logo-navbar navbar-brand mb-0 h1" src={UserIcon} />
 			</Link>
 		</div>
 		<div className="container">
