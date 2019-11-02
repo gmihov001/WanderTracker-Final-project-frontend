@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar2 } from "../component/Navbar2";
-import StampPic from "../../img/stamp.jpg";
+import passport from "../../img/passport.jpg";
+import BoardingPass from "../../img/BoardingPass.jpg";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
@@ -39,24 +40,20 @@ export const TravelDoc = () => (
 
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex ">
-					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
-					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
+					<img className=" navbar-brand mb-0 h1" src={passport} />
 				</div>
 				<div>
 					<Link to="/TripDetails">
 						<button className="smallButton bg-white px-2 mx-2">Delete</button>
 					</Link>
-					<button className="smallButton bg-white px-2 mx-2">Share</button>
 				</div>
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex">
-					<img className="logo-navbar navbar-brand mb-0 h1 " src={StampPic} />
-					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
+					<img className="travel-doc navbar-brand mb-0 h1 " src={BoardingPass} />
 				</div>
 				<div>
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
-					<button className="smallButton bg-white px-2 mx-2">Share</button>
 				</div>
 			</div>
 		</div>
