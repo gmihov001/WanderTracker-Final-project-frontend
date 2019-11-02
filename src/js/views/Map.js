@@ -27,7 +27,7 @@ export const Map = () => (
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
 					<p className="text-center py-2 px-3">
-						<Link to="/AddStamp">
+						<Link to="">
 							<img
 								src="https://img.icons8.com/cotton/64/000000/plus--v3.png"
 								className="createTrip m-2"

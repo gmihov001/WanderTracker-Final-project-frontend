@@ -37,9 +37,9 @@ export const Layout = () => {
 						<Route path="/SignUp" component={SignUp} />
 						<Route path="/HomePage" component={HomePage} />
 						<Route path="/Stamps" component={Stamps} />
-						<Route path="/AddStamp" />
+						<Route path="/AddStamp" component={AddStamp} />
 						<Route path="/TravelDoc" component={TravelDoc} />
-						<Route path="/AddTravelDoc" />
+						<Route path="/AddTravelDoc" component={AddTravelDoc} />
 						<Route path="/Map" component={Map} />
 						<Route path="/TripPlanner" component={TripPlanner} />
 						<Route path="/AddTrip" component={AddTrip} />
