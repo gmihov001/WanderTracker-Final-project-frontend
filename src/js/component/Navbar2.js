@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 import CalIcon from "../../img/Calendar.png";
 import DocIcon from "../../img/Documents.png";
-import StampsIcon from "../../img/StampsLocation.png";
+import StampsIcon from "../../img/Stamps.png";
 import MapIcon from "../../img/MapLocation.png";
 
 export const Navbar2 = () => {
