@@ -8,7 +8,7 @@ import UserIcon from "../../img/user-03.png";
 
 export const TripPlanner = () => (
 	<div className="wrapper">
-		<div className="container-fluid d-flex justify-content-between">
+		<div className="container-fluid d-flex bg-white justify-content-between">
 			<Link to="/HomePage">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 			</Link>

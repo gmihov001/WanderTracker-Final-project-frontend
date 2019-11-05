@@ -7,13 +7,14 @@
 }
 
 .wrapper {
-    background-color:rgb(252, 252, 252);
+    background-color:rgb(245, 245, 245);
 }
 
 .pageTitle {
     color: #fe5000;
-    border: solid 2px #fe5000;
-    border-radius: 5px;
+    border-bottom: solid 1px #fe5000;
+    text-shadow: 2px 2px 5px lightgrey;
+    border-radius: 0px;
 }
 
 .pageEntry {
@@ -28,9 +29,9 @@
 }
 
 .xlButton:hover {
-    background-color: white;
+    background-color: lightgrey;
     color: #fe5000;
-    border: solid 2px #fe5000;
+    border: solid 1px #fe5000;
     border-radius: 5px;
     box-shadow: 5px 10px 15px lightgreen;
 }
@@ -60,9 +61,8 @@
 }
 
 .createTrip:hover {
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 5px 10px 15px lightgreen;
-    background-color: white;
 }
 
 .entry {

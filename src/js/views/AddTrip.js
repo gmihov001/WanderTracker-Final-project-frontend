@@ -19,7 +19,7 @@ export const AddTrip = () => (
 		<div className="container">
 			<div className="row my-5 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3">New Trip</h1>
+					<h1 className="pageTitle text-center py-2 px-3">Add Trip</h1>
 				</div>
 			</div>
 			<div className="row my-5 d-flex justify-content-center">
