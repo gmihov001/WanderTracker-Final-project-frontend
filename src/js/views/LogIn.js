@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Navbar } from "../component/navbar";
 import { HomePage } from "./HomePage";
+import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export class LogIn extends React.Component {
 	constructor() {
@@ -23,7 +24,9 @@ export class LogIn extends React.Component {
 		console.log(this.state.loggedIn);
 		return (
 			<div>
-				<Navbar />
+				<Link to="/">
+					<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
+				</Link>
 				<div className="container main rounded shadow p-3">
 					<div className="row">
 						<div className="col-md-4 col-md-offset-3  text-center title">

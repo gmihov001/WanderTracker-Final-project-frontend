@@ -2,11 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "../component/navbar";
 import { Navbar2 } from "../component/Navbar2";
+import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export const SignUp = () => {
 	return (
 		<div>
-			<Navbar2 />
+			<Link to="/">
+				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
+			</Link>
 			<div className="container main rounded shadow p-3">
 				<div className="text-cont row">
 					<div className="col-md-4 col-md-offset-3 align-center text-center title">

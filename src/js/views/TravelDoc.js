@@ -41,7 +41,7 @@ export const TravelDoc = () => (
 
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex ">
-					<img className=" navbar-brand mb-0 h1" src={passport} />
+					<img className=" navbar-brand mb-0 h1 img-fluid" src={passport} />
 				</div>
 				<div>
 					<Link to="/TripDetails">
@@ -51,7 +51,7 @@ export const TravelDoc = () => (
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex">
-					<img className="travel-doc navbar-brand mb-0 h1 " src={BoardingPass} />
+					<img className="travel-doc navbar-brand mb-0 h1 img-fluid" src={BoardingPass} />
 				</div>
 				<div>
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
