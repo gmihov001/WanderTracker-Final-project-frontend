@@ -11,7 +11,6 @@ import DocIcon from "../../img/Documents.png";
 export const MainGate = () => (
 	<div className="wrapper">
 		<Navbar />
-
 		<div className="container">
 			<div className="row">
 				<div className="map-landing  img-fluid ">
