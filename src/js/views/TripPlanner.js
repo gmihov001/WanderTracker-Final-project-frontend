@@ -43,7 +43,7 @@ export const TripPlanner = () => (
 				</div>
 				<div>
 					<Link to="/TripDetails">
-						<button className="smallButton bg-white px-2 mx-2">Edit</button>
+						<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
 					</Link>
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
 				</div>
@@ -53,7 +53,7 @@ export const TripPlanner = () => (
 					<h4 className="pageEntry">Trip Spain 2020</h4>
 				</div>
 				<div>
-					<button className="smallButton bg-white px-2 mx-2">Edit</button>
+					<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
 				</div>
 			</div>

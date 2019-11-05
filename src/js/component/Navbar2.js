@@ -8,7 +8,7 @@ import MapIcon from "../../img/MapLocation.png";
 
 export const Navbar2 = () => {
 	return (
-		<div className="wrapper bg-white">
+		<div className="wrapper">
 			<nav className="navbar navbar-expand-lg navbar-light  d-flex justify-content-center ">
 				<button
 					className="navbar-toggler"
