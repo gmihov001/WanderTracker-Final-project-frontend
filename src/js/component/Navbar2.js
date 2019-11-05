@@ -8,15 +8,13 @@ import MapIcon from "../../img/MapLocation.png";
 
 export const Navbar2 = () => {
 	return (
-		<div>
-			<nav className="navbar  navbar-light bg-white  d-flex justify-content-center">
+		<div className="wrapper">
+			<nav className="navbar  navbar-light d-flex justify-content-center">
 				<div className="container text-center">
-					<div className="center">
-						<Link to="/Stamps">
-							<img className="icons-navbar navbar-brand mb-0 h1" title="Go Stamps" src={StampsIcon} />
-							<p>Stamps</p>
-						</Link>
-					</div>
+					<Link to="/Stamps">
+						<img className="icons-navbar navbar-brand mb-0 h1" title="Go Stamps" src={StampsIcon} />
+						<p>Stamps</p>
+					</Link>
 					<Link to="/TravelDoc">
 						<img
 							className="icons-navbar navbar-brand mb-0 h1"
@@ -35,7 +33,7 @@ export const Navbar2 = () => {
 							title="Go To Travel Planner"
 							src={CalIcon}
 						/>
-						<p>Travel Planner</p>
+						<p>Trip Planner</p>
 					</Link>
 				</div>
 			</nav>

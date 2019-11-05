@@ -24,14 +24,17 @@ export const HomePage = () => (
 					/>
 				</div>
 				<div className="col text-center">
-					<h3 className="text-center py-2 px-3">Personal Information | Emergency Contacts</h3>
+					<h5 className="text-center py-2 px-3">Personal Information</h5>
+					<h5 className="text-center py-2 px-3">Passport Number</h5>
+					<h5 className="text-center py-2 px-3">Passport expiration date</h5>
+				</div>
+				<div className="col text-center">
+					<h5 className="text-center py-2 px-3">Emergency Contacts</h5>
+					<h5 className="text-center py-2 px-3">Contact 1</h5>
+					<h5 className="text-center py-2 px-3">Contact 2</h5>
 				</div>
 			</div>
-			<div className="row my-4 d-flex justify-content-center">
-				<div className="col-md-4 text-center">
-					<p className="text-center py-2 px-3">&nbsp;</p>
-				</div>
-			</div>
+
 			<Navbar2 />
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex justify-content-between">
