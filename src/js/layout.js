@@ -12,8 +12,10 @@ import { TravelDoc } from "./views/TravelDoc";
 import { AddTravelDoc } from "./views/AddTravelDoc";
 import { Map } from "./views/Map";
 import { TripPlanner } from "./views/TripPlanner";
+import { TripPlanner2 } from "./views/TripPlanner2";
 import { AddTrip } from "./views/AddTrip";
 import { TripDetails } from "./views/TripDetails";
+import { TripDetails2 } from "./views/TripDetails2";
 import { EmergContacts } from "./views/EmergContacts";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
@@ -42,8 +44,10 @@ export const Layout = () => {
 						<Route path="/AddTravelDoc" component={AddTravelDoc} />
 						<Route path="/Map" component={Map} />
 						<Route path="/TripPlanner" component={TripPlanner} />
+						<Route path="/TripPlanner2" component={TripPlanner2} />
 						<Route path="/AddTrip" component={AddTrip} />
 						<Route path="/TripDetails" component={TripDetails} />
+						<Route path="/TripDetails2" component={TripDetails2} />
 						<Route path="/EmergContacts" component={EmergContacts} />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />

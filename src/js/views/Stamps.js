@@ -9,7 +9,7 @@ import AddIcon from "../../img/add.png";
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const Stamps = () => (
-	<div className="wrapper bg-white">
+	<div className="wrapper">
 		<div className="container-fluid d-flex justify-content-between">
 			<Link to="/HomePage">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
@@ -40,7 +40,7 @@ export const Stamps = () => (
 				</div>
 			</div>
 
-			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 				<div className="col d-flex ">
 					<img
 						className="logo-navbar navbar-brand mb-0 h1"
@@ -56,7 +56,7 @@ export const Stamps = () => (
 					<button className="smallButton bg-white px-2 mx-2">Share</button>
 				</div>
 			</div>
-			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 				<div className="col d-flex">
 					<img
 						className="logo-navbar navbar-brand mb-0 h1"
