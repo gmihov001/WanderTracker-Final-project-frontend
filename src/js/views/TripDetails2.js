@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MyContext } from "../store/appContext.js";
 import { Navbar2 } from "../component/Navbar2";
+import PropTypes from "prop-types";
 
 export class TripDetails2 extends React.Component {
 	constructor(props) {
@@ -79,3 +80,7 @@ export class TripDetails2 extends React.Component {
 		);
 	}
 }
+
+TripDetails2.propTypes = {
+	match: PropTypes.object
+};
