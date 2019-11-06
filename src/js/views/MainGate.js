@@ -9,7 +9,7 @@ import DocIcon from "../../img/Documents.png";
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const MainGate = () => (
-	<div className="wrapper">
+	<div className="wrapper bg-white">
 		<Navbar />
 		<div className="container">
 			<div className="row">
