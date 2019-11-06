@@ -31,8 +31,6 @@ export const Navbar2 = () => {
 						<Link to="/Stamps">
 							<div className="navicon-cont p-2 pl-5 flex-fill bd-highlight">
 								<img className="icons-navbar navbar-brand mb-0 h1" title="Go Stamps" src={StampsIcon} />
-
-								<p>Stamps</p>
 							</div>
 						</Link>
 						<Link to="/TravelDoc">
@@ -42,13 +40,11 @@ export const Navbar2 = () => {
 									title="Go To Travel Documets"
 									src={DocIcon}
 								/>
-								<p>Travel Documents</p>
 							</div>
 						</Link>
 						<Link to="/Map">
 							<div className="p-2 pl-5 flex-fill bd-highlight ">
 								<img className="icons-navbar navbar-brand mb-0 h1" title="Go To Maps" src={MapIcon} />
-								<p>Map</p>
 							</div>
 						</Link>
 						<Link to="/TripPlanner">
@@ -58,13 +54,11 @@ export const Navbar2 = () => {
 									title="Go To Travel Planner"
 									src={CalIcon}
 								/>
-								<p>Trip Planner</p>
 							</div>
 						</Link>
 						<Link to="/HomePage">
 							<div className="p-2 pl-5 flex-fill bd-highlight ">
 								<img className="icons-navbar navbar-brand mb-0 h1" src={UserIcon} />
-								<p>Profile</p>
 							</div>
 						</Link>
 					</div>
