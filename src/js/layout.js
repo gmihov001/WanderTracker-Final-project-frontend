@@ -47,7 +47,7 @@ export const Layout = () => {
 						<Route path="/TripPlanner2" component={TripPlanner2} />
 						<Route path="/AddTrip" component={AddTrip} />
 						<Route path="/TripDetails" component={TripDetails} />
-						<Route path="/TripDetails2" component={TripDetails2} />
+						<Route path="/TripDetails2/:id" component={TripDetails2} />
 						<Route path="/EmergContacts" component={EmergContacts} />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />

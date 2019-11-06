@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					name: "Greece",
 					year: 2019,
-					id: "12012019",
+					id: 12012019,
 					contacts: [
 						{
 							contact: "First Greek contact",
@@ -58,7 +58,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					name: "Spain",
 					year: 2021,
-					id: "15012019",
+					id: 15012019,
 					contacts: [
 						{
 							contact: "First Spanish contact",
@@ -99,7 +99,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					name: "Italy",
 					year: 2020,
-					id: "18012019",
+					id: 18012019,
 					contacts: [
 						{
 							contact: "First Italian contact",

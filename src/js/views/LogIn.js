@@ -21,7 +21,7 @@ export class LogIn extends React.Component {
 			return <Redirect to="/HomePage" />;
 		}
 
-		console.log(this.state.loggedIn);
+		//console.log(this.state.loggedIn);
 		return (
 			<div>
 				<Link to="/">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MyContext } from "../store/appContext.js";
 import { Navbar2 } from "../component/Navbar2";
 
-export const TripDetails2 = () => (
+export const TripDetails2 = props => (
 	<div className="wrapper">
 		<Navbar2 />
 		<MyContext.Consumer>
@@ -11,7 +11,7 @@ export const TripDetails2 = () => (
 				<div className="container">
 					<div className="row my-5 d-flex justify-content-center">
 						<div className="col-md-4 text-center">
-							<h1 className="pageTitle text-center py-2 px-3">Trip Details 2</h1>
+							<h1 className="pageTitle text-center py-2 px-3">{context.store.trip[id].name}</h1>
 						</div>
 					</div>
 					<div className="row my-5 d-flex justify-content-center">

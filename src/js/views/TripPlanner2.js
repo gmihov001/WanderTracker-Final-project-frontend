@@ -39,7 +39,7 @@ export const TripPlanner2 = props => (
 				{context => (
 					<React.Fragment>
 						{Object.keys(context.store.trip).map(id => (
-							<div key="1" className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
+							<div key={id} className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 								<div className="col d-flex justify-content-between">
 									<h4 className="pageEntry">
 										Trip {context.store.trip[id].name} {context.store.trip[id].year}
