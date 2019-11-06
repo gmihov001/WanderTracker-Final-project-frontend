@@ -4,6 +4,7 @@ import { Navbar2 } from "../component/Navbar2";
 import StampPic from "../../img/stamp.jpg";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 import UserIcon from "../../img/user-03.png";
+import AddIcon from "../../img/add.png";
 
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
