@@ -7,8 +7,8 @@ import UserIcon from "../../img/user-03.png";
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const TripPlanner = () => (
-	<div className="wrapper bg-white">
-		<div className="container-fluid d-flex  justify-content-between">
+	<div className="wrapper">
+		<div className="container-fluid d-flex bg-white justify-content-between">
 			<Link to="/HomePage">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 			</Link>
@@ -37,7 +37,7 @@ export const TripPlanner = () => (
 				</div>
 			</div>
 
-			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 				<div className="col d-flex justify-content-between">
 					<h4 className="pageEntry">Trip Greece 2019</h4>
 				</div>
@@ -48,7 +48,7 @@ export const TripPlanner = () => (
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
 				</div>
 			</div>
-			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
+			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 				<div className="col d-flex justify-content-between">
 					<h4 className="pageEntry">Trip Spain 2020</h4>
 				</div>

@@ -23,15 +23,18 @@ export const HomePage = () => (
 						className="rounded-circle mx-auto d-block img-fluid"
 					/>
 				</div>
-				<div className="col text-center">
-					<h5 className="text-center py-2 px-3">Personal Information</h5>
-					<h5 className="text-center py-2 px-3">Passport Number</h5>
-					<h5 className="text-center py-2 px-3">Passport expiration date</h5>
-				</div>
-				<div className="col text-center">
-					<h5 className="text-center py-2 px-3">Emergency Contacts</h5>
-					<h5 className="text-center py-2 px-3">Contact 1</h5>
-					<h5 className="text-center py-2 px-3">Contact 2</h5>
+				<div className="col text-left">
+					<p className="text py-2 px-3">
+						Passport Number: <strong>234987456</strong>
+					</p>
+					<p className="text py-2 px-3">
+						Passport expiration date: <strong>20 Oct 2030</strong>
+					</p>
+					<Link to="/EmergContacts">
+						<p className="text py-2 px-3">
+							<strong className="text">Emergency Contacts</strong>
+						</p>
+					</Link>
 				</div>
 			</div>
 
