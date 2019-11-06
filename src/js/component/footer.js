@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export const Footer = () => (
-	<footer className="container-fluid footer mt-auto py-3 text-center   ">
-		<div className="row justify-content-center">
+	<footer className="container-fluid footer mt-auto  p-0  text-center   ">
+		<div className="footer-cont row justify-content-center m-0 p-0">
 			<div className="col-md-5 text-center text-secondary">
 				<img className="logo-footer" src={wtLogo} />
 				<p>
