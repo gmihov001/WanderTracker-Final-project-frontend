@@ -21,30 +21,35 @@
     color: #fe5000;
 }
 
+.pageEntry:hover {
+    text-shadow: none;
+}
+
 .xlButton {
     background-color: #fe5000;
     color:white;
     border: solid 2px white;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px lightgray;
 }
 
 .xlButton:hover {
-    background-color: lightgrey;
-    color: #fe5000;
+    background-color: lightgreen;
+    color: slategray;
     border: solid 1px #fe5000;
-    border-radius: 5px;
-    box-shadow: 5px 10px 15px lightgreen;
+    border-radius: 10px;
 }
 
 .smallButton {
-    color: darkslategrey;
+    background-color: white !important;
+    color: gray;
     border-radius: 15px;
     border: solid 1px darkslategrey;
 }
 
 .smallButton:hover {
-    background-color: lightgray !important;
-    color:white !important;
+    color: white !important;
+    background-color: #fe5000 !important;
     box-shadow: 0px 1px 15px orange;
     font-weight: 500;
 }
