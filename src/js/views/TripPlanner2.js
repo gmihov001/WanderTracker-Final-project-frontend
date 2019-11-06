@@ -38,15 +38,17 @@ export const TripPlanner2 = props => (
 			<MyContext.Consumer>
 				{context => (
 					<React.Fragment>
-						{Object.keys(context.store.trip).map(id => (
-							<div key={id} className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
+						{Object.keys(context.store.trip).map((item, index) => (
+							<div
+								key={index}
+								className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 								<div className="col d-flex justify-content-between">
 									<h4 className="pageEntry">
-										Trip {context.store.trip[id].name} {context.store.trip[id].year}
+										Trip {context.store.trip[index].name} {context.store.trip[index].year}
 									</h4>
 								</div>
 								<div>
-									<Link to={`/TripDetails2/${context.store.trip[id].id}`}>
+									<Link to={`/TripDetails2/${index}`}>
 										<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
 									</Link>
 									<button className="smallButton bg-white px-2 mx-2">Delete</button>
