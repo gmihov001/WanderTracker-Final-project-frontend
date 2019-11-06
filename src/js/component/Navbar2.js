@@ -5,11 +5,16 @@ import CalIcon from "../../img/Calendar.png";
 import DocIcon from "../../img/Documents.png";
 import StampsIcon from "../../img/Stamps.png";
 import MapIcon from "../../img/MapLocation.png";
+import UserIcon from "../../img/user-03.png";
+import PropTypes from "prop-types"; //on top of the page
 
 export const Navbar2 = () => {
 	return (
-		<div className="wrapper bg-white">
-			<nav className="navbar navbar-expand-lg navbar-light  d-flex justify-content-center ">
+		<div className=" wrapper bg-white">
+			<nav className=" navbar navbar-expand-lg navbar-light  d-flex justify-content-center ">
+				<Link to="/HomePage">
+					<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
+				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -21,17 +26,17 @@ export const Navbar2 = () => {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 
-				<div className="collapse navbar-collapse  " id="navbarSupportedContent">
-					<div className="container navbar-nav mr-auto d-flex justify-content-between text-center">
+				<div className="collapse navbar-collapse" id="navbarSupportedContent">
+					<div className="container navbar-nav mr-5 pr-5 d-flex justify-content-end text-center">
 						<Link to="/Stamps">
-							<div>
+							<div className="navicon-cont p-2 pl-5 flex-fill bd-highlight">
 								<img className="icons-navbar navbar-brand mb-0 h1" title="Go Stamps" src={StampsIcon} />
 
 								<p>Stamps</p>
 							</div>
 						</Link>
 						<Link to="/TravelDoc">
-							<div>
+							<div className="p-2 pl-5 flex-fill bd-highlight ">
 								<img
 									className="icons-navbar navbar-brand mb-0 h1"
 									title="Go To Travel Documets"
@@ -41,19 +46,25 @@ export const Navbar2 = () => {
 							</div>
 						</Link>
 						<Link to="/Map">
-							<div>
+							<div className="p-2 pl-5 flex-fill bd-highlight ">
 								<img className="icons-navbar navbar-brand mb-0 h1" title="Go To Maps" src={MapIcon} />
 								<p>Map</p>
 							</div>
 						</Link>
 						<Link to="/TripPlanner">
-							<div>
+							<div className="p-2 pl-5 flex-fill bd-highlight ">
 								<img
 									className="icons-navbar navbar-brand mb-0 h1 "
 									title="Go To Travel Planner"
 									src={CalIcon}
 								/>
 								<p>Trip Planner</p>
+							</div>
+						</Link>
+						<Link to="/HomePage">
+							<div className="p-2 pl-5 flex-fill bd-highlight ">
+								<img className="icons-navbar navbar-brand mb-0 h1" src={UserIcon} />
+								<p>Profile</p>
 							</div>
 						</Link>
 					</div>

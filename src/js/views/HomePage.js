@@ -7,14 +7,7 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export const HomePage = () => (
 	<div className="wrapper">
-		<div className="container-fluid d-flex bg-white justify-content-between">
-			<Link to="/HomePage">
-				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
-			</Link>
-			<Link to="/">
-				<button className="navbar-signup btn text-danger ">Sign Out</button>
-			</Link>
-		</div>
+		<Navbar2 />
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-3 px-0">
@@ -37,8 +30,11 @@ export const HomePage = () => (
 					</Link>
 				</div>
 			</div>
-
-			<Navbar2 />
+			<Link to="/">
+				<button type="button" className="logout btn ">
+					Log Out
+				</button>
+			</Link>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col d-flex justify-content-between">
 					<h4 className="pageEntry">Travel Tip 1</h4>
