@@ -46,7 +46,9 @@ export const TripPlanner2 = props => (
 									</h4>
 								</div>
 								<div>
-									<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
+									<Link to={`/TripDetails2/${context.store.trip[id].id}`}>
+										<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
+									</Link>
 									<button className="smallButton bg-white px-2 mx-2">Delete</button>
 								</div>
 							</div>
