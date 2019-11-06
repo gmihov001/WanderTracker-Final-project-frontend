@@ -9,7 +9,7 @@ import UserIcon from "../../img/user-03.png";
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
 export const Map = () => (
-	<div className="container-fluid wrapper bg-white">
+	<div className="wrapper bg-white">
 		<div className="container-fluid d-flex justify-content-between">
 			<Link to="/HomePage">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
