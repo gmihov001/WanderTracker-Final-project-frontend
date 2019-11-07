@@ -16,36 +16,38 @@ export const MainGate = () => (
 				<div className="map-landing  img-fluid ">
 					<img id="worldMap" src={Map_Landing} />
 				</div>
-				<div className="main text-white mx-auto shadow  w-75">
-					<h2 className="text-center p-3">Plan Trips. Make Memories. Save Memories</h2>
+				<div className="main text-white mx-auto shadow  w-75 ">
+					<h2 className="text-center p-3">Plan, Save and Make Memories</h2>
 				</div>
 				<div className="d-flex justify-content-between m-1 text-secondary mx-auto">
-					<span className="icon m-2 p-4">
-						<center>
-							<img src={CalIcon} className="icon-main m-2" />
-							<h4>Plan</h4>
-							<br />
-							Plan your trip <br />
-							from initial ideas to final itinerary
-						</center>
-					</span>
-					<span className="icon m-2 p-4">
-						<center>
-							<img src={DocIcon} className="icon-main m-2" />
-							<h4>Keep</h4>
-							<br />
-							Scan and keep all your travel documents <br /> to access from anywhere if lost
-						</center>
-					</span>
-					<span className="icon m-2 p-4">
-						<center>
-							<img src={SaveIcon} className="icon-main m-2" />
-							<h4>Save</h4>
-							<br />
-							Save and share map locations, <br />
-							passport stamps and other memories
-						</center>
-					</span>
+					<div className="row justify-content-center mx-auto">
+						<span className="icon m-2 p-4">
+							<center>
+								<img src={CalIcon} className="icon-main m-2 " />
+								<h4>Plan</h4>
+								<br />
+								Plan your trip <br />
+								from initial ideas to final itinerary
+							</center>
+						</span>
+						<span className="icon m-2 p-4">
+							<center>
+								<img src={DocIcon} className="icon-main m-2 " />
+								<h4>Keep</h4>
+								<br />
+								Scan and keep all your travel documents <br /> to access from anywhere if lost
+							</center>
+						</span>
+						<span className="icon m-2 p-4">
+							<center>
+								<img src={SaveIcon} className="icon-main m-2 " />
+								<h4>Save</h4>
+								<br />
+								Save and share map locations, <br />
+								passport stamps and other memories
+							</center>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
