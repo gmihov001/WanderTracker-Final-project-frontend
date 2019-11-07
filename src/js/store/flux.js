@@ -1,18 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
 			trip: [
 				{
 					name: "Greece",
@@ -21,12 +9,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					contacts: [
 						{
 							contact: "First Greek contact",
-							address: "Street 1",
+							address: "Greek Street 1",
 							phone: "111.222.333"
 						},
 						{
 							contact: "Second Greek contact",
-							address: "Street 2",
+							address: "Greek Street 2",
 							phone: "111.222.444"
 						}
 					],
@@ -43,15 +31,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					itinerary: [
 						{
 							date: "01/01/2020",
-							content: "Walking tour at 8am"
+							content: "Walking tour Greece at 8am"
 						},
 						{
 							date: "02/01/2020",
-							content: "Bike tour at 9am"
+							content: "Bike tour Greece at 9am"
 						},
 						{
 							date: "03/01/2020",
-							content: "Museum 10am"
+							content: "Museum Greece 10am"
 						}
 					]
 				},
@@ -62,12 +50,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					contacts: [
 						{
 							contact: "First Spanish contact",
-							address: "Street 1",
+							address: "Spanish Street 1",
 							phone: "111.222.333"
 						},
 						{
 							contact: "Second Spanish contact",
-							address: "Street 2",
+							address: "Spanish Street 2",
 							phone: "111.222.444"
 						}
 					],
@@ -103,12 +91,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					contacts: [
 						{
 							contact: "First Italian contact",
-							address: "Street 1",
+							address: "Italian Street 1",
 							phone: "111.222.333"
 						},
 						{
 							contact: "Second Italian contact",
-							address: "Street 2",
+							address: "Italian Street 2",
 							phone: "111.222.444"
 						}
 					],

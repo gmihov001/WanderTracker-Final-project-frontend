@@ -4,10 +4,9 @@ import { Navbar2 } from "../component/Navbar2";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 import UserIcon from "../../img/user-03.png";
 import AddIcon from "../../img/addbutton.png";
+import { MyContext } from "../store/appContext";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
-export const TripPlanner = () => (
+export const TripPlanner = props => (
 	<div className="wrapper">
 		<Navbar2 />
 		<div className="container">
@@ -17,26 +16,30 @@ export const TripPlanner = () => (
 				</div>
 			</div>
 
-			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
-				<div className="col d-flex justify-content-between">
-					<h4 className="pageEntry">Trip Greece 2019</h4>
-				</div>
-				<div>
-					<Link to="/TripDetails">
-						<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
-					</Link>
-					<button className="smallButton bg-white px-2 mx-2">Delete</button>
-				</div>
-			</div>
-			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
-				<div className="col d-flex justify-content-between">
-					<h4 className="pageEntry">Trip Spain 2020</h4>
-				</div>
-				<div>
-					<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
-					<button className="smallButton bg-white px-2 mx-2">Delete</button>
-				</div>
-			</div>
+			<MyContext.Consumer>
+				{context => (
+					<React.Fragment>
+						{Object.keys(context.store.trip).map((item, index) => (
+							<div
+								key={index}
+								className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
+								<div className="col d-flex justify-content-between">
+									<h4 className="pageEntry">
+										Trip {context.store.trip[index].name} {context.store.trip[index].year}
+									</h4>
+								</div>
+								<div>
+									<Link to={`/TripDetails/${index}`}>
+										<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
+									</Link>
+									<button className="smallButton bg-white px-2 mx-2">Delete</button>
+								</div>
+							</div>
+						))}
+					</React.Fragment>
+				)}
+			</MyContext.Consumer>
+
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
 					<p className="text-center py-2 px-3">
