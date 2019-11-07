@@ -17,7 +17,7 @@ export const MainGate = () => (
 					<img id="worldMap" src={Map_Landing} />
 				</div>
 				<div className="main text-white mx-auto shadow  w-75">
-					<h2 className="text-center p-3">Plan Trips. Make Memories. Save Memories</h2>
+					<h2 className="text-center p-3">Plan, Save and Make Memories</h2>
 				</div>
 				<div className="d-flex justify-content-between m-1 text-secondary mx-auto">
 					<span className="icon m-2 p-4">
