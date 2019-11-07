@@ -10,8 +10,8 @@ import PropTypes from "prop-types"; //on top of the page
 
 export const Navbar2 = () => {
 	return (
-		<div className=" wrapper bg-white">
-			<nav className=" navbar navbar-expand-lg navbar-light  d-flex justify-content-center ">
+		<div className="wrapper bg-white">
+			<nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-center ">
 				<Link to="/HomePage">
 					<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 				</Link>
@@ -29,12 +29,12 @@ export const Navbar2 = () => {
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<div className="container navbar-nav mr-5 pr-5 d-flex justify-content-end text-center">
 						<Link to="/Stamps">
-							<div className="navicon-cont p-2 pl-5 flex-fill bd-highlight">
+							<div className="navicon-cont p-1 pl-5 flex-fill bd-highlight">
 								<img className="icons-navbar navbar-brand mb-0 h1" title="Go Stamps" src={StampsIcon} />
 							</div>
 						</Link>
 						<Link to="/TravelDoc">
-							<div className="p-2 pl-5 flex-fill bd-highlight ">
+							<div className="p-1 pl-5 flex-fill bd-highlight ">
 								<img
 									className="icons-navbar navbar-brand mb-0 h1"
 									title="Go To Travel Documets"
@@ -43,12 +43,12 @@ export const Navbar2 = () => {
 							</div>
 						</Link>
 						<Link to="/Map">
-							<div className="p-2 pl-5 flex-fill bd-highlight ">
+							<div className="p-1 pl-5 flex-fill bd-highlight ">
 								<img className="icons-navbar navbar-brand mb-0 h1" title="Go To Maps" src={MapIcon} />
 							</div>
 						</Link>
 						<Link to="/TripPlanner">
-							<div className="p-2 pl-5 flex-fill bd-highlight ">
+							<div className="p-1 pl-5 flex-fill bd-highlight ">
 								<img
 									className="icons-navbar navbar-brand mb-0 h1 "
 									title="Go To Travel Planner"
