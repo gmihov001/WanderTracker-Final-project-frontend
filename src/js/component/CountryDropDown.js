@@ -4,8 +4,6 @@ export const CountryDropDown = () => {
 	return (
 		<div>
 			<div>
-				<label htmlFor="country">Select a Country</label>
-
 				<select id="country" name="country" className="form-control">
 					<option value="Select Country">Select a Country</option>
 					<option value="Afghanistan">Afghanistan</option>

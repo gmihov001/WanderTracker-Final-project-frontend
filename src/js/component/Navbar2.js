@@ -59,7 +59,11 @@ export const Navbar2 = () => {
 
 						<Link to="/HomePage">
 							<div className="p-2 pl-5 flex-fill bd-highlight ">
-								<img className="icons-navbar navbar-brand mb-0 h1" src={UserIcon} />
+								<img
+									className="icons-navbar navbar-brand mb-0 h1"
+									title="Go To Profile"
+									src={UserIcon}
+								/>
 							</div>
 						</Link>
 					</div>
