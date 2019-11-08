@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			trip: [
 				{
 					name: "Greece",
+					month: "September",
 					year: 2019,
 					id: 12012019,
 					contacts: [
@@ -45,6 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					name: "Spain",
+					month: "January",
 					year: 2021,
 					id: 15012019,
 					contacts: [
@@ -86,6 +88,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				},
 				{
 					name: "Italy",
+					month: "May",
 					year: 2020,
 					id: 18012019,
 					contacts: [

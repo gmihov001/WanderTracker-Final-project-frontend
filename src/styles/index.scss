@@ -48,7 +48,7 @@
 .xlButton:hover {
     background-color: lightgreen;
     color: #fe5000;
-    border: solid 1px #fe5000;
+    border: solid 2px #fe5000;
     border-radius: 15px;
 }
 
@@ -125,12 +125,17 @@ button:hover {
 
 
 .logo-navbar{
-height: 4rem;
+    height: 4rem;
 }
 
 .icons-navbar{
-    width:50px;
+    width: 50px;
+    border: solid 1px white;
+    border-radius: 50px;
+}
 
+.icons-navbar:hover{
+    border: solid 1px #fe5000;
 }
 
 .navicon-cont{
