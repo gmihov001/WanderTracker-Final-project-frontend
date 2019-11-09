@@ -5,6 +5,7 @@ import CamIcon from "../../img/Image.png";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 import StampPic from "../../img/stamp.jpg";
 import UserIcon from "../../img/user-03.png";
+import Cam from "../component/Cam";
 
 <a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
 
@@ -19,7 +20,7 @@ export const AddStamp = () => (
 			</div>
 			<div className="row my-5 d-flex justify-content-center">
 				<div className="col d-flex justify-content-center mb-5">
-					<Link to="/Stamps">
+					<Link to="/Cam">
 						<img
 							className="take-pic navbar-brand mb-0 h1"
 							title="Take a picture of your stamp"

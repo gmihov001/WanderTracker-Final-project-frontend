@@ -19,7 +19,7 @@ export const AddTravelDoc = () => (
 			</div>
 			<div className="row my-5 d-flex justify-content-center">
 				<div className="col d-flex justify-content-center mb-5">
-					<Link to="/TravelDoc">
+					<Link to="/Cam">
 						<img
 							className="take-pic navbar-brand mb-0 h1"
 							title="Take a picture of your stamp"
@@ -35,7 +35,9 @@ export const AddTravelDoc = () => (
 			</div>
 			<div className="row my-5 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="xlButton text-center py-2 px-3">Save</h1>
+					<Link to="/TravelDoc">
+						<h1 className="xlButton text-center py-2 px-3">Save</h1>
+					</Link>
 				</div>
 			</div>
 		</div>
