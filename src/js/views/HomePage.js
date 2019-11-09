@@ -9,14 +9,14 @@ export const HomePage = () => (
 	<div className="wrapper">
 		<Navbar2 />
 		<div className="container">
-			<div className="row my-4 d-flex justify-content-center">
-				<div className="col-md-3 px-0">
+			<div className="row my-4 d-flex justify-content-center text-center">
+				<div className="col-md-3 px-0 ">
 					<img
 						src="https://cdn2.vectorstock.com/i/1000x1000/72/96/emotion-avatar-man-happy-successful-face-vector-13577296.jpg"
 						className="rounded-circle mx-auto d-block img-fluid"
 					/>
 				</div>
-				<div className="col text-left">
+				<div className="col mt-5 text-left">
 					<p className="text py-2 px-3">
 						Passport Number: <strong>234987456</strong>
 					</p>
