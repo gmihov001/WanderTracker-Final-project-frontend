@@ -1,19 +1,21 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			trip: [
+			trips: [
 				{
 					name: "Greece",
 					month: "September",
-					year: 2019,
-					id: 12012019,
+					year: "2019",
+					id: "12012019",
 					contacts: [
 						{
+							id: "234",
 							contact: "First Greek contact",
 							address: "Greek Street 1",
 							phone: "111.222.333"
 						},
 						{
+							id: "567",
 							contact: "Second Greek contact",
 							address: "Greek Street 2",
 							phone: "111.222.444"
@@ -21,24 +23,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 					],
 					places: [
 						{
+							id: "323",
 							place: "First Cool Place in Greece",
 							url: "http://www.visitgreece.gr/en/main_cities"
 						},
 						{
+							id: "989",
 							place: "Second Cool Place in Greece",
 							url: "http://www.visitgreece.gr/"
 						}
 					],
 					itinerary: [
 						{
+							id: "989",
 							date: "01/01/2020",
 							content: "Walking tour Greece at 8am"
 						},
 						{
+							id: "345",
 							date: "02/01/2020",
 							content: "Bike tour Greece at 9am"
 						},
 						{
+							id: "765",
 							date: "03/01/2020",
 							content: "Museum Greece 10am"
 						}
@@ -47,8 +54,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					name: "Spain",
 					month: "January",
-					year: 2021,
-					id: 15012019,
+					year: "2021",
+					id: "15012019",
 					contacts: [
 						{
 							contact: "First Spanish contact",
@@ -89,8 +96,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					name: "Italy",
 					month: "May",
-					year: 2020,
-					id: 18012019,
+					year: "2020",
+					id: "18012019",
 					contacts: [
 						{
 							contact: "First Italian contact",
@@ -140,6 +147,51 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
+
+			editTrip: (id, object) => {
+				const store = getStore();
+				const change = store.trips.map(item => {
+					if (item.id == id) {
+						return { ...trips, ...object };
+					}
+					return item;
+				});
+
+				setStore({ trips: change });
+			},
+
+			deleteTrip: id => {
+				const store = getStore();
+				const change = store.trips.filter(item => {
+					return item.id != id;
+				});
+				setStore({ trips: change });
+			},
+
+			addTrip: object => {
+				const store = getStore();
+
+				const newTrips = store.trips.concat(object);
+				setStore({ trips: newTrips });
+			},
+
+			//deletePlace
+
+			//deleteItinerary
+
+			deleteContact: (tripID, contactID) => {
+				const store = getStore();
+
+				const temp = store.trips.map(theTrip => {
+					if (theTrip.id == tripID) {
+						theTrip.contacts = store.trips.contacts.filter(contact => {
+							return contact.id != contactID;
+						});
+					}
+				});
+				setStore({ trips: temp });
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

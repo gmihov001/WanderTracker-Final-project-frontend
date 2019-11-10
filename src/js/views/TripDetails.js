@@ -34,10 +34,10 @@ export class TripDetails extends React.Component {
 								</div>
 
 								<div className="row py-4 my-4 d-flex bg-white shadow">
-									<div className="col-md-4 ">
+									<div className="col-md-4 bg-light by-2">
 										<h4 className="pageEntry">Contacts</h4>
 									</div>
-									<div className="col-md-8 d-flex justify-content-end">
+									<div className="col-md-8 bg-light d-flex justify-content-end py-2">
 										<input type="text" className="textfield col-md-6" placeholder="New Contact" />
 										<button className="addButton bg-white px-2 mx-2">Add</button>
 									</div>
