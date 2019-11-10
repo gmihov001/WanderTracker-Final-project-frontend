@@ -20,7 +20,7 @@ export const TravelDoc = () => (
 			</div>
 
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
-				<div className="col d-flex ">
+				<div className="col">
 					<img className=" navbar-brand mb-0 h1 img-fluid" src={passport} />
 				</div>
 				<div>
@@ -30,8 +30,11 @@ export const TravelDoc = () => (
 				</div>
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
-				<div className="col d-flex">
-					<img className="travel-doc navbar-brand mb-0 h1 img-fluid" src={BoardingPass} />
+				<div className="col">
+					<img
+						className="travel-doc navbar-brand mb-0 h1 img-fluid"
+						src="https://i.huffpost.com/gen/1936992/thumbs/o-TICKET-570.jpg?16"
+					/>
 				</div>
 				<div>
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>

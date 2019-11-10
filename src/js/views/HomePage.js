@@ -9,14 +9,22 @@ export const HomePage = () => (
 	<div className="wrapper">
 		<Navbar2 />
 		<div className="container">
-			<div className="row my-4 d-flex justify-content-center text-center">
-				<div className="col-md-3 px-0 ">
+			<div className="row my-4 d-flex justify-content-end text-center">
+				<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 px-0 ">
 					<img
-						src="https://cdn2.vectorstock.com/i/1000x1000/72/96/emotion-avatar-man-happy-successful-face-vector-13577296.jpg"
-						className="rounded-circle mx-auto d-block img-fluid"
+						src="https://images.unsplash.com/photo-1549986432-5060067864b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+						className="profile-pic mx-auto d-block img-fluid"
 					/>
+					<p className="profile-name text py-2 px-3">
+						<strong>John Smith</strong>
+						<br />
+						<button className="edit-profileIcon bg-lightgrey px-2 mx-2">
+							<i className="fas fa-cog"></i>
+						</button>
+					</p>
 				</div>
-				<div className="col mt-5 text-left">
+
+				<div className="col mt-3 text-left">
 					<p className="text py-2 px-3">
 						Passport Number: <strong>234987456</strong>
 					</p>
@@ -35,7 +43,9 @@ export const HomePage = () => (
 					</Link>
 				</div>
 			</div>
+		</div>
 
+		<div className="container mb-5">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
 					<h1 className="pageTitle text-center py-2 px-3">TRAVEL TIPS</h1>

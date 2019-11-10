@@ -11,7 +11,7 @@ import PropTypes from "prop-types"; //on top of the page
 export const Navbar2 = () => {
 	return (
 		<div className="wrapper bg-white">
-			<nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-center ">
+			<nav className="navbar2 navbar navbar-expand-lg navbar-light d-flex justify-content-center">
 				<Link to="/HomePage">
 					<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 				</Link>
