@@ -25,48 +25,58 @@ export const Navbar2 = () => {
 					aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
 				</button>
-
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
-					<div className="container navbar-nav mr-5 pr-5 d-flex justify-content-end text-center">
-						<Link to="/Stamps">
-							<div className="navicon-cont p-1 pl-5 flex-fill bd-highlight">
-								<img className="icons-navbar navbar-brand mb-0 h1" title="Go Stamps" src={StampsIcon} />
-							</div>
-						</Link>
-						<Link to="/TravelDoc">
-							<div className="p-1 pl-5 flex-fill bd-highlight ">
+					<section className="container s2 navbar-nav mr-0  text-center">
+						<div className="navicon-cont p-1 pl-5 flex-fill bd-highlight">
+							<Link to="/Stamps">
 								<img
-									className="icons-navbar navbar-brand mb-0 h1"
+									className="iconbtn icons-navbar navbar-brand mb-0 h1"
+									title="Go Stamps"
+									src={StampsIcon}
+								/>
+							</Link>
+						</div>
+
+						<div className="p-1 pl-5 flex-fill bd-highlight ">
+							<Link to="/TravelDoc">
+								<img
+									className="iconbtn icons-navbar navbar-brand mb-0 h1"
 									title="Go To Travel Documets"
 									src={DocIcon}
 								/>
-							</div>
-						</Link>
-						<Link to="/Map">
-							<div className="p-1 pl-5 flex-fill bd-highlight ">
-								<img className="icons-navbar navbar-brand mb-0 h1" title="Go To Maps" src={MapIcon} />
-							</div>
-						</Link>
-						<Link to="/TripPlanner">
-							<div className="p-1 pl-5 flex-fill bd-highlight ">
+							</Link>
+						</div>
+
+						<div className="p-1 pl-5 flex-fill bd-highlight ">
+							<Link to="/Map">
 								<img
-									className="icons-navbar navbar-brand mb-0 h1 "
+									className="iconbtn icons-navbar navbar-brand mb-0 h1"
+									title="Go To Maps"
+									src={MapIcon}
+								/>
+							</Link>
+						</div>
+
+						<div className="p-1 pl-5 flex-fill bd-highlight ">
+							<Link to="/TripPlanner">
+								<img
+									className="iconbtn icons-navbar navbar-brand mb-0 h1 "
 									title="Go To Travel Planner"
 									src={CalIcon}
 								/>
-							</div>
-						</Link>
+							</Link>
+						</div>
 
-						<Link to="/HomePage">
-							<div className="p-2 pl-5 flex-fill bd-highlight ">
+						<div className="p-2 pl-5 flex-fill bd-highlight ">
+							<Link to="/HomePage">
 								<img
-									className="icons-navbar navbar-brand mb-0 h1"
+									className="iconbtn icons-navbar navbar-brand mb-0 h1"
 									title="Go To Profile"
 									src={UserIcon}
 								/>
-							</div>
-						</Link>
-					</div>
+							</Link>
+						</div>
+					</section>
 				</div>
 			</nav>
 		</div>
