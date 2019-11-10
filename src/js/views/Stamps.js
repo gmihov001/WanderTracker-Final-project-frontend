@@ -33,7 +33,7 @@ export const Stamps = () => (
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 				<div className="col d-flex">
-					<img className="flag mr-5" src="https://www.countryflags.io/hn/shiny/64.png" />
+					<img className="flag mr-5" src="https://www.countryflags.io/hn/flat/64.png" />
 
 					<img className="logo-navbar navbar-brand mb-0 h1 " src={StampPic} />
 					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
