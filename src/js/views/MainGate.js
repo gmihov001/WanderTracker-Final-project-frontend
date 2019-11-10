@@ -26,22 +26,23 @@ export const MainGate = () => (
 								<img src={CalIcon} className="icon-main m-2 " />
 								<h4>Plan</h4>
 								<br />
-								Plan your trip <br />
+								Plan and organize your trips, <br />
 								from initial ideas to final itinerary
 							</center>
 						</span>
 						<span className="icon m-2 p-4">
 							<center>
 								<img src={DocIcon} className="icon-main m-2 " />
-								<h4>Keep</h4>
+								<h4>Save</h4>
 								<br />
-								Scan and keep all your travel documents <br /> to access from anywhere if lost
+								Scan and store all your travel documents. <br /> Have quick access in the event of an
+								emergency.
 							</center>
 						</span>
 						<span className="icon m-2 p-4">
 							<center>
 								<img src={SaveIcon} className="icon-main m-2 " />
-								<h4>Save</h4>
+								<h4>Keep</h4>
 								<br />
 								Save and share map locations, <br />
 								passport stamps and other memories

@@ -28,12 +28,7 @@ export class LogIn extends React.Component {
 					<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 				</Link>
 				<div className="container main rounded shadow p-3">
-					<div className="row">
-						<div className="col-md-4 col-md-offset-3  text-center title">
-							<h1>Want to Connect?</h1>
-							<div className="bar" />
-						</div>
-					</div>
+					<div className="row"></div>
 					<div className="row">
 						<div className="col-md-4 col-md-offset-3 form">
 							<h2>Login</h2>

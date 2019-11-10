@@ -41,18 +41,20 @@
 }
 
 .xlButton {
-    background-color: #fe5000;
+    background-color: #fd6e2b;
     color:white;
     border: solid 2px white;
     border-radius: 15px;
     box-shadow: 5px 10px 15px lightgray;
+    text-decoration: none;
 }
 
 .xlButton:hover {
-    background-color: lightgreen;
+    background-color:  white;
     color: #fe5000;
     border: solid 2px #fe5000;
     border-radius: 15px;
+    text-decoration: none;
 }
 
 .smallButton {
@@ -114,6 +116,26 @@ hr {
     border: solid 1px #fd6e2b;
     width: 100%
 }
+.navbar-toggler:hover{
+    background-color:lightgray;
+}
+
+.profile-pic{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.profile-name{
+    font-size: 30px;
+}
+
+.edit-profileIcon{
+    border:none;
+    background: #f5f5f5;
+    font-size: 22px;
+}
+
 
 /*------Navigation--------*/
 
@@ -131,15 +153,7 @@ button:hover {
     height: 4rem;
 }
 
-.icons-navbar{
-    width: 50px;
-    border: solid 1px white;
-    border-radius: 50px;
-}
 
-.icons-navbar:hover{
-    border: solid 1px #fe5000;
-}
 
 .navicon-cont{
     text-align: center;
@@ -319,6 +333,23 @@ footer p {
     height: auto;
 }
 
+/*-------Icons Transition------*/
 
 
+.iconbtn {
+    width: 60px;
+    height: 70px;
+}
 
+.s2 .iconbtn:hover {
+  animation: ro 2s linear infinite;
+}
+
+@keyframes ro {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

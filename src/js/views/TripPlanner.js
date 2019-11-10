@@ -12,7 +12,7 @@ export const TripPlanner = props => (
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3">Trip Planner</h1>
+					<h1 className="pageTitle text-center py-2 px-3">TRIP PLANNER</h1>
 				</div>
 			</div>
 
