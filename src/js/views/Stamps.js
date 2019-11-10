@@ -14,16 +14,13 @@ export const Stamps = () => (
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3">Stamps</h1>
+					<h1 className="pageTitle text-center py-2 px-3">STAMPS</h1>
 				</div>
 			</div>
 
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 				<div className="col d-flex ">
-					<img
-						className="logo-navbar navbar-brand mb-0 h1"
-						src="http://icons.veryicon.com/png/Flag/Rounded%20World%20Flags/Tokelau%20Flag.png"
-					/>
+					<img className="flag mr-5" src="https://www.countryflags.io/ca/flat/64.png" />
 					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
 					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
 				</div>
@@ -36,10 +33,7 @@ export const Stamps = () => (
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 				<div className="col d-flex">
-					<img
-						className="logo-navbar navbar-brand mb-0 h1"
-						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6iLhj7Hy5blSwlkxPeJ2wS5zcplAQkEUYuXTBJcBG3_SEJM1_&s"
-					/>
+					<img className="flag mr-5" src="https://www.countryflags.io/hn/shiny/64.png" />
 
 					<img className="logo-navbar navbar-brand mb-0 h1 " src={StampPic} />
 					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />

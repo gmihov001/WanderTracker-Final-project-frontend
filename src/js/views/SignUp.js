@@ -11,12 +11,7 @@ export const SignUp = () => {
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 			</Link>
 			<div className="container main rounded shadow p-3">
-				<div className="text-cont row">
-					<div className="col-md-4 col-md-offset-3 align-center text-center title">
-						<h1>Want to Connect?</h1>
-						<div className="bar" />
-					</div>
-				</div>
+				<div className="text-cont row"></div>
 				<div className="input-cont row">
 					<div className="input-cont2 col-md-4 col-md-offset-3 form">
 						<h2>Sign Up</h2>
