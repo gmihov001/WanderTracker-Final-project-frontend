@@ -12,20 +12,20 @@ export const TripPlanner = props => (
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3">TRIP PLANNER</h1>
+					<h1 className="pageTitle text-center py-2 px-3">Trip Planner</h1>
 				</div>
 			</div>
 
 			<MyContext.Consumer>
 				{context => (
 					<React.Fragment>
-						{Object.keys(context.store.trip).map((item, index) => (
+						{Object.keys(context.store.trips).map((item, index) => (
 							<div
 								key={index}
 								className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
 								<div className="col d-flex justify-content-between">
 									<h4 className="pageEntry">
-										Trip {context.store.trip[index].name} {context.store.trip[index].year}
+										Trip {context.store.trips[index].name} {context.store.trips[index].year}
 									</h4>
 								</div>
 								<div>

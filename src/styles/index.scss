@@ -6,6 +6,38 @@
     font-weight: 400;
 }
 
+.glass {
+    /* background styles */
+	background-color: #fe5000; /*for compatibility with older browsers*/
+	background-image: linear-gradient(#fe5000, orange);
+
+	/* text styles */
+	text-decoration: none;
+	color: #fff;
+}
+
+.glass:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.glass:hover {
+	background: linear-gradient(rgb(12, 160, 44),#0fa);
+}
+
+.glass:active {
+	background: linear-gradient(slategray, lightgray);
+}
+.addWindow {
+    border-radius: 30px;
+    border: solid 2px lightgray;
+}
+
 .x {
     color: lightgray;
     padding-left: 8px;
@@ -31,30 +63,33 @@
 
 .pageEntry {
     color: #fe5000;
-    font-weight: 400;
+    font-weight: 300;
     text-shadow: 2px 2px 4px lightgray;
 }
 
 .pageEntry:hover {
-    text-shadow: none;
-    text-shadow: 2px 2px 4px gray;
+    text-shadow: 2px 2px 6px lightgray;
 }
 
 .xlButton {
-    background-color: #fd6e2b;
+    background-color: #fe5000;
     color:white;
     border: solid 2px white;
     border-radius: 15px;
     box-shadow: 5px 10px 15px lightgray;
     text-decoration: none;
+    width: 60% !important;
 }
 
 .xlButton:hover {
-    background-color:  white;
-    color: #fe5000;
-    border: solid 2px #fe5000;
+    background-color:  lightgreen;
     border-radius: 15px;
     text-decoration: none;
+}
+
+.xlButton:active {
+    background-color: gray;
+    color: white;
 }
 
 .smallButton {

@@ -49,7 +49,7 @@ export class AddTrip extends React.Component {
 		return (
 			<div className="wrapper">
 				<Navbar2 />
-				<div className="container bg-white shadow-lg py-4 mt-5">
+				<div className="container addWindow bg-white shadow-lg py-4 mt-5">
 					<form>
 						<div className="row py-4 my-4 d-flex justify-content-center">
 							<div className="col-md-4 d-block">
@@ -98,9 +98,9 @@ export class AddTrip extends React.Component {
 				<MyContext.Consumer>
 					{({ actions }) => (
 						<div className="row my-5 d-flex justify-content-center">
-							<div className="col-md-4 text-center">
+							<div className="col-md-4 justify-content-center">
 								<h2
-									className="xlButton text-center py-2 px-3"
+									className="xlButton glass text-center py-2 px-3 m-auto"
 									onClick={() => {
 										actions.addTrip(this.state.trip);
 									}}>
