@@ -8,7 +8,7 @@ export class TripDetails extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			item: {}
+			trip: {}
 		};
 	}
 
@@ -22,39 +22,37 @@ export class TripDetails extends React.Component {
 				<Navbar2 />
 				<MyContext.Consumer>
 					{context => {
-						let trip = context.store.trip[this.props.match.params.id];
+						let thisTrip = context.store.trips[this.props.match.params.id];
+						console.log(thisTrip);
 						return (
 							<div className="container py-5">
 								<div className="row my-5 d-flex justify-content-center">
 									<div className="col-md-4 text-center">
 										<h1 className="pageTitle text-center px-3">
-											{trip.name} {trip.year}
+											{thisTrip.name} {thisTrip.year}
 										</h1>
 									</div>
 								</div>
 
 								<div className="row py-4 my-4 d-flex bg-white shadow">
-									<div className="col-md-4 bg-light by-2">
+									<div className="col-md-4 by-2">
 										<h4 className="pageEntry">Contacts</h4>
 									</div>
-									<div className="col-md-8 bg-light d-flex justify-content-end py-2">
+									<div className="col-md-8 d-flex justify-content-end py-2">
 										<input type="text" className="textfield col-md-6" placeholder="New Contact" />
 										<button className="addButton bg-white px-2 mx-2">Add</button>
 									</div>
 
 									<div className="d-block col-md-12 justify-content-end">
-										{Object.keys(trip.contacts).map((item, index) => (
+										{thisTrip.contacts.map((item, index) => (
 											<div key={index} className="row px-3 d-flex justify-content-end">
 												<div className="col-md-8 justify-content-end">
 													<span type="text" className="entry text-right px-3">
-														{trip.contacts[index].contact} , {trip.contacts[index].address}{" "}
-														, {trip.contacts[index].phone}
+														{item.contact} , {item.address} , {item.phone}
 													</span>
 												</div>
-												<div className="col-md-1 d-flex justify-content-between list-inline">
-													<div className="x">
-														<strong>x</strong>
-													</div>
+												<div className="col-md-2 x d-flex justify-content-between">
+													<strong>x</strong>
 												</div>
 											</div>
 										))}
@@ -71,14 +69,14 @@ export class TripDetails extends React.Component {
 									</div>
 
 									<div className="d-block col-md-12 justify-content-end">
-										{Object.keys(trip.places).map((item, index) => (
+										{thisTrip.places.map((item, index) => (
 											<div key={index} className="row px-3 d-flex justify-content-end">
 												<div className="col-md-8 justify-content-end">
 													<span type="text" className="entry text-right px-3">
-														{trip.places[index].place} , {trip.places[index].url}
+														{item.place} , {item.url}
 													</span>
 												</div>
-												<div className="col-md-1 d-flex justify-content-between list-inline">
+												<div className="col-md-2 d-flex justify-content-between list-inline">
 													<div className="x">
 														<strong>x</strong>
 													</div>
@@ -98,14 +96,14 @@ export class TripDetails extends React.Component {
 									</div>
 
 									<div className="d-block col-md-12 justify-content-end">
-										{Object.keys(trip.itinerary).map((item, index) => (
+										{thisTrip.itinerary.map((item, index) => (
 											<div key={index} className="row px-3 d-flex justify-content-end">
 												<div className="col-md-8 justify-content-end">
 													<span type="text" className="entry text-right px-3">
-														{trip.itinerary[index].date} , {trip.itinerary[index].content}
+														{item.date} , {item.content}
 													</span>
 												</div>
-												<div className="col-md-1 d-flex justify-content-between list-inline">
+												<div className="col-md-2 d-flex justify-content-between list-inline">
 													<div className="x">
 														<strong>x</strong>
 													</div>

@@ -6,33 +6,45 @@
     font-weight: 400;
 }
 
-.glass {
-    /* background styles */
-	background-color: #fe5000; /*for compatibility with older browsers*/
+.xlButton {
+    background-color: #fe5000;
+    color:white;
+    border: solid 2px white;
+    border-radius: 15px;
+    box-shadow: 5px 10px 15px lightgray;
+    text-decoration: none;
+    width: 60% !important;
 	background-image: linear-gradient(#fe5000, orange);
+}
 
-	/* text styles */
+.xlButton:hover {
+    background-color:  lightgreen;
+    background: linear-gradient(rgb(12, 160, 37),rgb(0, 255, 115));
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.xlButton:active {
+    background-color: gray;
+    background: linear-gradient(gray, lightgray);
+    color: white;
+}
+
+.glass {
 	text-decoration: none;
-	color: #fff;
 }
 
 .glass:after {
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: calc(100% - 4px);
-	height: 50%;
-	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    content: '';
+    border-radius: 10px;
+    position: absolute;
+    top: 2px;
+    left: 114px;
+    width: calc(56%);
+    height: 50%;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
 }
 
-.glass:hover {
-	background: linear-gradient(rgb(12, 160, 44),#0fa);
-}
-
-.glass:active {
-	background: linear-gradient(slategray, lightgray);
-}
 .addWindow {
     border-radius: 30px;
     border: solid 2px lightgray;
@@ -71,27 +83,6 @@
     text-shadow: 2px 2px 6px lightgray;
 }
 
-.xlButton {
-    background-color: #fe5000;
-    color:white;
-    border: solid 2px white;
-    border-radius: 15px;
-    box-shadow: 5px 10px 15px lightgray;
-    text-decoration: none;
-    width: 60% !important;
-}
-
-.xlButton:hover {
-    background-color:  lightgreen;
-    border-radius: 15px;
-    text-decoration: none;
-}
-
-.xlButton:active {
-    background-color: gray;
-    color: white;
-}
-
 .smallButton {
     background-color: white !important;
     color: gray;
@@ -104,6 +95,7 @@
     background-color: #fe5000 !important;
     box-shadow: 0px 1px 15px orange;
     font-weight: 500;
+    border: solid 1px white;
 }
 
 .addButton {
@@ -211,8 +203,9 @@ button:hover {
 }
 .main {
   background: #fd6e2b;
-  margin-top:auto;
-  margin-bottom:90px;
+  border: solid 2px white;
+  margin-top: auto;
+  margin-bottom: 150px;
   //max-width: 100%;
   //height: 100vh;
   font-size: 10px;

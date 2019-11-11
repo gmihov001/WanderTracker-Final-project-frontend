@@ -6,11 +6,11 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export const SignUp = () => {
 	return (
-		<div>
+		<div className="wrapper">
 			<Link to="/">
 				<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 			</Link>
-			<div className="container main rounded shadow p-3">
+			<div className="container main rounded shadow-lg p-3 my-3">
 				<div className="text-cont row"></div>
 				<div className="input-cont row">
 					<div className="input-cont2 col-md-4 col-md-offset-3 form">
@@ -22,7 +22,7 @@ export const SignUp = () => {
 						<input type="password" name="password" placeholder="password" />
 						<br />
 						<input type="password" name="Confirm password" placeholder="Confirm password" />
-						<a className="btn btn-default login" href="#0">
+						<a className="btn btn-default shadow login" href="#0">
 							Submit
 						</a>
 					</div>
