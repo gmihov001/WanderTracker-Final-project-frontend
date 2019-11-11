@@ -75,6 +75,7 @@
 		"prop-types": "^15.7.2",
 		"react": "^16.11.0",
 		"react-bootstrap": "^1.0.0-beta.14",
+		"react-cam": "^1.0.2",
 		"react-dom": "^16.11.0",
 		"react-html5-camera-photo": "^1.5.2",
 		"react-polyfills": "0.0.1",
