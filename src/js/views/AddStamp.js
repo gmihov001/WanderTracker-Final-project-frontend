@@ -48,11 +48,10 @@ export const AddStamp = () => (
 					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
 				</div>
 			</div>
-
 			<div className="row my-5 d-flex justify-content-center">
-				<div className="col-md-4 text-center">
+				<div className="col-md-4 justify-content-center">
 					<Link to="/Stamps">
-						<h1 className="xlButton text-center py-2 px-3">Save</h1>
+						<h2 className="xlButton glass text-center py-2 px-3 m-auto">Save</h2>
 					</Link>
 				</div>
 			</div>
