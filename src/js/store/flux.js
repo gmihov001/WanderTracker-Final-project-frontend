@@ -176,11 +176,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ trips: newTrips });
 			},
 
-			//deletePlace
+			/*addContact: object => {
+                const store = getStore();
 
-			//deleteItinerary
+                const newContacts = store.trips.contacts.concat(object);
+                setStore({trips.contacts: newContacts});
+            },*/
 
-			deleteContact: (tripID, contactID) => {
+			//addPlace:
+
+			//addItinerary:
+
+			removeContact: (tripID, contactID) => {
 				const store = getStore();
 
 				const temp = store.trips.map(theTrip => {
@@ -192,6 +199,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 				setStore({ trips: temp });
 			},
+
+			//removePlace: id =>
+
+			//removeItinerary: id =>
 
 			changeColor: (index, color) => {
 				//get the store
