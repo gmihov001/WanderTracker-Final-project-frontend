@@ -27,9 +27,9 @@ export class Cam extends React.Component {
 				)}
 
 				<div className="row my-5 d-flex justify-content-center">
-					<div className="col-md-6 text-center">
-						<Link to="/TravelDoc">
-							<h1 className="xlButton text-center py-2 px-3">Save</h1>
+					<div className="col-md-4 justify-content-center">
+						<Link to="/Stamps">
+							<h2 className="xlButton glass text-center py-2 px-3 m-auto">Save</h2>
 						</Link>
 					</div>
 				</div>
