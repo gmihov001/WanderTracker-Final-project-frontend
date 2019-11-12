@@ -35,8 +35,10 @@ export const EmergContacts = () => (
 				</div>
 			</div>
 			<div className="row my-5 d-flex justify-content-center">
-				<div className="col-md-4 text-center">
-					<h1 className="xlButton text-center py-2 px-3">Save</h1>
+				<div className="col-md-4 justify-content-center">
+					<Link to="/HomePage">
+						<h2 className="xlButton glass text-center py-2 px-3 m-auto">Save</h2>
+					</Link>
 				</div>
 			</div>
 		</div>

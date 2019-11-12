@@ -16,7 +16,7 @@ export const Map = () => (
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3">MAP</h1>
+					<h1 className="pageTitle text-center py-2 px-3">Map</h1>
 				</div>
 			</div>
 

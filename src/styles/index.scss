@@ -146,6 +146,10 @@ hr {
 .navbar-toggler:hover{
     background-color:lightgray;
 }
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+  }
 
 .profile-pic{
     width: 250px;
@@ -161,6 +165,21 @@ hr {
     border:none;
     background: #f5f5f5;
     font-size: 22px;
+}
+.main-landing {
+    //background-color: rgba(250, 80, 0, 0.5);
+  background: #fd6e2b;
+  border: solid 2px white;
+  margin-top: auto;
+  margin-bottom: 50px;
+  width: 90%;
+  
+  
+  //height: 100vh;
+  //font-size: 92px;
+  //position: relative;
+  //bottom: 250px;
+  
 }
 
 
@@ -211,47 +230,47 @@ button:hover {
   font-size: 10px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
   font-size: 20px;
   padding: .55em;
   width: 100%;
   margin-bottom: 1em;
   border: none;
 }
-input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder,input[type=email]::-webkit-input-placeholder {
   color: #aaaaaa;
   position: relative;
   padding: 0;
   transition: all 0.5s ease;
 }
-input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder {
   color: #aaaaaa;
   position: relative;
   padding: 0;
   transition: all 0.5s ease;
 }
-input[type=text]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder {
   color: #aaaaaa;
   position: relative;
   padding: 0;
   transition: all 0.5s ease;
 }
-input[type=text]::placeholder, input[type=password]::placeholder {
+input[type=text]::placeholder, input[type=password]::placeholder, input[type=email]::placeholder {
   color: #aaaaaa;
   position: relative;
   padding: 0;
   transition: all 0.5s ease;
 }
-input[type=text]:hover::-webkit-input-placeholder, input[type=text]:focus::-webkit-input-placeholder, input[type=password]:hover::-webkit-input-placeholder, input[type=password]:focus::-webkit-input-placeholder {
+input[type=text]:hover::-webkit-input-placeholder, input[type=text]:focus::-webkit-input-placeholder, input[type=password]:hover::-webkit-input-placeholder, input[type=password]:focus::-webkit-input-placeholder, input[type=email]:hover::-webkit-input-placeholder, input[type=email]:focus::-webkit-input-placeholder {
   padding-top: 3em;
 }
-input[type=text]:hover:-ms-input-placeholder, input[type=text]:focus:-ms-input-placeholder, input[type=password]:hover:-ms-input-placeholder, input[type=password]:focus:-ms-input-placeholder {
+input[type=text]:hover:-ms-input-placeholder, input[type=text]:focus:-ms-input-placeholder, input[type=password]:hover:-ms-input-placeholder, input[type=password]:focus:-ms-input-placeholder, input[type=email]:hover:-ms-input-placeholder, input[type=email]:focus:-ms-input-placeholder {
   padding-top: 3em;
 }
-input[type=text]:hover::-ms-input-placeholder, input[type=text]:focus::-ms-input-placeholder, input[type=password]:hover::-ms-input-placeholder, input[type=password]:focus::-ms-input-placeholder {
+input[type=text]:hover::-ms-input-placeholder, input[type=text]:focus::-ms-input-placeholder, input[type=password]:hover::-ms-input-placeholder, input[type=password]:focus::-ms-input-placeholder, input[type=email]:hover::-ms-input-placeholder, input[type=email]:focus::-ms-input-placeholder {
   padding-top: 3em;
 }
-input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[type=password]:hover::placeholder, input[type=password]:focus::placeholder {
+input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[type=password]:hover::placeholder, input[type=password]:focus::placeholder, input[type=email]:hover::placeholder, input[type=email]:focus::placeholder {
   padding-top: 3em;
 }
 
@@ -279,9 +298,9 @@ input[type=text]:hover::placeholder, input[type=text]:focus::placeholder, input[
   border-radius: .65em;
 }
 .login:hover, .signup:hover, .login:focus, .signup:focus {
-  background: #fff;
-  color: #f58421;
-  border: none;
+  background: white;
+  color: #f58421 !important;
+  border: solid 1px white;
 }
 
 .signup {
@@ -305,6 +324,10 @@ h1, h2, h3, h4, h5, h6, input {
 #worldMap{
     max-width: 100%;
     height: auto;
+    //position: absolute;
+    //left: 0px;
+    //top: 0px;
+    //z-index: -1;
     //margin-bottom: 10px;
 }
 
