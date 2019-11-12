@@ -39,8 +39,8 @@
     border-radius: 10px;
     position: absolute;
     top: 2px;
-    left: 114px;
-    width: calc(56%);
+    left: 4.6em;
+    width: calc(55%);
     height: 50%;
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
 }
@@ -54,12 +54,12 @@
     color: lightgray;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 50px;
+    border-radius: 15px;
 }
 
 .x:hover {
-    color: red;
-    background-color: lightgray;
+    background-color: rgb(248, 50, 1);
+    color: white;
 }
 
 .wrapper {
@@ -351,7 +351,15 @@ footer p {
     padding: 1px !important;
     padding-left: 5px !important;
     margin: 1px !important;
-    font-size: 1.2em !important;
+    font-size: 1em !important;
+    color: teal;
+}
+
+.textfield:focus {
+    border: solid 1px orange;
+    border-radius: 15px;
+    background-color: rgb(250,250,250);    
+    outline: none;     
 }
 
 /*-----Travel doc-----*/
