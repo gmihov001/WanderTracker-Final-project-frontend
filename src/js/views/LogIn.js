@@ -65,7 +65,11 @@ export class LogIn extends React.Component {
 								value={this.state.password}
 								onChange={this.handleChange}
 							/>
-							<button className="btn btn-default login" href="#0" onClick={this.loginHandle}>
+							<button
+								type="button"
+								className="btn btn-default login"
+								href="#0"
+								onClick={this.loginHandle}>
 								Login
 							</button>
 							<span className="signup-cont">

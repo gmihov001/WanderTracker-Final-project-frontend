@@ -29,10 +29,6 @@ export class SignUp extends React.Component {
 		this.setState({ [name]: value });
 	};
 
-	loginHandle = () => {
-		this.setState({ loggedIn: true });
-	};
-
 	render() {
 		return (
 			<div className="wrapper">
