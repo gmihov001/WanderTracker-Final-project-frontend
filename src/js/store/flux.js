@@ -171,29 +171,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addTrip: object => {
 				const store = getStore();
+				// object.id = Math.random();
 
 				const newTrips = store.trips.concat(object);
 				setStore({ trips: newTrips });
 			},
 
-			/*addContact: object => {
+			/*addContact: (tripID, contact) => {
                 const store = getStore();
-
-                const newContacts = store.trips.contacts.concat(object);
-                setStore({trips.contacts: newContacts});
+                contact.id = Math.random(Math.ceil(1,1000000)); 
+                const temp = store.trips.map( theTrip =>{
+                    if (theTrip.ID == tripID) {
+                        theTrip.contacts = trips.contacts.concat(contact);
+                    }
+                    return theTrip;
+                }
+                    setStore(trips: temp);
             },*/
 
 			//addPlace:
 
 			//addItinerary:
 
-			removeContact: (tripID, contactID) => {
+			removeContact: (tripID, contact) => {
 				const store = getStore();
 
 				const temp = store.trips.map(theTrip => {
 					if (theTrip.id == tripID) {
 						theTrip.contacts = store.trips.contacts.filter(contact => {
-							return contact.id != contactID;
+							return contact.id != contact;
 						});
 					}
 				});

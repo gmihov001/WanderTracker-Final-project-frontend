@@ -8,6 +8,15 @@ export class TripDetails extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			userInput: {
+				contact: "",
+				address: "",
+				phone: 0,
+				place: "",
+				url: "",
+				date: "",
+				content: ""
+			},
 			trip: {
 				name: "",
 				month: "",
@@ -20,18 +29,17 @@ export class TripDetails extends React.Component {
 		};
 	}
 
-	render() {
-		console.log(this.props);
-		console.log(this.state);
-		console.log(this.props.match.params.id);
+	handleContact = evt => {
+		this.setState({ userInput: { ...this.state.userInput, contact: evt.target.value } });
+	};
 
+	render() {
 		return (
 			<div className="wrapper">
 				<Navbar2 />
 				<MyContext.Consumer>
 					{context => {
 						let thisTrip = context.store.trips[this.props.match.params.id];
-						console.log(thisTrip);
 						return (
 							<div className="container pb-5 pt-3">
 								<div className="row my-2 d-flex justify-content-center">
@@ -47,13 +55,14 @@ export class TripDetails extends React.Component {
 										<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 											<div className="col-md-4 by-2">
 												<h4 className="pageEntry">Contacts</h4>
+												<span>{this.state.userInput.contact}</span>
 											</div>
 											<div className="col d-flex justify-content-end py-2">
 												<input
 													type="text"
 													className="textfield col-md-4"
 													name="contact"
-													onChange={this.handleContactName}
+													onChange={this.handleContact}
 													placeholder="Contact name..."
 												/>
 												<input
@@ -67,7 +76,7 @@ export class TripDetails extends React.Component {
 													type="text"
 													className="textfield col-md-4"
 													name="phone"
-													onChange={this.handlePhoneNumber}
+													onChange={this.handlePhone}
 													placeholder="Phone number..."
 												/>
 
