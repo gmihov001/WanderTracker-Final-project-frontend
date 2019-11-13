@@ -9,13 +9,19 @@ export class TripDetails extends React.Component {
 		super(props);
 		this.state = {
 			userInput: {
-				contact: "",
-				address: "",
-				phone: 0,
-				place: "",
-				url: "",
-				date: "",
-				content: ""
+				contacts: {
+					contact: "",
+					address: "",
+					phone: ""
+				},
+				places: {
+					place: "",
+					url: ""
+				},
+				itinerary: {
+					date: "",
+					content: ""
+				}
 			},
 			trip: {
 				name: "",
@@ -29,8 +35,58 @@ export class TripDetails extends React.Component {
 		};
 	}
 
-	handleContact = evt => {
-		this.setState({ userInput: { ...this.state.userInput, contact: evt.target.value } });
+	handleChangeContacts = evt => {
+		this.setState({
+			userInput: {
+				...this.state.userInput,
+				contacts: { ...this.state.userInput.contacts, [evt.target.name]: evt.target.value }
+			}
+		});
+	};
+
+	handleChangePlaces = evt => {
+		this.setState({
+			userInput: {
+				...this.state.userInput,
+				places: { ...this.state.userInput.places, [evt.target.name]: evt.target.value }
+			}
+		});
+	};
+
+	handleChangeItinerary = evt => {
+		this.setState({
+			userInput: {
+				...this.state.userInput,
+				itinerary: { ...this.state.userInput.itinerary, [evt.target.name]: evt.target.value }
+			}
+		});
+	};
+
+	addToContacts = e => {
+		e.preventDefault();
+		const newContacts = this.state.trip.contacts.concat(this.state.userInput.contacts);
+		this.setState({
+			trip: { ...this.state.trip, contacts: newContacts },
+			userInput: { ...this.state.userInput, contacts: { contact: "", address: "", phone: "" } }
+		});
+	};
+
+	addToPlaces = e => {
+		e.preventDefault();
+		const newPlaces = this.state.trip.places.concat(this.state.userInput.places);
+		this.setState({
+			trip: { ...this.state.trip, places: newPlaces },
+			userInput: { ...this.state.userInput, places: { place: "", url: "" } }
+		});
+	};
+
+	addToItinerary = e => {
+		e.preventDefault();
+		const newItinerary = this.state.trip.itinerary.concat(this.state.userInput.itinerary);
+		this.setState({
+			trip: { ...this.state.trip, itinerary: newItinerary },
+			userInput: { ...this.state.userInput, itinerary: { date: "", content: "" } }
+		});
 	};
 
 	render() {
@@ -38,80 +94,81 @@ export class TripDetails extends React.Component {
 			<div className="wrapper">
 				<Navbar2 />
 				<MyContext.Consumer>
-					{context => {
-						let thisTrip = context.store.trips[this.props.match.params.id];
+					{({ store, actions }) => {
+						let thisTrip = store.trips[this.props.match.params.id];
 						return (
 							<div className="container pb-5 pt-3">
-								<div className="row my-2 d-flex justify-content-center">
+								<div className="row py-2 my-4 d-flex justify-content-center">
 									<div className="col-md-4 text-center">
-										<h1 className="pageTitle text-center px-3">
+										<h1 className="pageTitle text-center px-1">
 											{thisTrip.name} {thisTrip.year}
 										</h1>
+										<p>Trip ID: {thisTrip.id}</p>
 									</div>
 								</div>
 
-								<div className="row pb-3 pt-1 my-4 d-flex bg-white shadow">
+								<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
 									<form className="form-inline w-100">
 										<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 											<div className="col-md-4 by-2">
 												<h4 className="pageEntry">Contacts</h4>
-												<span>{this.state.userInput.contact}</span>
 											</div>
 											<div className="col d-flex justify-content-end py-2">
 												<input
 													type="text"
 													className="textfield col-md-4"
+													value={this.state.userInput.contacts.contact}
 													name="contact"
-													onChange={this.handleContact}
+													onChange={this.handleChangeContacts}
 													placeholder="Contact name..."
 												/>
 												<input
 													type="text"
 													className="textfield col-md-4"
+													value={this.state.userInput.contacts.address}
 													name="address"
-													onChange={this.handleAddress}
+													onChange={this.handleChangeContacts}
 													placeholder="Address..."
 												/>
 												<input
 													type="text"
 													className="textfield col-md-4"
+													value={this.state.userInput.contacts.phone}
 													name="phone"
-													onChange={this.handlePhone}
+													onChange={this.handleChangeContacts}
 													placeholder="Phone number..."
 												/>
-
 												<button
 													className="addButton bg-white px-2 mx-2"
-													onClick={() => {
-														actions.addContact(this.state.trip.contacts);
-													}}>
+													onClick={this.addToContacts}>
 													Add
 												</button>
 											</div>
 										</div>
 									</form>
-
 									<div className="d-block col-md-12 justify-content-end">
 										{thisTrip.contacts.map((item, index) => (
-											<div key={index} className="row px-3 d-flex justify-content-end">
-												<div className="col-md-8 justify-content-end">
-													<span type="text" className="entry text-right px-3">
+											<div key={index} className="row px-3 d-flex justify-content-center">
+												<div className="col-md-5 px-0 d-flex justify-content-left">
+													<span type="text" className="entry px-1 ">
 														{item.contact} , {item.address} , {item.phone}
 													</span>
 												</div>
 												<div
-													className="col-md-2 x d-flex justify-content-between"
+													className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
 													onClick={() => {
 														actions.removeContact({ index });
 													}}>
-													<strong>x</strong>
+													<span className="deleteEntry d-flex justify-content-center">
+														<i className="far fa-calendar-times"></i>
+													</span>
 												</div>
 											</div>
 										))}
 									</div>
 								</div>
 
-								<div className="row pb-3 bt-1 my-4 d-flex bg-white shadow">
+								<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
 									<form className="form-inline w-100">
 										<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 											<div className="col-md-4 by-2">
@@ -121,22 +178,22 @@ export class TripDetails extends React.Component {
 												<input
 													type="text"
 													className="textfield col-md-4"
+													value={this.state.userInput.places.place}
 													name="place"
-													onChange={this.handlePlace}
+													onChange={this.handleChangePlaces}
 													placeholder="Place..."
 												/>
 												<input
 													type="text"
 													className="textfield col-md-4"
 													name="url"
-													onChange={this.handleURL}
 													placeholder="URL..."
+													value={this.state.userInput.places.url}
+													onChange={this.handleChangePlaces}
 												/>
 												<button
 													className="addButton bg-white px-2 mx-2"
-													onClick={() => {
-														actions.addPlace(this.state.trip.places);
-													}}>
+													onClick={this.addToPlaces}>
 													Add
 												</button>
 											</div>
@@ -145,27 +202,27 @@ export class TripDetails extends React.Component {
 
 									<div className="d-block col-md-12 justify-content-end">
 										{thisTrip.places.map((item, index) => (
-											<div key={index} className="row px-3 d-flex justify-content-end">
-												<div className="col-md-8 justify-content-end">
-													<span type="text" className="entry text-right px-3">
+											<div key={index} className="row px-3 d-flex justify-content-center">
+												<div className="col-md-5 px-0 d-flex justify-content-left">
+													<span type="text" className="entry px-1">
 														{item.place} , {item.url}
 													</span>
 												</div>
-												<div className="col-md-2 d-flex justify-content-between list-inline">
-													<div
-														className="x"
-														onClick={() => {
-															actions.removePlace({ index });
-														}}>
-														<strong>x</strong>
-													</div>
+												<div
+													className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
+													onClick={() => {
+														actions.removeContact({ index });
+													}}>
+													<span className="deleteEntry d-flex justify-content-center">
+														<i className="far fa-calendar-times"></i>
+													</span>
 												</div>
 											</div>
 										))}
 									</div>
 								</div>
 
-								<div className="row pb-3 pt-1 my-4 d-flex bg-white shadow">
+								<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
 									<form className="form-inline w-100">
 										<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 											<div className="col-md-4 by-2">
@@ -175,22 +232,22 @@ export class TripDetails extends React.Component {
 												<input
 													type="text"
 													className="textfield col-md-4"
+													value={this.state.userInput.itinerary.date}
 													name="date"
-													onChange={this.handleDate}
+													onChange={this.handleChangeItinerary}
 													placeholder="Date..."
 												/>
 												<input
 													type="text"
 													className="textfield col-md-4"
+													value={this.state.userInput.itinerary.content}
 													name="content"
-													onChange={this.handleActivity}
+													onChange={this.handleChangeItinerary}
 													placeholder="Activity details..."
 												/>
 												<button
 													className="addButton bg-white px-2 mx-2"
-													onClick={() => {
-														actions.addItinerary(this.state.trip.itinerary);
-													}}>
+													onClick={this.addToItinerary}>
 													Add
 												</button>
 											</div>
@@ -199,23 +256,34 @@ export class TripDetails extends React.Component {
 
 									<div className="d-block col-md-12 justify-content-end">
 										{thisTrip.itinerary.map((item, index) => (
-											<div key={index} className="row px-3 d-flex justify-content-end">
-												<div className="col-md-8 justify-content-end">
-													<span type="text" className="entry text-right px-3">
+											<div key={index} className="row px-3 d-flex justify-content-center">
+												<div className="col-md-5 px-0 d-flex justify-content-left">
+													<span type="text" className="entry px-1">
 														{item.date} , {item.content}
 													</span>
 												</div>
-												<div className="col-md-2 d-flex justify-content-between list-inline">
-													<div
-														className="x"
-														onClick={() => {
-															actions.removeItinerary({ index });
-														}}>
-														<strong>x</strong>
-													</div>
+												<div
+													className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
+													onClick={() => {
+														actions.removeContact({ index });
+													}}>
+													<span className="deleteEntry d-flex justify-content-center">
+														<i className="far fa-calendar-times"></i>
+													</span>
 												</div>
 											</div>
 										))}
+									</div>
+								</div>
+								<div className="row my-5 d-flex justify-content-center">
+									<div className="col-md-4 justify-content-center">
+										<h2
+											className="xlButton glass text-center py-2 px-3 m-auto"
+											onClick={() => {
+												actions.editTrip(thisTrip.id, this.state.trip);
+											}}>
+											Save
+										</h2>
 									</div>
 								</div>
 							</div>

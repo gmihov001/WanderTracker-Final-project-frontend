@@ -19,31 +19,19 @@ export class AddTrip extends React.Component {
 				itinerary: []
 			}
 		};
-		this.handleName = this.handleName.bind(this);
-		this.handleMonth = this.handleMonth.bind(this);
-		this.handleYear = this.handleYear.bind(this);
 	}
 
-	handleName(evt) {
-		// check it out: we get the evt.target.name (which will be either "email" or "password")
-		// and use it to target the key on our `state` object with the same name, using bracket syntax
-
+	handleName = evt => {
 		this.setState({ trip: { ...this.state.trip, name: evt.target.value } });
-	}
+	};
 
-	handleMonth(evt) {
-		// check it out: we get the evt.target.name (which will be either "email" or "password")
-		// and use it to target the key on our `state` object with the same name, using bracket syntax
-
+	handleMonth = evt => {
 		this.setState({ trip: { ...this.state.trip, month: evt.target.value } });
-	}
+	};
 
-	handleYear(evt) {
-		// check it out: we get the evt.target.name (which will be either "email" or "password")
-		// and use it to target the key on our `state` object with the same name, using bracket syntax
-
+	handleYear = evt => {
 		this.setState({ trip: { ...this.state.trip, year: evt.target.value } });
-	}
+	};
 
 	render() {
 		return (
@@ -64,7 +52,7 @@ export class AddTrip extends React.Component {
 								<input
 									type="text"
 									className="textfield col-md-6"
-									//value={this.state.trip.name}
+									value={this.state.trip.name}
 									name="name"
 									onChange={this.handleName}
 									placeholder="Destination..."
@@ -75,7 +63,7 @@ export class AddTrip extends React.Component {
 								<input
 									type="text"
 									className="textfield col-md-6"
-									//value={this.state.trip.name}
+									value={this.state.trip.month}
 									name="month"
 									onChange={this.handleMonth}
 									placeholder="Month of Travel..."
@@ -86,7 +74,7 @@ export class AddTrip extends React.Component {
 								<input
 									type="text"
 									className="textfield col-md-6"
-									//value={this.state.trip.name}
+									value={this.state.trip.year}
 									name="year"
 									onChange={this.handleYear}
 									placeholder="Year of Travel"
