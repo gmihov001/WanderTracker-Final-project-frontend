@@ -24,9 +24,7 @@ export const TravelDoc = () => (
 					<img className=" navbar-brand mb-0 h1 img-fluid" src={passport} />
 				</div>
 				<div>
-					<Link to="/TripDetails">
-						<button className="smallButton bg-white px-2 mx-2">Delete</button>
-					</Link>
+					<button className="smallButton bg-white px-2 mx-2">Delete</button>
 				</div>
 			</div>
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
