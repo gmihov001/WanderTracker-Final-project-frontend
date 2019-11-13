@@ -25,9 +25,8 @@ export const Stamps = () => (
 					<img className="logo-navbar navbar-brand mb-0 h1" src={StampPic} />
 				</div>
 				<div>
-					<Link to="/TripDetails">
-						<button className="smallButton bg-white px-2 mx-2">Delete</button>
-					</Link>
+					<button className="smallButton bg-white px-2 mx-2">Delete</button>
+
 					<button className="smallButton bg-white px-2 mx-2">Share</button>
 				</div>
 			</div>
