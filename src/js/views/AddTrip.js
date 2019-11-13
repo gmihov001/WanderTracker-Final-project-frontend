@@ -9,6 +9,7 @@ export class AddTrip extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			userInput: {},
 			trip: {
 				name: "",
 				month: "",
@@ -33,6 +34,10 @@ export class AddTrip extends React.Component {
 		this.setState({ trip: { ...this.state.trip, year: evt.target.value } });
 	};
 
+	/*redirect = () => {
+		window.location.assign("https://8080-c4f1c2ca-27f9-47b0-ae8f-9aff7c8ca27b.ws-us02.gitpod.io/TripPlanner");
+	};*/
+
 	render() {
 		return (
 			<div className="wrapper">
@@ -42,9 +47,9 @@ export class AddTrip extends React.Component {
 						<div className="row py-4 my-4 d-flex justify-content-center">
 							<div className="col-md-4 d-block">
 								<h1 className="pageTitle text-center py-2 px-3">Add New Trip</h1>
-								<h3 className="text-secondary text-center rounded shadow">
+								<h4 className="text-secondary text-center rounded shadow">
 									{this.state.trip.name} {this.state.trip.month} {this.state.trip.year}
-								</h3>
+								</h4>
 							</div>
 						</div>
 						<div className="row mb-5 mt-3 d-block">
@@ -52,7 +57,7 @@ export class AddTrip extends React.Component {
 								<input
 									type="text"
 									className="textfield col-md-6"
-									value={this.state.trip.name}
+									value={this.state.userInput.name}
 									name="name"
 									onChange={this.handleName}
 									placeholder="Destination..."
@@ -63,7 +68,7 @@ export class AddTrip extends React.Component {
 								<input
 									type="text"
 									className="textfield col-md-6"
-									value={this.state.trip.month}
+									value={this.state.userInput.month}
 									name="month"
 									onChange={this.handleMonth}
 									placeholder="Month of Travel..."
@@ -74,7 +79,7 @@ export class AddTrip extends React.Component {
 								<input
 									type="text"
 									className="textfield col-md-6"
-									value={this.state.trip.year}
+									value={this.state.userInput.year}
 									name="year"
 									onChange={this.handleYear}
 									placeholder="Year of Travel"
@@ -89,7 +94,7 @@ export class AddTrip extends React.Component {
 							<div className="col-md-4 justify-content-center">
 								<h2
 									className="xlButton glass text-center py-2 px-3 m-auto"
-									onClick={() => {
+									onMouseDown={() => {
 										actions.addTrip(this.state.trip);
 									}}>
 									Save

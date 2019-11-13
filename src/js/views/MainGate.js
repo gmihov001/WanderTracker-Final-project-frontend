@@ -18,7 +18,7 @@ export const MainGate = () => (
 				</div>
 
 				<div className="main-landing text-white mx-auto shadow mx-5  ">
-					<h2 className="text-center p-2 h3 font-weight-light">Plan, Save and Make Memories</h2>
+					<h2 className="text-center p-2 h3 font-weight-light">Plan Travel | Save Memories</h2>
 				</div>
 				<div className="d-flex justify-content-between m-1 text-secondary mx-auto">
 					<div className="row justify-content-center mx-auto">

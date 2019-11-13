@@ -51,7 +51,7 @@
 }
 
 .x {
-    color: lightgray;
+    color: darkgray;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 15px;
@@ -59,7 +59,7 @@
 
 .x:hover {
     background-color: rgb(248, 50, 1);
-    color: white;
+    color: lightgray;
 }
 
 .wrapper {
@@ -130,14 +130,37 @@
 }
 
 .entry {
-    color:gray;
+    color: #fe5000;
+    text-shadow: 0px 0px 3px white;
     padding-top: 5px;
     border-radius: 15px;
     padding: 3px;
-    padding-left: 5px;
     margin-left: 3px;
     font-weight: 300;
 }
+
+.entry-block {
+    border-radius: 20px;
+    background-color: rgb(243,243,243);
+    border: solid 1px orange;
+    box-shadow: inset 0px -1px 10px gray;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 99%;
+    padding: 3px;
+}
+
+
+.entry-row {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 15px;
+}
+
+.entry-row:hover {
+    background-color: rgb(245, 245, 245);
+}
+
 
 hr {
     border: solid 1px #fd6e2b;
@@ -388,8 +411,8 @@ footer p {
 /*-----Travel doc-----*/
 
 .travel-doc{
-     max-width: 50%;
-    height: auto;
+    max-width: 50%;
+    height: 150px !important;
 }
 
 /*-------Icons Transition------*/

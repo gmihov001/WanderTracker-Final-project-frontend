@@ -21,9 +21,9 @@ export const TravelDoc = () => (
 
 			<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 				<div className="col">
-					<img className=" navbar-brand mb-0 h1 img-fluid" src={passport} />
+					<img className="travel-doc navbar-brand mb-0 h1 img-fluid" src={passport} height="100" />
 				</div>
-				<div>
+				<div className="mx-2">
 					<Link to="/TripDetails">
 						<button className="smallButton bg-white px-2 mx-2">Delete</button>
 					</Link>
@@ -33,10 +33,11 @@ export const TravelDoc = () => (
 				<div className="col">
 					<img
 						className="travel-doc navbar-brand mb-0 h1 img-fluid"
+						height="100"
 						src="https://i.huffpost.com/gen/1936992/thumbs/o-TICKET-570.jpg?16"
 					/>
 				</div>
-				<div>
+				<div className="mx-2">
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
 				</div>
 			</div>

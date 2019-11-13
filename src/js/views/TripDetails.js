@@ -24,10 +24,6 @@ export class TripDetails extends React.Component {
 				}
 			},
 			trip: {
-				name: "",
-				month: "",
-				year: "",
-				id: "",
 				contacts: [],
 				places: [],
 				itinerary: []
@@ -146,9 +142,11 @@ export class TripDetails extends React.Component {
 											</div>
 										</div>
 									</form>
-									<div className="d-block col-md-12 justify-content-end">
+									<div className="d-block entry-block col-md-12 justify-content-end">
 										{thisTrip.contacts.map((item, index) => (
-											<div key={index} className="row px-3 d-flex justify-content-center">
+											<div
+												key={index}
+												className="row entry-row px-3 d-flex justify-content-center">
 												<div className="col-md-5 px-0 d-flex justify-content-left">
 													<span type="text" className="entry px-1 ">
 														{item.contact} , {item.address} , {item.phone}
@@ -157,7 +155,7 @@ export class TripDetails extends React.Component {
 												<div
 													className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
 													onClick={() => {
-														actions.removeContact({ index });
+														actions.removeContact(thisTrip.id, thisTrip.contacts);
 													}}>
 													<span className="deleteEntry d-flex justify-content-center">
 														<i className="far fa-calendar-times"></i>
@@ -200,9 +198,11 @@ export class TripDetails extends React.Component {
 										</div>
 									</form>
 
-									<div className="d-block col-md-12 justify-content-end">
+									<div className="d-block entry-block col-md-12 justify-content-end">
 										{thisTrip.places.map((item, index) => (
-											<div key={index} className="row px-3 d-flex justify-content-center">
+											<div
+												key={index}
+												className="row entry-row px-3 d-flex justify-content-center">
 												<div className="col-md-5 px-0 d-flex justify-content-left">
 													<span type="text" className="entry px-1">
 														{item.place} , {item.url}
@@ -211,7 +211,7 @@ export class TripDetails extends React.Component {
 												<div
 													className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
 													onClick={() => {
-														actions.removeContact({ index });
+														actions.removePlace({ index });
 													}}>
 													<span className="deleteEntry d-flex justify-content-center">
 														<i className="far fa-calendar-times"></i>
@@ -254,9 +254,11 @@ export class TripDetails extends React.Component {
 										</div>
 									</form>
 
-									<div className="d-block col-md-12 justify-content-end">
+									<div className="d-block entry-block col-md-12 justify-content-end">
 										{thisTrip.itinerary.map((item, index) => (
-											<div key={index} className="row px-3 d-flex justify-content-center">
+											<div
+												key={index}
+												className="row entry-row px-3 d-flex justify-content-center">
 												<div className="col-md-5 px-0 d-flex justify-content-left">
 													<span type="text" className="entry px-1">
 														{item.date} , {item.content}
@@ -265,7 +267,7 @@ export class TripDetails extends React.Component {
 												<div
 													className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
 													onClick={() => {
-														actions.removeContact({ index });
+														actions.removeItinerary(thisTrip.id, thisTrip.contacts);
 													}}>
 													<span className="deleteEntry d-flex justify-content-center">
 														<i className="far fa-calendar-times"></i>

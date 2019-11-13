@@ -70,13 +70,13 @@ export const HomePage = () => (
 						</p>
 					</div>
 					<div className="card-footer">
-						<p>Check the rest of this content at...</p>
+						<p>Check the rest of this article on:</p>
 						<a
 							className="link"
 							href="https://www.neverendingfootsteps.com/100-best-travel-tips/"
 							target="_blank"
 							rel="noopener noreferrer">
-							Click here!
+							neverendingfootsteps.com...
 						</a>
 					</div>
 				</div>
@@ -98,13 +98,13 @@ export const HomePage = () => (
 						</p>
 					</div>
 					<div className="card-footer">
-						<p>Check the rest of this content at...</p>
+						<p>Check the rest of this article on:</p>
 						<a
 							href="https://ordinarytraveler.com/travel-photographer-packing-list"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="link">
-							Click here!
+							ordinarytraveler.com...
 						</a>
 					</div>
 				</div>
@@ -124,13 +124,13 @@ export const HomePage = () => (
 						</p>
 					</div>
 					<div className="card-footer">
-						<p>Check the rest of this content at...</p>
+						<p>Check the rest of this article on:</p>
 						<a
 							className="link"
 							href="https://ordinarytraveler.com/europe-travel-tips"
 							target="_blank"
 							rel="noopener noreferrer">
-							click here!
+							ordinarytraveler.com
 						</a>
 					</div>
 				</div>

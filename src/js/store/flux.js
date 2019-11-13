@@ -63,10 +63,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let change = [];
 				change = store.trips.map(item => {
 					if (item.id == tripID) {
-						item.contacts = item.contacts.concat(object.contacts);
-						item.places = item.places.concat(object.places);
-						item.itinerary = item.itinerary.concat(object.itinerary);
-						return item;
+						//let updatedTrip = Object.assign(item, object);
+						return { ...item, ...object };
 					} else {
 						return item;
 					}
@@ -109,13 +107,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			//addItinerary:
 
-			removeContact: (tripID, contact) => {
+			removeContact: (tripID, theContacts) => {
 				const store = getStore();
 
 				const temp = store.trips.map(theTrip => {
 					if (theTrip.id == tripID) {
-						theTrip.contacts = store.trips.contacts.filter(contact => {
-							return contact.id != contact;
+						theTrip.contacts = theTrip.contacts.filter(item => {
+							return item.contact != theContacts.contact;
 						});
 					}
 				});
