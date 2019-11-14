@@ -30,7 +30,7 @@ export const Navbar2 = () => {
 						<Link to="/Stamps">
 							<img
 								className="iconbtn icons-navbar navbar-brand mb-0 h1"
-								title="Go Stamps"
+								title="Go  to Stamps"
 								src={StampsIcon}
 							/>
 						</Link>
@@ -40,7 +40,7 @@ export const Navbar2 = () => {
 						<Link to="/TravelDoc">
 							<img
 								className="iconbtn icons-navbar navbar-brand mb-0 h1"
-								title="Go To Travel Documets"
+								title="Go To Travel Documents"
 								src={DocIcon}
 							/>
 						</Link>
