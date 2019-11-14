@@ -155,7 +155,7 @@ export class TripDetails extends React.Component {
 												<div
 													className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
 													onClick={() => {
-														actions.removeContact(thisTrip.id, thisTrip.contacts);
+														actions.removeContact(thisTrip.id, item.contid);
 													}}>
 													<span className="deleteEntry d-flex justify-content-center">
 														<i className="far fa-calendar-times"></i>

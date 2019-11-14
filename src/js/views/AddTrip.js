@@ -4,6 +4,7 @@ import { Navbar2 } from "../component/Navbar2";
 import UserIcon from "../../img/user-03.png";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 import { MyContext } from "../store/appContext.js";
+import PropTypes from "prop-types";
 
 export class AddTrip extends React.Component {
 	constructor(props) {
@@ -95,7 +96,9 @@ export class AddTrip extends React.Component {
 								<h2
 									className="xlButton glass text-center py-2 px-3 m-auto"
 									onMouseDown={() => {
-										actions.addTrip(this.state.trip);
+										if (actions.addTrip(this.state.trip)) {
+											this.props.history.push("/TripPlanner");
+										}
 									}}>
 									Save
 								</h2>
@@ -107,3 +110,7 @@ export class AddTrip extends React.Component {
 		);
 	}
 }
+
+AddTrip.propTypes = {
+	history: PropTypes.object
+};

@@ -9,11 +9,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					id: "15012019",
 					contacts: [
 						{
+							contid: "123432",
 							contact: "First Spanish contact",
 							address: "Spanish Street 1",
 							phone: "111.222.333"
 						},
 						{
+							contid: "345621",
 							contact: "Second Spanish contact",
 							address: "Spanish Street 2",
 							phone: "111.222.444"
@@ -59,6 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			editTrip: (tripID, object) => {
+				console.log();
 				const store = getStore();
 				let change = [];
 				change = store.trips.map(item => {
@@ -87,6 +90,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				const updatedTrips = store.trips.concat(object);
 				setStore({ trips: updatedTrips });
+				return true;
 			},
 
 			/*addContact: (tripID, newContacts) => {
@@ -107,16 +111,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			//addItinerary:
 
-			removeContact: (tripID, theContacts) => {
+			removeContact: (tripID, contactID) => {
 				const store = getStore();
 
 				const temp = store.trips.map(theTrip => {
-					if (theTrip.id == tripID) {
+					if (theTrip.id === tripID) {
 						theTrip.contacts = theTrip.contacts.filter(item => {
-							return item.contact != theContacts.contact;
+							return item.contid !== contactID;
 						});
 					}
+					return theTrip;
 				});
+				console.log(temp);
 				setStore({ trips: temp });
 			},
 
