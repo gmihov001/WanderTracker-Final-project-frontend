@@ -1,11 +1,13 @@
 import React from "react";
 import countries from "../constants/countries.js";
+import Coor from "../constants/Coor.json";
 
 export class CountryDropDown extends React.Component {
 	constructor() {
 		super();
 		this.state = {};
 	}
+
 	render() {
 		return (
 			<div>
