@@ -20,7 +20,6 @@ export class Map extends React.Component {
 		};
 	}
 	onChange = e => {
-		console.log(Coor[e.target.value]);
 		this.setState({ country: Coor[e.target.value] });
 	};
 	render() {
