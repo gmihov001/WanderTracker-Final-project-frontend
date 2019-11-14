@@ -1,7 +1,7 @@
 import React from "react";
 import Camera from "react-html5-camera-photo";
 import { Link } from "react-router-dom";
-import { Navbar2 } from "../component/Navbar2";
+import { Navbar2 } from "./Navbar2";
 import passport from "../../img/passport.jpg";
 import countries from "../constants/countries";
 import "react-html5-camera-photo/build/css/index.css";
