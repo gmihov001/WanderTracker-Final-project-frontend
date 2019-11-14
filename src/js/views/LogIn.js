@@ -68,7 +68,7 @@ export class LogIn extends React.Component {
 							<button
 								type="button"
 								className="btn btn-default login"
-								href="#0"
+								href="#0 "
 								onClick={this.loginHandle}>
 								Login
 							</button>
