@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar2 } from "../component/Navbar2";
 import UserIcon from "../../img/user-03.png";
 import wtLogo from "../../img/wanderTrackerLogo.png";
-import { MyContext } from "../store/appContext.js";
+import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
 
 export class AddTrip extends React.Component {
@@ -89,7 +89,7 @@ export class AddTrip extends React.Component {
 						</div>
 					</form>
 				</div>
-				<MyContext.Consumer>
+				<Context.Consumer>
 					{({ actions }) => (
 						<div className="row my-5 d-flex justify-content-center">
 							<div className="col-md-4 justify-content-center">
@@ -105,7 +105,7 @@ export class AddTrip extends React.Component {
 							</div>
 						</div>
 					)}
-				</MyContext.Consumer>
+				</Context.Consumer>
 			</div>
 		);
 	}

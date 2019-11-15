@@ -13,13 +13,12 @@ import { AddTravelDoc } from "./views/AddTravelDoc";
 import { Map } from "./views/Map";
 import { TripPlanner } from "./views/TripPlanner";
 import { AddTrip } from "./views/AddTrip";
-import { TripDetails } from "./views/TripDetails";
+import { TripDetailsBeta } from "./views/TripDetailsBeta";
 import { EmergContacts } from "./views/EmergContacts";
 import { Cam } from "./component/Cam";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
-import injectContext from "./store/appContext";
-
+import injectContext from "./store/appContext.js";
 import { Footer } from "./component/footer";
 
 //create your first component
@@ -44,7 +43,7 @@ export const Layout = () => {
 						<Route path="/Map" component={Map} />
 						<Route path="/TripPlanner" component={TripPlanner} />
 						<Route path="/AddTrip" component={AddTrip} />
-						<Route path="/TripDetails/:id" component={TripDetails} />
+						<Route path="/TripDetailsBeta/:id" component={TripDetailsBeta} />
 						<Route path="/EmergContacts" component={EmergContacts} />
 						<Route path="/Cam" component={Cam} />
 						<Route path="/demo" component={Demo} />

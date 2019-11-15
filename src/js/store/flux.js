@@ -23,26 +23,80 @@ const getState = ({ getStore, getActions, setStore }) => {
 					],
 					places: [
 						{
+							placeid: "223344",
 							place: "First Cool Place in Spain",
 							url: "URL"
 						},
 						{
+							placeid: "334455",
 							place: "Second Cool Place in Spain",
 							url: "URL"
 						}
 					],
 					itinerary: [
 						{
+							itinid: "445566",
 							date: "01/02/2020",
 							content: "Walking tour in Spain at 8am"
 						},
 						{
+							itinid: "667788",
 							date: "02/02/2020",
 							content: "Bike tour in Spain at 9am"
 						},
 						{
+							itinid: "998877",
 							date: "03/02/2020",
 							content: "Museum in Spain 10am"
+						}
+					]
+				},
+				{
+					name: "Greece",
+					month: "February",
+					year: "2022",
+					id: "16012011",
+					contacts: [
+						{
+							contid: "723432",
+							contact: "First Greek contact",
+							address: "Greek Street 1",
+							phone: "111.222.333"
+						},
+						{
+							contid: "745621",
+							contact: "Second Greek contact",
+							address: "Greek Street 2",
+							phone: "111.222.444"
+						}
+					],
+					places: [
+						{
+							placeid: "441122",
+							place: "First Cool Place in Greece",
+							url: "URL GR"
+						},
+						{
+							placeid: "441177",
+							place: "Second Cool Place in Greece",
+							url: "URL GR"
+						}
+					],
+					itinerary: [
+						{
+							itinid: "887766",
+							date: "06/02/2023",
+							content: "Walking tour in Greece at 8am"
+						},
+						{
+							itinid: "776655",
+							date: "06/04/2023",
+							content: "Bike tour in Greece at 9am"
+						},
+						{
+							itinid: "665544",
+							date: "06/01/2023",
+							content: "Museum in Greece 10am"
 						}
 					]
 				}
@@ -122,7 +176,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 					return theTrip;
 				});
-				console.log(temp);
+
 				setStore({ trips: temp });
 			},
 
