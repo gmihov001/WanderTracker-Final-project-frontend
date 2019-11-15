@@ -4,9 +4,9 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 
 export const Navbar = () => {
 	return (
-		<div className="wrapper">
-			<div className="wrapper">
-				<nav className="navbar navbar-light  bg-white mb-3">
+		<div className="wrapper ">
+			<div className="wrapper mt-5">
+				<nav className="navbar navbar-light  bg-white fixed-top">
 					<Link to="/">
 						<img className="logo-navbar navbar-brand mb-0 h1" src={wtLogo} />
 					</Link>

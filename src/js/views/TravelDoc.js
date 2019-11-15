@@ -16,7 +16,7 @@ export const TravelDoc = () => (
 		<div className="container">
 			<div className="row my-4 d-flex justify-content-center">
 				<div className="col-md-4 text-center">
-					<h1 className="pageTitle text-center py-2 px-3">Documents</h1>
+					<h1 className="pageTitle text-center py-2 px-3">Travel Documents</h1>
 				</div>
 			</div>
 			<div className="row my-5 d-flex justify-content-center">
@@ -51,15 +51,6 @@ export const TravelDoc = () => (
 				</div>
 				<div className="mx-2">
 					<button className="smallButton bg-white px-2 mx-2">Delete</button>
-				</div>
-			</div>
-			<div className="row my-4 d-flex justify-content-center">
-				<div className="col-md-4 text-center">
-					<p className="text-center py-2 px-3">
-						<Link to="/AddTravelDoc">
-							<img src={AddIcon} className="createTrip m-2" title="Save New Travel Document" />
-						</Link>
-					</p>
 				</div>
 			</div>
 		</div>
