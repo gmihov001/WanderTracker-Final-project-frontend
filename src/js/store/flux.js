@@ -157,7 +157,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const store = getStore();
 				object.id = Math.ceil((Math.random() + 1) * 100000);
 
-				const updatedTrips = store.trips.concat(object);
+				const updatedTrips = store.trips.concat([object]);
 				setStore({ trips: updatedTrips });
 				return true;
 			},

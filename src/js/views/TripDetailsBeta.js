@@ -22,7 +22,7 @@ export class TripDetailsBeta extends React.Component {
 						return (
 							<div className="container pb-5 pt-3">
 								{store.trips.map((thisTrip, index) => {
-									if (thisTrip.id === this.props.match.params.id) {
+									if (`${thisTrip.id}` === this.props.match.params.id) {
 										return (
 											<div key={index}>
 												<div className="row py-2 my-4 d-flex justify-content-center">
@@ -33,7 +33,7 @@ export class TripDetailsBeta extends React.Component {
 														<p>Trip ID: {thisTrip.id}</p>
 													</div>
 												</div>
-												<div className="row pb-3 pt-2 my-4 d-flex justify-content-end bg-white shadow">
+												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
 													<div className="col-md-11 minititle">
 														<h4 className="pageEntry">Contacts</h4>
 													</div>
