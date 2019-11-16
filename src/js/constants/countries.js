@@ -2,7 +2,6 @@ const countries = [
 	{ value: "af", label: "Afghanistan" },
 	{ value: "al", label: "Albania" },
 	{ value: "dz", label: "Algeria" },
-	{ value: "as", label: "American Samoa" },
 	{ value: "ad", label: "Andorra" },
 	{ value: "ao", label: "Angola" },
 	{ value: "ai", label: "Anguilla" },
