@@ -9,8 +9,6 @@ import AddIcon from "../../img/addbutton.png";
 import countries from "../constants/countries";
 import Coor from "../constants/Coor.json";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
 export class Map extends React.Component {
 	constructor() {
 		super();

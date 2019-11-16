@@ -8,8 +8,6 @@ import UserIcon from "../../img/user-03.png";
 import AddIcon from "../../img/addbutton.png";
 import CamIcon from "../../img/Image.png";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
 export const TravelDoc = () => (
 	<div className="wrapper ">
 		<Navbar2 />

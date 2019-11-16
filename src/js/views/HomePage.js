@@ -4,8 +4,6 @@ import { Navbar2 } from "../component/Navbar2";
 import wtLogo from "../../img/wanderTrackerLogo.png";
 import { Context } from "../store/appContext.js";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
 export const HomePage = () => (
 	<div className="wrapper">
 		<Navbar2 />

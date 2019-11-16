@@ -6,8 +6,6 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 import passport from "../../img/passport.jpg";
 import UserIcon from "../../img/user-03.png";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
 export const AddTravelDoc = () => (
 	<div className="wrapper ">
 		<Navbar2 />

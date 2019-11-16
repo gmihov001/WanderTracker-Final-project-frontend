@@ -8,8 +8,6 @@ import AddIcon from "../../img/addbutton.png";
 import CamIcon from "../../img/Image.png";
 import countries from "../constants/countries";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
 export const Stamps = () => (
 	<div className="wrapper">
 		<Navbar2 />
