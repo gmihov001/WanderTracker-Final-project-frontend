@@ -33,8 +33,8 @@ export class TripDetailsBeta extends React.Component {
 														<p>Trip ID: {thisTrip.id}</p>
 													</div>
 												</div>
-												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
-													<div className="col-md-4 by-2">
+												<div className="row pb-3 pt-2 my-4 d-flex justify-content-end bg-white shadow">
+													<div className="col-md-11 minititle">
 														<h4 className="pageEntry">Contacts</h4>
 													</div>
 													<TripContacts

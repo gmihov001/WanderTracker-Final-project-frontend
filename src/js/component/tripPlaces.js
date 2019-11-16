@@ -8,9 +8,14 @@ export class TripPlaces extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			trip: {}
+			place: "",
+			url: ""
 		};
 	}
+
+	handleChangePlaces = evt => {
+		this.setState({ [evt.target.name]: evt.target.value });
+	};
 
 	render() {
 		return (
@@ -18,10 +23,10 @@ export class TripPlaces extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div className="container pb-5 pt-3">
-							{store.trips.map(thisTrip => {
+							{store.trips.map((thisTrip, index) => {
 								if (thisTrip.id === this.props.tripID) {
 									return (
-										<div className="container d-block">
+										<div key={index} className="container d-block">
 											<form className="form-inline d-flex justify-content-between w-100">
 												<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 													<div className="col d-flex justify-content-center py-2">
@@ -30,7 +35,7 @@ export class TripPlaces extends React.Component {
 															className="textfield col-md-4"
 															//value={this.state.userInput.places.place}
 															name="place"
-															//onChange={this.handleChangePlaces}
+															onChange={this.handleChangePlaces}
 															placeholder="Place..."
 														/>
 														<input
@@ -39,12 +44,14 @@ export class TripPlaces extends React.Component {
 															name="url"
 															placeholder="URL..."
 															//value={this.state.userInput.places.url}
-															//onChange={this.handleChangePlaces}
+															onChange={this.handleChangePlaces}
 														/>
 														<button
+															type="button"
 															className="addButton bg-white px-2 mx-2"
-															//onClick={this.addToPlaces}
-														>
+															onClick={() => {
+																actions.addPlace(thisTrip.id, { ...this.state });
+															}}>
 															Add
 														</button>
 													</div>

@@ -10,17 +10,12 @@ export class TripContacts extends React.Component {
 		this.state = {
 			contact: "",
 			address: "",
-			phobne: ""
+			phone: ""
 		};
 	}
 
 	handleChangeContacts = evt => {
-		this.setState({
-			trip: {
-				...this.state.trip,
-				contacts: { ...this.state.trip.contacts, [evt.target.name]: evt.target.value }
-			}
-		});
+		this.setState({ [evt.target.name]: evt.target.value });
 	};
 
 	render() {
@@ -29,10 +24,10 @@ export class TripContacts extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div className="container pb-5 pt-3">
-							{store.trips.map(thisTrip => {
+							{store.trips.map((thisTrip, index) => {
 								if (thisTrip.id === this.props.tripID) {
 									return (
-										<div className="container d-block">
+										<div key={index} className="container d-block">
 											<form className="form-inline d-flex justify-content-between w-100">
 												<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 													<div className="col d-flex justify-content-center py-2">
@@ -61,6 +56,7 @@ export class TripContacts extends React.Component {
 															placeholder="Phone number..."
 														/>
 														<button
+															type="button"
 															className="addButton bg-white px-2 mx-2"
 															onClick={() => {
 																actions.addContact(thisTrip.id, { ...this.state });
