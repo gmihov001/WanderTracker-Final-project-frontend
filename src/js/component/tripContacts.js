@@ -8,9 +8,20 @@ export class TripContacts extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			trip: {}
+			contact: "",
+			address: "",
+			phobne: ""
 		};
 	}
+
+	handleChangeContacts = evt => {
+		this.setState({
+			trip: {
+				...this.state.trip,
+				contacts: { ...this.state.trip.contacts, [evt.target.name]: evt.target.value }
+			}
+		});
+	};
 
 	render() {
 		return (
@@ -30,7 +41,7 @@ export class TripContacts extends React.Component {
 															className="textfield col-md-4"
 															//value={this.state.userInput.contacts.contact}
 															name="contact"
-															//onChange={this.handleChangeContacts}
+															onChange={this.handleChangeContacts}
 															placeholder="Contact name..."
 														/>
 														<input
@@ -38,7 +49,7 @@ export class TripContacts extends React.Component {
 															className="textfield col-md-4"
 															//value={this.state.userInput.contacts.address}
 															name="address"
-															//onChange={this.handleChangeContacts}
+															onChange={this.handleChangeContacts}
 															placeholder="Address..."
 														/>
 														<input
@@ -46,13 +57,14 @@ export class TripContacts extends React.Component {
 															className="textfield col-md-4"
 															//value={this.state.userInput.contacts.phone}
 															name="phone"
-															//onChange={this.handleChangeContacts}
+															onChange={this.handleChangeContacts}
 															placeholder="Phone number..."
 														/>
 														<button
 															className="addButton bg-white px-2 mx-2"
-															//onClick={this.addToContacts}
-														>
+															onClick={() => {
+																actions.addContact(thisTrip.id, { ...this.state });
+															}}>
 															Add
 														</button>
 													</div>
@@ -94,6 +106,6 @@ export class TripContacts extends React.Component {
 }
 
 TripContacts.propTypes = {
-	tripID: PropTypes.number,
-	contid: PropTypes.number
+	tripID: PropTypes.string,
+	contid: PropTypes.string
 };

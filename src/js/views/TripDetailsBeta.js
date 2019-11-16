@@ -3,6 +3,8 @@ import { Context } from "../store/appContext.js";
 import { Navbar2 } from "../component/Navbar2";
 import PropTypes from "prop-types";
 import { TripContacts } from "../component/tripContacts.js";
+import { TripPlaces } from "../component/tripPlaces.js";
+import { TripItinerary } from "../component/tripItinerary.js";
 import { TriPlanner } from "./TripPlanner";
 
 export class TripDetailsBeta extends React.Component {
@@ -38,6 +40,26 @@ export class TripDetailsBeta extends React.Component {
 													<TripContacts
 														tripID={thisTrip.id}
 														contid={thisTrip.contacts.contid}
+													/>
+												</div>
+
+												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
+													<div className="col-md-4 by-2">
+														<h4 className="pageEntry">Places of Interest</h4>
+													</div>
+													<TripPlaces
+														tripID={thisTrip.id}
+														placeid={thisTrip.places.placeid}
+													/>
+												</div>
+
+												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
+													<div className="col-md-4 by-2">
+														<h4 className="pageEntry">Itinerary</h4>
+													</div>
+													<TripItinerary
+														tripID={thisTrip.id}
+														itinid={thisTrip.itinerary.itinid}
 													/>
 												</div>
 											</div>

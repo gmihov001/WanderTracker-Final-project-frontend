@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
 
-
 #app {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -99,14 +98,22 @@
 }
 
 .addButton {
-    color: rgb(46, 196, 46);
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50px !important;
+    color: white;
+    background-image: linear-gradient(rgb(50, 200,50), rgb(217, 255, 174)); 
     border-radius: 15px;
     border: solid 1px rgb(46, 196, 46);
+    font-weight: 400;
 }
 
 .addButton:hover {
+    background-image: transparent;
     background-color: lightgreen !important;
+    color: green !important;
     font-weight: 500;
+    box-shadow: 1px 3px 10px gray;
 }
 
 .createTrip:hover {
@@ -142,8 +149,8 @@
 .entry-block {
     border-radius: 20px;
     background-color: rgb(243,243,243);
-    border: solid 1px orange;
-    box-shadow: inset 0px -1px 10px gray;
+    border: solid 1px #fe5000;
+    box-shadow: inset 0px -1px 10px rgb(255, 230, 116);
     margin-left: 5px;
     margin-right: 5px;
     max-width: 99%;

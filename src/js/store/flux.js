@@ -147,19 +147,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return true;
 			},
 
-			/*addContact: (tripID, newContacts) => {
+			addContact: (tripID, newContact) => {
                 const store = getStore();
-                //contact.id = Math.random(Math.ceil(1,1000000));
+                contact.id = Math.ceil((Math.random() + 1) * 100000);
 
-                const temp = store.trips.map( item => {
-                    if (item.id == tripID) {
-                     item.contacts.concat(newContacts);
+                const updatedContacts = store.trips.map(item => {
+                    if(tripID === item.id) {
+                        item.contacts = item.contacts.concat([newContact]);
                     }
-                    return item;
                 };
 
-                setStore({trips: temp});
-            },*/
+				return true;
+            },
 
 			//addPlace:
 
@@ -180,9 +179,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ trips: temp });
 			},
 
-			//removePlace: id =>
+			removePlace: (tripID, placeID) => {
+				const store = getStore();
 
-			//removeItinerary: id =>
+				const temp = store.trips.map(theTrip => {
+					if (theTrip.id === tripID) {
+						theTrip.places = theTrip.places.filter(item => {
+							return item.placeid !== placeID;
+						});
+					}
+					return theTrip;
+				});
+
+				setStore({ trips: temp });
+			},
+
+			removeItinerary: (tripID, itineraryID) => {
+				const store = getStore();
+
+				const temp = store.trips.map(theTrip => {
+					if (theTrip.id === tripID) {
+						theTrip.itinerary = theTrip.itinerary.filter(item => {
+							return item.itinid !== itineraryID;
+						});
+					}
+					return theTrip;
+				});
+
+				setStore({ trips: temp });
+			},
 
 			changeColor: (index, color) => {
 				//get the store
