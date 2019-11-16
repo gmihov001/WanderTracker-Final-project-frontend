@@ -20,7 +20,7 @@ export class Map extends React.Component {
 		};
 	}
 	onChange = e => {
-		this.setState({ country: Coor[e.target.value] });
+		this.setState({ country: this.state.country.concat([Coor[e.target.value]]) });
 	};
 	render() {
 		return (
@@ -33,7 +33,7 @@ export class Map extends React.Component {
 						</div>
 					</div>
 
-					<SimpleMap markers={[this.state.country]} />
+					<SimpleMap markers={this.state.country} />
 				</div>
 				<div className="row my-4 d-flex justify-content-center">
 					<div className="col-md-4 text-center">

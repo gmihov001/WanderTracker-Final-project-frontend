@@ -15,6 +15,9 @@ export class SignUp extends React.Component {
 		};
 	}
 
+	alertSubmit = e => {
+		return alert("Form Submited");
+	};
 	handleSubmit = e => {
 		e.preventDefault();
 		console.log("The form was submitted");
@@ -42,7 +45,7 @@ export class SignUp extends React.Component {
 							<h2>Sign Up</h2>
 							<input
 								type="text"
-								name="Full Name"
+								name="name"
 								placeholder="Enter your full name"
 								value={this.state.name}
 								onChange={this.handleChange}
@@ -65,7 +68,10 @@ export class SignUp extends React.Component {
 							/>
 							<br />
 
-							<button className="btn btn-default shadow login" href="#0">
+							<button
+								onClick={() => this.alertSubmit()}
+								className="btn btn-default shadow login"
+								href="#0">
 								Submit
 							</button>
 						</div>
