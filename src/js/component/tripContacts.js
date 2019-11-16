@@ -10,17 +10,12 @@ export class TripContacts extends React.Component {
 		this.state = {
 			contact: "",
 			address: "",
-			phobne: ""
+			phone: ""
 		};
 	}
 
 	handleChangeContacts = evt => {
-		this.setState({
-			trip: {
-				...this.state.trip,
-				contacts: { ...this.state.trip.contacts, [evt.target.name]: evt.target.value }
-			}
-		});
+		this.setState({ [evt.target.name]: evt.target.value });
 	};
 
 	render() {
@@ -61,6 +56,7 @@ export class TripContacts extends React.Component {
 															placeholder="Phone number..."
 														/>
 														<button
+															type="button"
 															className="addButton bg-white px-2 mx-2"
 															onClick={() => {
 																actions.addContact(thisTrip.id, { ...this.state });

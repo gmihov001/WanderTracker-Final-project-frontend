@@ -8,9 +8,14 @@ export class TripPlaces extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			trip: {}
+			place: "",
+			url: ""
 		};
 	}
+
+	handleChangePlaces = evt => {
+		this.setState({ [evt.target.name]: evt.target.value });
+	};
 
 	render() {
 		return (
@@ -30,7 +35,7 @@ export class TripPlaces extends React.Component {
 															className="textfield col-md-4"
 															//value={this.state.userInput.places.place}
 															name="place"
-															//onChange={this.handleChangePlaces}
+															onChange={this.handleChangePlaces}
 															placeholder="Place..."
 														/>
 														<input
@@ -39,12 +44,14 @@ export class TripPlaces extends React.Component {
 															name="url"
 															placeholder="URL..."
 															//value={this.state.userInput.places.url}
-															//onChange={this.handleChangePlaces}
+															onChange={this.handleChangePlaces}
 														/>
 														<button
+															type="button"
 															className="addButton bg-white px-2 mx-2"
-															//onClick={this.addToPlaces}
-														>
+															onClick={() => {
+																actions.addPlace(thisTrip.id, { ...this.state });
+															}}>
 															Add
 														</button>
 													</div>

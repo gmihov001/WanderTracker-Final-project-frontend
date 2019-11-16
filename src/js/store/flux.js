@@ -103,6 +103,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			/*
+                {
+                    name: "asdasd",
+                    month: "sdsdf"
+                }
+            */
+			/*fake: (newObj) => {
+                const store = getStore();
+                const oldObj = store.trips.find(t => t.id === newObj.id);
+                setState({
+                    trips: store.trips.concat([{ ...oldObj, ...newObj }]);
+                });
+            },*/
+
 			login: (usename, pw) => {},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
@@ -150,20 +164,45 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addContact: (tripID, newContact) => {
 				const store = getStore();
-				contact.id = Math.ceil((Math.random() + 1) * 100000);
+				newContact.contid = Math.ceil((Math.random() + 1) * 100000);
 
-				const updatedContacts = store.trips.map(item => {
+				const updatedTrips = store.trips.map(item => {
 					if (tripID === item.id) {
 						item.contacts = item.contacts.concat([newContact]);
 					}
+					return item;
 				});
-
+				setStore({ trips: updatedTrips });
 				return true;
 			},
 
-			//addPlace:
+			addPlace: (tripID, newPlace) => {
+				const store = getStore();
+				newPlace.placeid = Math.ceil((Math.random() + 1) * 100000);
 
-			//addItinerary:
+				const updatedTrips = store.trips.map(item => {
+					if (tripID === item.id) {
+						item.places = item.places.concat([newPlace]);
+					}
+					return item;
+				});
+				setStore({ trips: updatedTrips });
+				return true;
+			},
+
+			addItinerary: (tripID, newItinerary) => {
+				const store = getStore();
+				newItinerary.itinid = Math.ceil((Math.random() + 1) * 100000);
+
+				const updatedTrips = store.trips.map(item => {
+					if (tripID === item.id) {
+						item.itinerary = item.itinerary.concat([newContact]);
+					}
+					return item;
+				});
+				setStore({ trips: updatedTrips });
+				return true;
+			},
 
 			removeContact: (tripID, contactID) => {
 				const store = getStore();

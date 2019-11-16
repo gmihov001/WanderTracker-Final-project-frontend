@@ -12,6 +12,10 @@ export class TripItinerary extends React.Component {
 		};
 	}
 
+	handleChangeItinerary = evt => {
+		this.setState({ [evt.target.name]: evt.target.value });
+	};
+
 	render() {
 		return (
 			<Context.Consumer>
@@ -30,7 +34,7 @@ export class TripItinerary extends React.Component {
 															className="textfield col-md-4"
 															//value={this.state.userInput.itinerary.date}
 															name="date"
-															//onChange={this.handleChangeItinerary}
+															onChange={this.handleChangeItinerary}
 															placeholder="Date..."
 														/>
 														<input
@@ -38,13 +42,14 @@ export class TripItinerary extends React.Component {
 															className="textfield col-md-4"
 															//value={this.state.userInput.itinerary.content}
 															name="content"
-															//onChange={this.handleChangeItinerary}
+															onChange={this.handleChangeItinerary}
 															placeholder="Activity details..."
 														/>
 														<button
 															className="addButton bg-white px-2 mx-2"
-															//onClick={this.addToItinerary}
-														>
+															onClick={() => {
+																actions.addItinerary(thisTrip.id, { ...this.state });
+															}}>
 															Add
 														</button>
 													</div>
