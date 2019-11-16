@@ -149,17 +149,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addContact: (tripID, newContact) => {
-                const store = getStore();
-                contact.id = Math.ceil((Math.random() + 1) * 100000);
+				const store = getStore();
+				contact.id = Math.ceil((Math.random() + 1) * 100000);
 
-                const updatedContacts = store.trips.map(item => {
-                    if(tripID === item.id) {
-                        item.contacts = item.contacts.concat([newContact]);
-                    }
-                };
+				const updatedContacts = store.trips.map(item => {
+					if (tripID === item.id) {
+						item.contacts = item.contacts.concat([newContact]);
+					}
+				});
 
 				return true;
-            },
+			},
 
 			//addPlace:
 
