@@ -28,8 +28,14 @@
     background: linear-gradient(gray, lightgray);
     color: white;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
+}
+
+.minititle {
+    background-color: #ffeaaf;
+    box-shadow: 1px 5px 5px gray;
 }
 
 /*.glass {

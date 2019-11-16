@@ -8,7 +8,8 @@ export class TripItinerary extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			trip: {}
+			date: "",
+			content: ""
 		};
 	}
 
@@ -22,10 +23,10 @@ export class TripItinerary extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div className="container pb-5 pt-3">
-							{store.trips.map(thisTrip => {
+							{store.trips.map((thisTrip, index) => {
 								if (thisTrip.id === this.props.tripID) {
 									return (
-										<div className="container d-block">
+										<div key={index} className="container d-block">
 											<form className="form-inline d-flex justify-content-between w-100">
 												<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 													<div className="col d-flex justify-content-center py-2">
@@ -46,6 +47,7 @@ export class TripItinerary extends React.Component {
 															placeholder="Activity details..."
 														/>
 														<button
+															type="button"
 															className="addButton bg-white px-2 mx-2"
 															onClick={() => {
 																actions.addItinerary(thisTrip.id, { ...this.state });
@@ -57,19 +59,19 @@ export class TripItinerary extends React.Component {
 											</form>
 
 											<div className="d-block entry-block col-md-12 justify-content-end">
-												{thisTrip.places.map((item, index) => (
+												{thisTrip.itinerary.map((item, index) => (
 													<div
 														key={index}
 														className="row entry-row px-3 d-flex justify-content-center">
 														<div className="col-md-5 px-0 d-flex justify-content-left">
 															<span type="text" className="entry px-1 ">
-																{item.place} , {item.url}
+																{item.date} , {item.content}
 															</span>
 														</div>
 														<div
 															className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
 															onClick={() => {
-																actions.removePlace(thisTrip.id, item.placeid);
+																actions.removeItinerary(thisTrip.id, item.itinid);
 															}}>
 															<span className="deleteEntry d-flex justify-content-center">
 																<i className="far fa-calendar-times"></i>

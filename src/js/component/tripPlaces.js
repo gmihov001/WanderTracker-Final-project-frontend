@@ -23,10 +23,10 @@ export class TripPlaces extends React.Component {
 				{({ store, actions }) => {
 					return (
 						<div className="container pb-5 pt-3">
-							{store.trips.map(thisTrip => {
+							{store.trips.map((thisTrip, index) => {
 								if (thisTrip.id === this.props.tripID) {
 									return (
-										<div className="container d-block">
+										<div key={index} className="container d-block">
 											<form className="form-inline d-flex justify-content-between w-100">
 												<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
 													<div className="col d-flex justify-content-center py-2">

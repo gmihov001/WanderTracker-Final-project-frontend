@@ -196,7 +196,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				const updatedTrips = store.trips.map(item => {
 					if (tripID === item.id) {
-						item.itinerary = item.itinerary.concat([newContact]);
+						item.itinerary = item.itinerary.concat([newItinerary]);
 					}
 					return item;
 				});
