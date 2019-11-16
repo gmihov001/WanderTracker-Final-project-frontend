@@ -15,5 +15,3 @@ ImagePreview.propTypes = {
 	dataUri: PropTypes.string,
 	isFullscreen: PropTypes.bool
 };
-
-export default ImagePreview;

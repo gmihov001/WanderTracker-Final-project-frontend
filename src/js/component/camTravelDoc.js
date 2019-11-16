@@ -5,10 +5,11 @@ import { Navbar2 } from "./Navbar2";
 import passport from "../../img/passport.jpg";
 import countries from "../constants/countries";
 import "react-html5-camera-photo/build/css/index.css";
+import CameraImport, { FACING_MODES } from "react-html5-camera-photo";
 
-import ImagePreview from "./ImagePreview"; // source code : ./src/demo/AppWithImagePreview/ImagePreview
+import { ImagePreview } from "./ImagePreview"; // source code : ./src/demo/AppWithImagePreview/ImagePreview
 
-export class Cam extends React.Component {
+export class camTravelDoc extends React.Component {
 	constructor(props, context) {
 		super(props, context);
 		this.state = { dataUri: null };
@@ -26,7 +27,10 @@ export class Cam extends React.Component {
 				<Navbar2 />
 				<div className="container App mt-5">
 					<div className="row my-5 d-flex justify-content-center">
-						<Camera onTakePhotoAnimationDone={this.onTakePhotoAnimationDone} />
+						<Camera
+							onTakePhotoAnimationDone={this.onTakePhotoAnimationDone}
+							idealFacingMode={FACING_MODES.ENVIRONMENT}
+						/>
 					</div>
 					<div className="container d-flex justify-content-center">
 						<div className="row">
@@ -56,7 +60,7 @@ export class Cam extends React.Component {
 
 					<div className="row my-5 d-flex justify-content-center">
 						<div className="col-md-4 justify-content-center">
-							<Link to="/Stamps">
+							<Link to="/TravelDoc">
 								<h2 className="xlButton glass text-center py-2 px-3 m-auto">Save</h2>
 							</Link>
 						</div>

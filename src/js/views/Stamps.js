@@ -19,7 +19,7 @@ export const Stamps = () => (
 			</div>
 			<div className="row my-5 d-flex justify-content-center">
 				<div className="col d-flex justify-content-center mb-5">
-					<Link to="/Cam">
+					<Link to="/camStamps">
 						<img
 							className="take-pic navbar-brand mb-0 h1"
 							title="Take a picture of your stamp"

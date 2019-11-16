@@ -6,7 +6,7 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 import StampPic from "../../img/stamp.jpg";
 import UserIcon from "../../img/user-03.png";
 import countries from "../constants/countries";
-import Cam from "../component/Cam";
+import camStamps from "../component/camStamps";
 import CountryDropDown from "../component/CountryDropDown";
 
 export const AddStamp = () => (
