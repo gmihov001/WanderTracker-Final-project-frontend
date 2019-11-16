@@ -6,8 +6,6 @@ import SaveIcon from "../../img/Save.png";
 import CalIcon from "../../img/Calendar.png";
 import DocIcon from "../../img/Documents.png";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
 export const MainGate = () => (
 	<div className="wrapper bg-white">
 		<Navbar />

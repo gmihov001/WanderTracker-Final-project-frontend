@@ -9,8 +9,6 @@ import AddIcon from "../../img/addbutton.png";
 import countries from "../constants/countries";
 import Coor from "../constants/Coor.json";
 
-<a href="https://icons8.com/icon/22917/postcard">Postcard icon by Icons8</a>;
-
 export class Map extends React.Component {
 	constructor() {
 		super();
@@ -20,11 +18,17 @@ export class Map extends React.Component {
 		};
 	}
 	onChange = e => {
-		this.setState({ country: Coor[e.target.value] });
+		console.dir(e.target);
+		this.setState({
+			country: this.state.country.concat({
+				label: e.target.options[e.target.selectedIndex].innerHTML,
+				coordinates: Coor[e.target.value]
+			})
+		});
 	};
 	render() {
 		return (
-			<div className="wrapper ">
+			<div className="wrapper">
 				<Navbar2 />
 				<div className="container">
 					<div className="row my-4 d-flex justify-content-center">
@@ -33,18 +37,25 @@ export class Map extends React.Component {
 						</div>
 					</div>
 
-					<SimpleMap markers={[this.state.country]} />
+					<SimpleMap markers={this.state.country} />
 				</div>
 				<div className="row my-4 d-flex justify-content-center">
 					<div className="col-md-4 text-center">
 						<select onChange={this.onChange} id="country" name="country" className="form-control">
 							<option value="Select Country">Select a Country</option>
-							{countries.map(({ label, value }) => (
-								<option key={value} value={value}>
+							{countries.map(({ label, value }, index) => (
+								<option key={index} value={value}>
 									{label}
 								</option>
 							))}
 						</select>
+					</div>
+					<div className="container">
+						<div className="row my-5 d-flex justify-content-center">
+							<div className="col-md-4 justify-content-center">
+								<h2 className="xlButton glass text-center py-2 px-3 m-auto">Save</h2>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
