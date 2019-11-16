@@ -7,11 +7,10 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 import UserIcon from "../../img/user-03.png";
 import AddIcon from "../../img/addbutton.png";
 import CamIcon from "../../img/Image.png";
-import camTravelDoc from "../component/camTravelDoc";
 
 export class TravelDoc extends React.Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
 
 		this.state = {};
 	}

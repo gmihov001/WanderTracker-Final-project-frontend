@@ -7,37 +7,36 @@ import countries from "../constants/countries";
 import "react-html5-camera-photo/build/css/index.css";
 import CameraImport, { FACING_MODES } from "react-html5-camera-photo";
 
-import { ImagePreview } from "./ImagePreview"; // source code : ./src/demo/AppWithImagePreview/ImagePreview
+import { ImagePreview } from "./ImagePreview";
 
 export class camTravelDoc extends React.Component {
-	constructor(props, context) {
-		super(props, context);
-		this.state = { dataUri: null };
+	constructor() {
+		super();
+		this.state = { picTravelDoc: null };
 	}
 
-	onTakePhotoAnimationDone = dataUri => {
-		console.log("takePhoto");
-		this.setState({ dataUri });
+	onTakePhoto = picTravelDoc => {
+		this.setState({ picTravelDoc });
 	};
 
 	render() {
-		console.log(this.state.dataUri);
 		return (
 			<div className="wrapper">
 				<Navbar2 />
 				<div className="container App mt-5">
 					<div className="row my-5 d-flex justify-content-center">
 						<Camera
-							onTakePhotoAnimationDone={this.onTakePhotoAnimationDone}
+							onTakePhoto={this.onTakePhoto}
 							idealFacingMode={FACING_MODES.ENVIRONMENT}
+							isImageMirror={false}
 						/>
 					</div>
 					<div className="container d-flex justify-content-center">
 						<div className="row">
 							<select id="country" name="country" className="form-control">
 								<option value="Select Country">Select a Country</option>
-								{countries.map(({ label, value }) => (
-									<option key={value} value={value}>
+								{countries.map(({ label, value }, index) => (
+									<option key={index} value={value}>
 										{label}
 									</option>
 								))}
@@ -46,12 +45,12 @@ export class camTravelDoc extends React.Component {
 					</div>
 
 					<div>
-						{this.state.dataUri ? (
+						{this.state.picTravelDoc ? (
 							<div className="row py-4 my-4 bg-white shadow">
 								<div className="col d-flex justify-content-center">
 									<img
 										className="stamp-prev navbar-brand mb-0 h1 img-fluid"
-										src={this.state.dataUri}
+										src={this.state.picTravelDoc}
 									/>
 								</div>
 							</div>
