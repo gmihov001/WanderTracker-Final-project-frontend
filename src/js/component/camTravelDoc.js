@@ -53,6 +53,7 @@ export class camTravelDoc extends React.Component {
 										src={this.state.picTravelDoc}
 									/>
 								</div>
+								<img className="flag mr-5" src="https://www.countryflags.io/hn/flat/64.png" />
 							</div>
 						) : null}
 					</div>

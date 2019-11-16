@@ -10,7 +10,9 @@ export const SimpleMap = ({ markers }) => {
 		<div>
 			<ComposableMap>
 				<Geographies geography={geoUrl}>
-					{({ geographies }) => geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)}
+					{({ geographies }) =>
+						geographies.map(geo => <Geography fill="#FCC14F" key={geo.rsmKey} geography={geo} />)
+					}
 				</Geographies>
 				{markers.map(({ label, coordinates }, index) => (
 					<Marker key={index} coordinates={[coordinates[1], coordinates[0]]}>
