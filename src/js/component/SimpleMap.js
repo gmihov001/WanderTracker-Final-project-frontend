@@ -12,8 +12,8 @@ export const SimpleMap = ({ markers }) => {
 				<Geographies geography={geoUrl}>
 					{({ geographies }) => geographies.map(geo => <Geography key={geo.rsmKey} geography={geo} />)}
 				</Geographies>
-				{markers.map((marker, index) => (
-					<Marker key={index} coordinates={[marker[1], marker[0]]}>
+				{markers.map(({ label, coordinates }, index) => (
+					<Marker key={index} coordinates={[coordinates[1], coordinates[0]]}>
 						<g
 							fill="none"
 							stroke="#FF5533"
@@ -24,6 +24,9 @@ export const SimpleMap = ({ markers }) => {
 							<circle cx="12" cy="10" r="3" />
 							<path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
 						</g>
+						<text textAnchor="middle" style={{ fontFamily: "system-ui", fill: "yellow", fontSize: "10px" }}>
+							{label}
+						</text>
 					</Marker>
 				))}
 			</ComposableMap>
