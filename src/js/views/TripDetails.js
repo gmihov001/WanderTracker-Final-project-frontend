@@ -1,117 +1,120 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.js";
 import { Navbar2 } from "../component/Navbar2";
 import PropTypes from "prop-types";
+import { TripContacts } from "../component/tripContacts.js";
+import { TripPlaces } from "../component/tripPlaces.js";
+import { TripItinerary } from "../component/tripItinerary.js";
+import { TriPlanner } from "./TripPlanner";
 
 export class TripDetails extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			userInput: {
-				contacts: {
-					contact: "",
-					address: "",
-					phone: ""
-				},
-				places: {
-					place: "",
-					url: ""
-				},
-				itinerary: {
-					date: "",
-					content: ""
-				}
-			},
-			trip: []
-		};
+		this.state = {};
 	}
-
-	assignState = array => {
-		this.setState({ trip: array });
-	};
-
-	/*
-	handleChangeContacts = evt => {
-		this.setState({
-			userInput: {
-				...this.state.userInput,
-				contacts: { ...this.state.userInput.contacts, [evt.target.name]: evt.target.value }
-			}
-		});
-	};
-
-	handleChangePlaces = evt => {
-		this.setState({
-			userInput: {
-				...this.state.userInput,
-				places: { ...this.state.userInput.places, [evt.target.name]: evt.target.value }
-			}
-		});
-	};
-
-	handleChangeItinerary = evt => {
-		this.setState({
-			userInput: {
-				...this.state.userInput,
-				itinerary: { ...this.state.userInput.itinerary, [evt.target.name]: evt.target.value }
-			}
-		});
-	};
-
-	addToContacts = e => {
-		e.preventDefault();
-		const newContacts = this.state.trip.contacts.concat(this.state.userInput.contacts);
-		this.setState({
-			trip: { ...this.state.trip, contacts: newContacts },
-			userInput: { ...this.state.userInput, contacts: { contact: "", address: "", phone: "" } }
-		});
-	};
-
-	addToPlaces = e => {
-		e.preventDefault();
-		const newPlaces = this.state.trip.places.concat(this.state.userInput.places);
-		this.setState({
-			trip: { ...this.state.trip, places: newPlaces },
-			userInput: { ...this.state.userInput, places: { place: "", url: "" } }
-		});
-	};
-
-	addToItinerary = e => {
-		e.preventDefault();
-		const newItinerary = this.state.trip.itinerary.concat(this.state.userInput.itinerary);
-		this.setState({
-			trip: { ...this.state.trip, itinerary: newItinerary },
-			userInput: { ...this.state.userInput, itinerary: { date: "", content: "" } }
-		});
-    };
-    */
 
 	render() {
 		return (
-			<React.Fragment>
-				<div className="wrapper">
-					<Navbar2 />
-					<Context.Consumer>
-						{({ store, actions }) => {
-							let thisTrip = store.trips.map(aTrip => {
-								if (aTrip.id == this.props.match.params.id) {
-									return aTrip;
-								}
-							});
-							console.log(thisTrip);
-							assignState(thisTrip);
+			<div className="wrapper">
+				<Navbar2 />
+				<Context.Consumer>
+					{({ store }) => {
+						return (
+							<div className="container pb-5 pt-3">
+								{store.trips.map((thisTrip, index) => {
+									if (`${thisTrip.id}` === this.props.match.params.id) {
+										return (
+											<div key={index}>
+												<div className="row py-2 my-4 d-flex justify-content-center">
+													<div className="col-md-4 text-center">
+														<h1 className="pageTitle text-center px-1">
+															{thisTrip.name} {thisTrip.year}
+														</h1>
+													</div>
+												</div>
 
-							console.log(this.state.trip);
-							return (
-								<div className="container">
-									<div>Hello!</div>
-								</div>
-							);
-						}}
-					</Context.Consumer>
-				</div>
-			</React.Fragment>
+												<div className="row py-3 my-2 bg-white shadow">
+													<div id="module" className="container">
+														<div className="col-md-11 mb-3">
+															<h4 className="pageEntry">Contacts</h4>
+														</div>
+														<p
+															className="collapse"
+															id="collapseContacts"
+															aria-expanded="false">
+															<TripContacts
+																tripID={thisTrip.id}
+																contid={thisTrip.contacts.contid}
+															/>
+														</p>
+														<a
+															role="button"
+															className="collapsed"
+															data-toggle="collapse"
+															href="#collapseContacts"
+															aria-expanded="false"
+															aria-controls="collapseContacts"></a>
+													</div>
+												</div>
+
+												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
+													<div id="module" className="container">
+														<div className="col-md-4 by-2">
+															<h4 className="pageEntry">Places of Interest</h4>
+														</div>
+
+														<p
+															className="collapse"
+															id="collapsePlaces"
+															aria-expanded="false">
+															<TripPlaces
+																tripID={thisTrip.id}
+																placeid={thisTrip.places.placeid}
+															/>
+														</p>
+														<a
+															role="button"
+															className="collapsed"
+															data-toggle="collapse"
+															href="#collapsePlaces"
+															aria-expanded="false"
+															aria-controls="collapsePlaces"></a>
+													</div>
+												</div>
+
+												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
+													<div id="module" className="container">
+														<div className="col-md-4 by-2">
+															<h4 className="pageEntry">Itinerary</h4>
+														</div>
+
+														<p
+															className="collapse"
+															id="collapseExample"
+															aria-expanded="false">
+															<TripItinerary
+																tripID={thisTrip.id}
+																itinid={thisTrip.itinerary.itinid}
+															/>
+														</p>
+														<a
+															role="button"
+															className="collapsed"
+															data-toggle="collapse"
+															href="#collapseExample"
+															aria-expanded="false"
+															aria-controls="collapseExample"></a>
+													</div>
+												</div>
+											</div>
+										);
+									}
+								})}
+							</div>
+						);
+					}}
+				</Context.Consumer>
+			</div>
 		);
 	}
 }

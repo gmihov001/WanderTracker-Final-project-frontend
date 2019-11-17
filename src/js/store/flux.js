@@ -1,6 +1,16 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			emergency_contacts: [
+				{
+					name: "Georgi",
+					number: "9546465110"
+				},
+				{
+					name: "Mom",
+					number: "9548730042"
+				}
+			],
 			trips: [
 				{
 					name: "Spain",
@@ -130,7 +140,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			editTrip: (tripID, object) => {
-				console.log();
 				const store = getStore();
 				let change = [];
 				change = store.trips.map(item => {
@@ -160,6 +169,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const updatedTrips = store.trips.concat([object]);
 				setStore({ trips: updatedTrips });
 				return true;
+			},
+
+			addEmergContact: object => {
+				const store = getStore();
+				object.id = Math.ceil((Math.random() + 1) * 100000);
+
+				const updatedEmergContacts = store.emergency_contacts.concat([object]);
+				setStore({ emergency_contacts: updatedEmergContacts });
+				return true;
+			},
+
+			removeEmergContact: name => {
+				const store = getStore();
+				const change = store.emergency_contacts.filter(item => {
+					return item.name != name;
+				});
+				setStore({ emergency_contacts: change });
 			},
 
 			addContact: (tripID, newContact) => {

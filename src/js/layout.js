@@ -13,7 +13,7 @@ import { AddTravelDoc } from "./views/AddTravelDoc";
 import { Map } from "./views/Map";
 import { TripPlanner } from "./views/TripPlanner";
 import { AddTrip } from "./views/AddTrip";
-import { TripDetailsBeta } from "./views/TripDetailsBeta";
+import { TripDetails } from "./views/TripDetails";
 import { EmergContacts } from "./views/EmergContacts";
 import { camTravelDoc } from "./component/camTravelDoc";
 import { camStamps } from "./component/camStamps";
@@ -44,7 +44,7 @@ export const Layout = () => {
 						<Route path="/Map" component={Map} />
 						<Route path="/TripPlanner" component={TripPlanner} />
 						<Route path="/AddTrip" component={AddTrip} />
-						<Route path="/TripDetailsBeta/:id" component={TripDetailsBeta} />
+						<Route path="/TripDetails/:id" component={TripDetails} />
 						<Route path="/EmergContacts" component={EmergContacts} />
 						<Route path="/camTravelDoc" component={camTravelDoc} />
 						<Route path="/camStamps" component={camStamps} />

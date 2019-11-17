@@ -23,7 +23,7 @@ export class TripContacts extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="container pb-5 pt-3">
+						<div className="container pb-1 pt-3">
 							{store.trips.map((thisTrip, index) => {
 								if (thisTrip.id === this.props.tripID) {
 									return (
@@ -67,7 +67,7 @@ export class TripContacts extends React.Component {
 												</div>
 											</form>
 
-											<div className="d-block entry-block col-md-12 justify-content-end">
+											<div className="d-block entry-block col-md-12 my-2 justify-content-end">
 												{thisTrip.contacts.map((item, index) => (
 													<div
 														key={index}

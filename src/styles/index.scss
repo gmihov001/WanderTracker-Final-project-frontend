@@ -5,6 +5,34 @@
     font-weight: 400;
 }
 
+.row {
+    border-radius: 10px;
+}
+
+#module {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#module a.collapsed:after  {
+    content: 'Show List';
+    color: yellowgreen;
+    padding: 5px;
+    margin-left: 15px;
+    box-shadow: 1px 1px 2px gray;
+    border-radius: 15px;
+}
+
+#module a:not(.collapsed):after {
+    box-shadow: 1px 1px 2px gray;
+    content: 'Hide List';
+    color: orange;
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+
 .xlButton {
     background-color: #fe5000;
     color:white;
@@ -18,7 +46,7 @@
 
 .xlButton:hover {
     background-color:  lightgreen;
-    background: linear-gradient(rgb(12, 160, 37),rgb(0, 255, 115));
+    background: linear-gradient(rgb(0, 255, 115),rgb(12, 160, 37));
     border-radius: 15px;
     text-decoration: none;
 }
@@ -31,11 +59,6 @@
 
 a:hover {
     text-decoration: none;
-}
-
-.minititle {
-    background-color: #ffeaaf;
-    box-shadow: 1px 5px 5px gray;
 }
 
 /*.glass {
@@ -72,36 +95,54 @@ a:hover {
 
 .wrapper {
     background-color:rgb(245, 245, 245);
+    box-shadow: inset 0px 2px 15px gray;
 }
 
 .pageTitle {
     color: #fe5000;
-    border-bottom: solid 1px #fe5000;
-    text-shadow: 2px 2px 4px lightgray;
-    border-radius: 0px;
+    background-color: rgb(250,250,250);
+    font-size: 2em;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 5px rgb(180,180,180);
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.658), inset -2px -2px 6px lightgray;
 }
 
 .pageEntry {
     color: #fe5000;
     font-weight: 300;
-    text-shadow: 2px 2px 4px lightgray;
+    text-shadow: 1px 1px 4px rgb(180, 180, 180);
 }
 
-.pageEntry:hover {
-    text-shadow: 2px 2px 6px lightgray;
-}
-
-.smallButton {
+.smallView {
     background-color: white !important;
-    color: gray;
+    color: yellowgreen;
     border-radius: 15px;
-    border: solid 1px darkslategrey;
+    border: solid 1px yellowgreen;
+    box-shadow: 1px 1px 5px gray;
 }
 
-.smallButton:hover {
+.smallView:hover {
+    color: white !important;
+    background-color: yellowgreen !important;
+    box-shadow: 0px 1px 15px yellowgreen;
+    font-weight: 500;
+    border: solid 1px white;
+}
+
+.smallDelete {
+    background-color: white !important;
+    color: orangered;
+    border-radius: 15px;
+    border: solid 1px orange;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.smallDelete:hover {
     color: white !important;
     background-color: #fe5000 !important;
-    box-shadow: 0px 1px 15px orange;
+    box-shadow: 0px 1px 15px orangered;
     font-weight: 500;
     border: solid 1px white;
 }
@@ -159,7 +200,7 @@ a:hover {
     border-radius: 20px;
     background-color: rgb(243,243,243);
     border: solid 1px #fe5000;
-    box-shadow: inset 0px -1px 10px rgb(251, 196, 108);
+    box-shadow: inset 0px -1px 5px rgb(251, 218, 108);
     margin-left: 5px;
     margin-right: 5px;
     max-width: 99%;
@@ -424,7 +465,7 @@ footer p {
 .textfield:focus {
     border: solid 1px orange;
     border-radius: 15px;
-    background-color: rgb(250,250,250);    
+    background-color: rgb(255,255,255);    
     outline: none;    
     box-shadow: inset 0px -1px 15px rgb(255, 236, 128); 
 }

@@ -19,18 +19,17 @@ export const TripPlanner = props => (
 					</div>
 
 					{store.trips.map((item, index) => (
-						<div key={index} className="row py-4 my-4 d-flex justify-content-between bg-white shadow-sm">
+						<div key={index} className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 							<div className="col d-flex justify-content-between">
 								<h4 className="pageEntry">
-									Trip {item.name} {item.year}
+									{item.name} {item.year}
 								</h4>
-								ID: {item.id}
 							</div>
 							<div>
-								<Link to={`/TripDetailsBeta/${item.id}`}>
-									<button className="smallButton bg-white px-2 mx-2">View/Edit</button>
+								<Link to={`/TripDetails/${item.id}`}>
+									<button className="smallView bg-white px-2 mx-2">View/Edit</button>
 								</Link>
-								<button className="smallButton bg-white px-2 mx-2">Delete</button>
+								<button className="smallDelete bg-white px-2 mx-2">Delete</button>
 							</div>
 						</div>
 					))}

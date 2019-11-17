@@ -31,15 +31,15 @@ export class Map extends React.Component {
 			<div className="wrapper">
 				<Navbar2 />
 				<div className="container">
-					<div className="row my-4 d-flex justify-content-center">
-						<div className="col-md-4 text-center">
+					<div className="row mt-5 d-flex justify-content-center">
+						<div className="col-md-2 text-center">
 							<h1 className="pageTitle text-center py-2 px-3">Map</h1>
 						</div>
 					</div>
 
 					<SimpleMap markers={this.state.country} />
 				</div>
-				<div className="row my-4 d-flex justify-content-center">
+				<div className="row my-2 d-flex justify-content-center">
 					<div className="col-md-4 text-center">
 						<select onChange={this.onChange} id="country" name="country" className="form-control">
 							<option value="Select Country">Select a Country</option>
