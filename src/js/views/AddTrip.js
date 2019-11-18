@@ -35,17 +35,13 @@ export class AddTrip extends React.Component {
 		this.setState({ trip: { ...this.state.trip, year: evt.target.value } });
 	};
 
-	/*redirect = () => {
-		window.location.assign("https://8080-c4f1c2ca-27f9-47b0-ae8f-9aff7c8ca27b.ws-us02.gitpod.io/TripPlanner");
-	};*/
-
 	render() {
 		return (
 			<div className="wrapper">
 				<Navbar2 />
 				<div className="container addWindow bg-white shadow-lg py-4 mt-5">
 					<form>
-						<div className="row py-4 my-4 d-flex justify-content-center">
+						<div className="row py-3 my-3 d-flex justify-content-center">
 							<div className="col-md-4 d-block">
 								<h1 className="pageTitle text-center py-2 px-3">Add New Trip</h1>
 								<h4 className="text-secondary text-center rounded shadow">
@@ -95,7 +91,7 @@ export class AddTrip extends React.Component {
 							<div className="col-md-4 justify-content-center">
 								<h2
 									className="xlButton glass text-center py-2 px-3 m-auto"
-									onMouseDown={() => {
+									onMouseUp={() => {
 										if (actions.addTrip(this.state.trip)) {
 											this.props.history.push("/TripPlanner");
 										}

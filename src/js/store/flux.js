@@ -1,6 +1,20 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
+		passport_number: "23456789",
+		passport_expiry: "12.10.2029",
 		store: {
+			countries: [
+				{
+					label: "France",
+					coordinates: ["46.0000", "2.0000"],
+					value: ""
+				},
+				{
+					label: "Spain",
+					coordinates: ["40.0000", "-4.0000"],
+					value: ""
+				}
+			],
 			traveldocs: [
 				{
 					id: "232",
@@ -178,12 +192,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ trips: change });
 			},
 
+			addPasNum: num => {
+				const updatedPasNum = num;
+				setStore({ passport_number: updatedPasNum });
+			},
+
+			addPasExp: date => {
+				const updatedPasExp = date;
+				setStore({ passport_expiry: updatedPasExp });
+			},
+
 			addTrip: object => {
 				const store = getStore();
 				object.id = Math.ceil((Math.random() + 1) * 100000);
 
 				const updatedTrips = store.trips.concat([object]);
 				setStore({ trips: updatedTrips });
+				return true;
+			},
+
+			addCountry: object => {
+				const store = getStore();
+				const updatedCountries = store.countries.concat(object);
+				setStore({ countries: updatedCountries });
 				return true;
 			},
 
