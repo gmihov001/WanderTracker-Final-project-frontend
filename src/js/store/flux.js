@@ -1,12 +1,42 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			traveldocs: [
+				{
+					id: "232",
+					photo: "Document image",
+					label: "Bulgaria",
+					value: "bg"
+				},
+				{
+					id: "565",
+					photo: "Document image",
+					label: "Honduras",
+					value: "hn"
+				}
+			],
+			stamps: [
+				{
+					id: "897",
+					photo: "Stamp image",
+					label: "Honduras",
+					value: "hn"
+				},
+				{
+					id: "997",
+					photo: "Stamp image",
+					label: "Bulgaria",
+					value: "bg"
+				}
+			],
 			emergency_contacts: [
 				{
+					id: "234",
 					name: "Georgi",
 					number: "9546465110"
 				},
 				{
+					id: "567",
 					name: "Mom",
 					number: "9548730042"
 				}
@@ -113,20 +143,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			/*
-                {
-                    name: "asdasd",
-                    month: "sdsdf"
-                }
-            */
-			/*fake: (newObj) => {
-                const store = getStore();
-                const oldObj = store.trips.find(t => t.id === newObj.id);
-                setState({
-                    trips: store.trips.concat([{ ...oldObj, ...newObj }]);
-                });
-            },*/
-
 			login: (usename, pw) => {},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
@@ -186,6 +202,40 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return item.name != name;
 				});
 				setStore({ emergency_contacts: change });
+			},
+
+			addStamp: object => {
+				const store = getStore();
+				object.id = Math.ceil((Math.random() + 1) * 100000);
+
+				const updatedStamps = store.stamps.concat([object]);
+				setStore({ stamps: updatedStamps });
+				return true;
+			},
+
+			removeStamp: id => {
+				const store = getStore();
+				const change = store.stamps.filter(item => {
+					return item.id != id;
+				});
+				setStore({ stamps: change });
+			},
+
+			addDoc: object => {
+				const store = getStore();
+				object.id = Math.ceil((Math.random() + 1) * 100000);
+
+				const updatedDocs = store.traveldocs.concat([object]);
+				setStore({ traveldocs: updatedDocs });
+				return true;
+			},
+
+			removeDoc: id => {
+				const store = getStore();
+				const change = store.traveldocs.filter(item => {
+					return item.id != id;
+				});
+				setStore({ traveldocs: change });
 			},
 
 			addContact: (tripID, newContact) => {

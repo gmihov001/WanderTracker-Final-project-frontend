@@ -7,6 +7,7 @@ import wtLogo from "../../img/wanderTrackerLogo.png";
 import UserIcon from "../../img/user-03.png";
 import AddIcon from "../../img/addbutton.png";
 import CamIcon from "../../img/Image.png";
+import { Context } from "../store/appContext.js";
 
 export class TravelDoc extends React.Component {
 	constructor() {
@@ -14,6 +15,10 @@ export class TravelDoc extends React.Component {
 
 		this.state = {};
 	}
+
+	getImage = country => {
+		return `https://www.countryflags.io/${country}/shiny/64.png`;
+	};
 
 	render() {
 		return (
@@ -38,27 +43,37 @@ export class TravelDoc extends React.Component {
 						</div>
 					</div>
 
-					<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
-						<div className="col">
-							<img className="travel-doc navbar-brand mb-0 h1 img-fluid" src={passport} height="100" />
-						</div>
-						<div className="mx-2">
-							<Link to="/TripDetails">
-								<button className="smallButton bg-white px-2 mx-2">Delete</button>
-							</Link>
-						</div>
-					</div>
-					<div className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
-						<div className="col">
-							<img
-								className="travel-doc navbar-brand mb-0 h1 img-fluid"
-								height="100"
-								src="https://i.huffpost.com/gen/1936992/thumbs/o-TICKET-570.jpg?16"
-							/>
-						</div>
-						<div className="mx-2">
-							<button className="smallButton bg-white px-2 mx-2">Delete</button>
-						</div>
+					<div className="row my-5 d-flex justify-content-center">
+						<Context.Consumer>
+							{({ store, actions }) => {
+								return (
+									<div className="container d-block">
+										{store.traveldocs.map((item, index) => {
+											return (
+												<div
+													key={index}
+													className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
+													<div className="col d-flex ">
+														<img className="flag mr-5" src={this.getImage(item.value)} />
+														{item.id} | {item.photo} | {item.label}
+													</div>
+													<div className="mr-2">
+														<button
+															className="smallDelete px-2 mx-2"
+															type="button"
+															onClick={() => {
+																actions.removeDoc(item.id);
+															}}>
+															Delete
+														</button>
+													</div>
+												</div>
+											);
+										})}
+									</div>
+								);
+							}}
+						</Context.Consumer>
 					</div>
 				</div>
 			</div>
