@@ -44,18 +44,24 @@ export class Map extends React.Component {
 
 							<SimpleMap markers={store.countries} />
 						</div>
-						<div className="row my-2 d-flex justify-content-center">
-							<div className="col-md-4 text-center">
-								<select onChange={this.onChange} id="country" name="country" className="form-control">
-									<option value="Select Country">Select a Country</option>
-									{countries.map(({ label, value }, index) => (
-										<option key={index} value={value}>
-											{label}
-										</option>
-									))}
-								</select>
+						<div className="container">
+							<div className="row my-5 d-flex justify-content-center">
+								<div className="col-md-4 justify-content-center">
+									<select
+										onChange={this.onChange}
+										id="country"
+										name="country"
+										className="form-control">
+										<option value="Select Country">Select a Country</option>
+										{countries.map(({ label, value }, index) => (
+											<option key={index} value={value}>
+												{label}
+											</option>
+										))}
+									</select>
+								</div>
 							</div>
-							<div className="container">
+							<div className="container ">
 								<div className="row my-5 d-flex justify-content-center">
 									<div className="col-md-4 justify-content-center">
 										<h2

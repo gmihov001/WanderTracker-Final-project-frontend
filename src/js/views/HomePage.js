@@ -26,12 +26,8 @@ export class HomePage extends React.Component {
 								src="https://images.unsplash.com/photo-1549986432-5060067864b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 								className="profile-pic mx-auto d-block img-fluid"
 							/>
-							<p className="profile-name text py-2 px-3">
+							<p className="profile-name text py-2 px-3 mb-5">
 								<strong>John Smith</strong>
-								<br />
-								<button className="edit-profileIcon bg-lightgrey px-2 mx-2">
-									<i className="fas fa-cog"></i>
-								</button>
 							</p>
 						</div>
 						<Context.Consumer>
