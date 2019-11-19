@@ -6,20 +6,46 @@ import passport from "../../img/passport.jpg";
 import countries from "../constants/countries";
 import "react-html5-camera-photo/build/css/index.css";
 import CameraImport, { FACING_MODES } from "react-html5-camera-photo";
-
+import { Context } from "../store/appContext.js";
+import PropTypes from "prop-types";
 import { ImagePreview } from "./ImagePreview";
 
 export class camStamps extends React.Component {
 	constructor() {
 		super();
-		this.state = { picStamp: null };
+		this.state = {
+			stamp: {
+				photo: null,
+				label: "",
+				value: ""
+			}
+		};
 	}
 
-	onTakePhoto = picStamp => {
-		this.setState({ picStamp });
+	onTakePhoto = photo => {
+		//const newstamp = Object.assign(this.state.stamp, photo);
+		this.setState({ stamp: { ...this.state.stamp, photo: photo } });
+	};
+
+	onChange = e => {
+		console.dir(e.target);
+		let str = e.target.options[e.target.selectedIndex].innerHTML;
+		let split = str.split(" ");
+
+		this.setState({
+			stamp: {
+				label: split[0],
+				value: split[1]
+			}
+		});
+	};
+
+	getImage = country => {
+		return `https://www.countryflags.io/${country}/shiny/64.png`;
 	};
 
 	render() {
+		console.log("Typeof: " + typeof this.state.stamp.photo);
 		return (
 			<div className="wrapper">
 				<Navbar2 />
@@ -33,39 +59,61 @@ export class camStamps extends React.Component {
 					</div>
 					<div className="container d-flex justify-content-center">
 						<div className="row">
-							<select id="country" name="country" className="form-control">
+							<select id="country" name="country" onChange={this.onChange} className="form-control">
 								<option value="Select Country">Select a Country</option>
 								{countries.map(({ label, value }, index) => (
 									<option key={index} value={value}>
-										{label}
+										{label} {value}
 									</option>
 								))}
 							</select>
 						</div>
 					</div>
-
 					<div>
-						{this.state.picStamp ? (
-							<div className="row py-4 my-4 bg-white shadow">
-								<div className="col d-flex justify-content-center">
+						{this.state.stamp ? (
+							<div className="row d-flex justify-content-between py-4 my-4 bg-white shadow">
+								<div className="col pageEntry ml-3 px-2 h-1 mt-4">
+									<h3 className="align-middle">{this.state.stamp.label}</h3>
+								</div>
+								<div className="col">
 									<img
 										className="stamp-prev navbar-brand mb-0 h1 img-fluid"
-										src={this.state.picStamp}
+										src={this.state.stamp.photo}
+									/>
+								</div>
+								<div>
+									<img
+										className="stamp-prev navbar-brand mr-5 h-1"
+										src={this.getImage(this.state.stamp.value)}
 									/>
 								</div>
 							</div>
 						) : null}
 					</div>
-
-					<div className="row my-5 d-flex justify-content-center">
-						<div className="col-md-4 justify-content-center">
-							<Link to="/Stamps">
-								<h2 className="xlButton glass text-center py-2 px-3 m-auto">Save</h2>
-							</Link>
-						</div>
-					</div>
+					<Context.Consumer>
+						{({ actions }) => (
+							<div className="row my-5 d-flex justify-content-center">
+								<div className="col-md-4 justify-content-center">
+									<h2
+										className="xlButton glass text-center py-2 px-3 m-auto"
+										type="text"
+										onMouseUp={() => {
+											if (actions.addStamp(this.state.stamp)) {
+												this.props.history.push("/Stamps");
+											}
+										}}>
+										Save
+									</h2>
+								</div>
+							</div>
+						)}
+					</Context.Consumer>
 				</div>
 			</div>
 		);
 	}
 }
+
+camStamps.propTypes = {
+	history: PropTypes.object
+};

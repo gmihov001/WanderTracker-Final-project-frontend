@@ -45,6 +45,7 @@ export class Stamps extends React.Component {
 							{({ store, actions }) => {
 								return (
 									<div className="container d-block">
+<<<<<<< HEAD
 										{store.stamps.map((item, index) => {
 											return (
 												<div
@@ -65,9 +66,39 @@ export class Stamps extends React.Component {
 															Delete
 														</button>
 													</div>
+=======
+										{store.stamps.map((item, index) => (
+											<div
+												key={index}
+												className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
+												<div className="pageEntry ml-3 px-2 h-1 mt-4">
+													<h3 className="align-middle">{item.label}</h3>
 												</div>
-											);
-										})}
+
+												<div className="col d-flex justify-content-center">
+													<img
+														className="stamp-prev navbar-brand mb-0 h1 img-fluid"
+														src={item.photo}
+													/>
+												</div>
+
+												<div>
+													<img className="flag mr-5" src={this.getImage(item.value)} />
+												</div>
+												<div className="mr-2">
+													<button className="smallView px-2 mx-2">Share</button>
+													<button
+														className="smallDelete px-2 mx-2"
+														type="button"
+														onClick={() => {
+															actions.removeStamp(item.id);
+														}}>
+														Delete
+													</button>
+>>>>>>> b4f3b8a005497cbec9b8028dcf8b0e9f74222419
+												</div>
+											</div>
+										))}
 									</div>
 								);
 							}}
