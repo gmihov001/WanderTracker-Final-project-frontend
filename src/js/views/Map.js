@@ -17,6 +17,7 @@ export class Map extends React.Component {
 			country: []
 		};
 	}
+
 	onChange = e => {
 		console.dir(e.target);
 		this.setState({
@@ -27,6 +28,7 @@ export class Map extends React.Component {
 		});
 	};
 	render() {
+		console.log();
 		return (
 			<div className="wrapper">
 				<Navbar2 />

@@ -56,6 +56,7 @@ export class Stamps extends React.Component {
 													</div>
 													<div className="mr-2">
 														<button className="smallView px-2 mx-2">Share</button>
+
 														<button
 															className="smallDelete px-2 mx-2"
 															type="button"
