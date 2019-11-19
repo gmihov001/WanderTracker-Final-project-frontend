@@ -30,9 +30,9 @@ export class EmergContacts extends React.Component {
 						<Context.Consumer>
 							{({ store, actions }) => {
 								return (
-									<div className="container d-block">
-										<form className="form-inline d-flex justify-content-between w-100">
-											<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
+									<div className="container ">
+										<form className="  w-100">
+											<div className="  w-100 col-md-12 col-lg-12  mb-2">
 												<div className="col d-flex justify-content-center py-2">
 													<input
 														type="text"
@@ -41,6 +41,9 @@ export class EmergContacts extends React.Component {
 														onChange={this.handleChangeContacts}
 														placeholder="Contact name..."
 													/>
+												</div>
+
+												<div className="col d-flex justify-content-center py-2">
 													<input
 														type="text"
 														className="textfield col-md-4"
@@ -48,6 +51,8 @@ export class EmergContacts extends React.Component {
 														onChange={this.handleChangeContacts}
 														placeholder="Contact number..."
 													/>
+												</div>
+												<div className="col d-flex justify-content-center py-2">
 													<button
 														type="button"
 														className="addButton bg-white px-2 mx-2"
@@ -60,7 +65,7 @@ export class EmergContacts extends React.Component {
 											</div>
 										</form>
 
-										<div className="d-block entry-block col-md-10 col-lg-8 my-2 justify-content-end">
+										<div className="d-block entry-block col-md-10 col-lg-8 my-2 ">
 											{store.emergency_contacts.map((item, index) => (
 												<div
 													key={index}
@@ -71,11 +76,11 @@ export class EmergContacts extends React.Component {
 														</span>
 													</div>
 													<div
-														className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
+														className="col-md-2 col-lg-1 x pt-1 w-100 ml-auto"
 														onClick={() => {
 															actions.removeEmergContact(item.name);
 														}}>
-														<span className="deleteEntry d-flex justify-content-center">
+														<span className="deleteEntry ">
 															<i className="far fa-calendar-times"></i>
 														</span>
 													</div>

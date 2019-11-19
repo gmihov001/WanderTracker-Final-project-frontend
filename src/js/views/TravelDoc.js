@@ -51,7 +51,7 @@ export class TravelDoc extends React.Component {
 											<div
 												key={index}
 												className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
-												<div className="pageEntry ml-3 px-2 h-1 mt-4">
+												<div className="col pageEntry ml-3 px-2 h-1 mt-4">
 													<h3 className="align-middle">{item.label}</h3>
 												</div>
 
@@ -64,13 +64,13 @@ export class TravelDoc extends React.Component {
 
 												<div>
 													<img
-														className="mr-5 stamp-prev navbar-brand"
+														className="col mr-5 stamp-prev navbar-brand img-fluid"
 														src={this.getImage(item.value)}
 													/>
 												</div>
-												<div className="mr-2">
+												<div className=" mr-2">
 													<button
-														className="smallDelete px-2 mx-2"
+														className="col smallDelete px-2 mx-1"
 														type="button"
 														onClick={() => {
 															actions.removeDoc(item.id);
