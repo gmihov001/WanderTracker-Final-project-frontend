@@ -28,6 +28,7 @@ export class Map extends React.Component {
 			}
 		});
 	};
+
 	render() {
 		console.log();
 		return (
