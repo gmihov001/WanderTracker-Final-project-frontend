@@ -52,7 +52,7 @@ export class TravelDoc extends React.Component {
 												key={index}
 												className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 												<div className="pageEntry ml-3 px-2 h-1 mt-4">
-													<h3 className="align-middle">{item.label}</h3>
+													<h3 className="country-name align-middle">{item.label}</h3>
 												</div>
 
 												<div className="col d-flex justify-content-center">

@@ -73,7 +73,7 @@ export class camStamps extends React.Component {
 						{this.state.stamp ? (
 							<div className="row d-flex justify-content-between py-4 my-4 bg-white shadow">
 								<div className="col pageEntry ml-3 px-2 h-1 mt-4">
-									<h3 className="align-middle">{this.state.stamp.label}</h3>
+									<h3 className="country-name align-middle">{this.state.stamp.label}</h3>
 								</div>
 								<div className="col">
 									<img
