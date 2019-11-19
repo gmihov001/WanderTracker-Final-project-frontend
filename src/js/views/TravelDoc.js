@@ -29,9 +29,8 @@ export class TravelDoc extends React.Component {
 							<h1 className="pageTitle text-center py-2 px-3">Travel Documents</h1>
 						</div>
 					</div>
-
-					<div className="row my-5 d-flex justify-content-center">
-						<div className="col d-flex justify-content-center mb-5">
+					<div className="row my-3 d-flex justify-content-center">
+						<div className="col d-flex justify-content-center mb-2">
 							<Link to="/camTravelDoc">
 								<img
 									className="take-pic navbar-brand mb-0 h1"
@@ -50,24 +49,27 @@ export class TravelDoc extends React.Component {
 										{store.traveldocs.map((item, index) => (
 											<div
 												key={index}
-												className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
-												<div className="pageEntry ml-3 px-2 h-1 mt-4">
-													<h3 className="country-name align-middle">{item.label}</h3>
+												className="row py-2 my-4 d-flex justify-content-between bg-white shadow">
+												<div className="col-sm-2 col-md-2 pageEntry ml-3 px-2 h-1 mt-4">
+													<h3 className="align-middle">{item.label}</h3>
 												</div>
 
-												<div className="col d-flex justify-content-center">
+												<div className="col-sm-2 col-md-4 d-flex justify-content-center">
 													<img
 														className="stamp-prev navbar-brand mb-0 h1 img-fluid"
+														onError="this.style.display='none'"
 														src={item.photo}
 													/>
 												</div>
 
-												<div>
+												<div className="col-sm-2 col-md-2 mt-3 text-center">
 													<img
-														className="col mr-5 stamp-prev navbar-brand img-fluid"
+														className="flag mr-0"
+														onError="this.style.display='none'"
 														src={this.getImage(item.value)}
 													/>
 												</div>
+                                                
 												<div className=" mr-2">
 													<button
 														className="smallDelete px-2 mx-1"

@@ -11,12 +11,12 @@
 }
 
 #module {
-  width: 100%;
   font-size: 14px;
   line-height: 1.5;
+  //display: inline;
 }
 
-#module a.collapsed:after  {
+#module a.collapsed::after  {
     content: 'Show List';
     color: yellowgreen;
     padding: 5px;
@@ -25,12 +25,12 @@
     border-radius: 15px;
 }
 
-#module a:not(.collapsed):after {
-    box-shadow: 1px 1px 2px gray;
+#module a:not(.collapsed)::after {
     content: 'Hide List';
     color: orange;
     padding: 5px;
     margin-left: 15px;
+    box-shadow: 1px 1px 2px gray;
     border-radius: 15px;
 }
 
@@ -58,25 +58,13 @@
     color: white;
 }
 
+.flag {
+    filter: saturate(2);
+}
+
 a:hover {
     text-decoration: none;
 }
-
-/*.glass {
-	text-decoration: none;
-}
-
-.glass:after {
-    content: '';
-    border-radius: 10px;
-    position: absolute;
-    top: 2px;
-    left: 4.6em;
-    width: calc(55%);
-    height: 50%;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
-}*/
-
 
 .addWindow {
     border-radius: 30px;
@@ -84,7 +72,7 @@ a:hover {
 }
 
 .x {
-    color: darkgray;
+    color: orangered;
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 15px;
@@ -102,13 +90,22 @@ a:hover {
 
 .pageTitle {
     color: #fe5000;
-    background-color: rgb(253,253,253);
+    background-color: rgb(251, 251, 251);
     font-size: 2em;
     padding-top: 5px;
     padding-bottom: 8px;
     text-shadow: 0px 1px 4px rgb(150,150,150);
     border-radius: 10px;
     box-shadow: inset 2px 2px 2px rgb(255, 255, 255), inset -2px -2px 6px lightgray;
+}
+
+.underTitle {
+    font-weight: 1000;
+    color: rgb(228, 228, 228);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: -1px -1px 0px darkgray, 1px 1px 0px white;
 }
 
 .pageEntry {

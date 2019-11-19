@@ -18,6 +18,12 @@ export const TripPlanner = props => (
 						</div>
 					</div>
 
+					<div className="row mt-4 mb-1 pl-0 d-flex flex-row">
+						<div className="col-md-4 text-center pl-0">
+							<h1 className="underTitle text-left pl-0 pt-2 pr-4">Trips:</h1>
+						</div>
+					</div>
+
 					{store.trips.map((item, index) => (
 						<div key={index} className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
 							<div className="col d-flex justify-content-between">
@@ -25,7 +31,7 @@ export const TripPlanner = props => (
 									{item.name} {item.year}
 								</h4>
 							</div>
-							<div>
+							<div className="pr-3">
 								<Link to={`/TripDetails/${item.id}`}>
 									<button className="smallView bg-white px-2 mx-2">View/Edit</button>
 								</Link>
