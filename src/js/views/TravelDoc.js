@@ -69,9 +69,10 @@ export class TravelDoc extends React.Component {
 														src={this.getImage(item.value)}
 													/>
 												</div>
-												<div className="col-sm-1 col-md-1 pr-3 mr-2 my-2">
+                                                
+												<div className=" mr-2">
 													<button
-														className="smallDelete mt-3 mb-4 px-2 mx-auto"
+														className="smallDelete px-2 mx-1"
 														type="button"
 														onClick={() => {
 															actions.removeDoc(item.id);
