@@ -61,7 +61,10 @@ export class Stamps extends React.Component {
 												</div>
 
 												<div>
-													<img className="flag mr-5" src={this.getImage(item.value)} />
+													<img
+														className="col mr-5 stamp-prev navbar-brand img-fluid"
+														src={this.getImage(item.value)}
+													/>
 												</div>
 												<div className="mr-2">
 													<button className="smallView px-2 mx-2">Share</button>
