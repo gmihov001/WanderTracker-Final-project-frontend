@@ -29,8 +29,8 @@ export class Stamps extends React.Component {
 							<h1 className="pageTitle text-center py-2 px-3">Stamps</h1>
 						</div>
 					</div>
-					<div className="row my-5 d-flex justify-content-center">
-						<div className="col d-flex justify-content-center mb-5">
+					<div className="row my-3 d-flex justify-content-center">
+						<div className="col d-flex justify-content-center mb-2">
 							<Link to="/camStamps">
 								<img
 									className="take-pic navbar-brand mb-0 h1"
@@ -48,25 +48,28 @@ export class Stamps extends React.Component {
 										{store.stamps.map((item, index) => (
 											<div
 												key={index}
-												className="row py-4 my-4 d-flex justify-content-between bg-white shadow">
-												<div className="pageEntry ml-3 px-2 h-1 mt-4">
-													<h3 className="align-middle">{item.label}</h3>
+												className="row py-2 my-4 d-flex justify-content-between bg-white shadow">
+												<div className="col-sm-2 col-md-2 pageEntry ml-3 px-2 h-1 mt-4">
+													<h3 className="align-middle center-block">{item.label}</h3>
 												</div>
 
-												<div className="col d-flex justify-content-center">
+												<div className="col-sm-3 col-md-4 d-flex justify-content-center">
 													<img
 														className="stamp-prev navbar-brand mb-0 h1 img-fluid"
 														src={item.photo}
 													/>
 												</div>
 
-												<div>
-													<img className="flag mr-5" src={this.getImage(item.value)} />
+												<div className="col-sm-3 col-md-2 mt-3 text-center">
+													<img
+														className="flag mr-5 center-block"
+														src={this.getImage(item.value)}
+													/>
 												</div>
-												<div className="mr-2">
-													<button className="smallView px-2 mx-2">Share</button>
+												<div className="col-sm-3 col-md-2 mr-2 my-2">
+													<button className="smallView my-4 px-2 mx-2">Share</button>
 													<button
-														className="smallDelete px-2 mx-2"
+														className="smallDelete my-4 px-2 mx-2"
 														type="button"
 														onClick={() => {
 															actions.removeStamp(item.id);

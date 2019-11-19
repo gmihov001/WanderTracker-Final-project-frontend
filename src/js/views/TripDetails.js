@@ -59,7 +59,7 @@ export class TripDetails extends React.Component {
 
 												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
 													<div id="module" className="container">
-														<div className="col-md-4 by-2">
+														<div className="col-md-4 mb-3">
 															<h4 className="pageEntry">Places of Interest</h4>
 														</div>
 
@@ -84,7 +84,7 @@ export class TripDetails extends React.Component {
 
 												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
 													<div id="module" className="container">
-														<div className="col-md-4 by-2">
+														<div className="col-md-4 mb-3">
 															<h4 className="pageEntry">Itinerary</h4>
 														</div>
 
