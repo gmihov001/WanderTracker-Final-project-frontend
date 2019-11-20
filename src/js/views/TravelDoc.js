@@ -69,7 +69,7 @@ export class TravelDoc extends React.Component {
 														src={this.getImage(item.value)}
 													/>
 												</div>
-                                                
+
 												<div className=" mr-2">
 													<button
 														className="smallDelete px-2 mx-1"
