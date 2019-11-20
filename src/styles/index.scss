@@ -17,32 +17,32 @@
 }
 
 #module a.collapsed::after  {
-    content: 'Show List';
+    content: '>> Show List';
     color: yellowgreen;
     padding: 5px;
     margin-left: 15px;
-    box-shadow: 1px 1px 2px gray;
+    //box-shadow: 1px 1px 2px gray;
     border-radius: 15px;
 }
 
 #module a:not(.collapsed)::after {
-    content: 'Hide List';
+    content: '<< Hide List';
     color: orange;
     padding: 5px;
     margin-left: 15px;
-    box-shadow: 1px 1px 2px gray;
+    //box-shadow: 1px 1px 2px gray;
     border-radius: 15px;
 }
 
 .xlButton {
     background-color: #fe5000;
     color:white;
-    border: solid 2px white;
+    //border: solid 1px white;
     border-radius: 15px;
-    box-shadow: 5px 10px 15px lightgray;
     text-decoration: none;
     width: 60% !important;
-	background-image: linear-gradient(#fe5000, orange);
+	background: linear-gradient(#fe5000, orange);
+    box-shadow: 1px 5px 12px gray, inset 1px 4px 5px rgb(255, 255, 255);
 }
 
 .xlButton:hover {
@@ -50,12 +50,14 @@
     background: linear-gradient(rgb(0, 255, 115),rgb(12, 160, 37));
     border-radius: 15px;
     text-decoration: none;
+    box-shadow: 1px 3px 5px gray, inset 2px 3px 3px rgb(255, 255, 255);
 }
 
 .xlButton:active {
     background-color: gray;
     background: linear-gradient(gray, lightgray);
     color: white;
+    box-shadow: 1px 3px 5px gray, inset 2px 3px 3px rgba(255, 255, 255, 0.808);
 }
 
 .flag {
@@ -90,13 +92,13 @@ a:hover {
 
 .pageTitle {
     color: #fe5000;
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(246, 246, 246);
     font-size: 2em;
     padding-top: 5px;
     padding-bottom: 8px;
     text-shadow: 0px 1px 4px rgb(150,150,150);
     border-radius: 10px;
-    box-shadow: inset 2px 2px 2px rgb(255, 255, 255), inset -2px -2px 6px lightgray;
+    box-shadow: inset 2px 2px 2px rgb(255, 255, 255), inset -2px -2px 6px rgb(180, 180, 180);
 }
 
 .underTitle {
@@ -112,6 +114,11 @@ a:hover {
     color: #fe5000;
     font-weight: 300;
     text-shadow: 1px 1px 4px rgb(180, 180, 180);
+}
+
+select {
+    background-clip: text;
+    box-shadow: -1px -2px 0px darkgray, 1px 2px 0px white;
 }
 
 .smallView {
@@ -181,8 +188,10 @@ a:hover {
 }
 
 .logout{
-    background: #fd6e2b;
+    background: linear-gradient(#fe5000, orange);
     color: white;
+    border-radius: 10px;
+    box-shadow: 1px 3px 5px gray, inset 2px 3px 3px rgba(255, 255, 255, 0.808);
 }
 
 .entry {
@@ -217,6 +226,20 @@ a:hover {
     background-color: rgb(245, 245, 245);
 }
 
+a {
+    text-decoration: none;
+    color: rgb(254,80,0);
+    font-size: 1.1em;
+}
+
+a:link {
+    color: rgb(254,80,0);
+}
+
+a:hover {
+    color: rgb(107,202,186);
+    text-shadow: 1px 0px 2px darkslategray;
+}
 
 hr {
     border: solid 1px #fd6e2b;
@@ -231,8 +254,8 @@ hr {
   }
 
 .profile-pic{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 

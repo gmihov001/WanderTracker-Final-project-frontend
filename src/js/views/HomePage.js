@@ -20,7 +20,7 @@ export class HomePage extends React.Component {
 			<div className="wrapper">
 				<Navbar2 />
 				<div className="container">
-					<div className="row my-4 d-flex justify-content-end text-center">
+					<div className="row my-4 d-flex justify-content-center text-center">
 						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 px-0 ">
 							<img
 								src="https://images.unsplash.com/photo-1549986432-5060067864b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
@@ -74,25 +74,27 @@ export class HomePage extends React.Component {
 										</form>
 									</div>
 									<Link to="/EmergContacts">
-										<p className="text py-2 px-3">
-											<strong className="text">Emergency Contacts</strong>
+										<p className="text py-2">
+											<strong className="text emergCont">Emergency Contacts + </strong>
 										</p>
-									</Link>
-									<Link to="/">
-										<button type="button" className="logout btn ml-3 ">
-											Log Out
-										</button>
 									</Link>
 								</div>
 							)}
 						</Context.Consumer>
+						<div>
+							<Link to="/">
+								<button type="button" className="logout btn ml-3 px-4 py-3">
+									Log Out
+								</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 
 				<div className="container mb-5">
-					<div className="row my-4 d-flex justify-content-center">
+					<div className="row my-4 d-flex flex-row">
 						<div className="col-md-4 text-center">
-							<h1 className="pageTitle text-center py-2 px-3">Travel Tips</h1>
+							<h1 className="underTitle text-left pl-0 pt-2 pr-4">Travel Tips</h1>
 						</div>
 					</div>
 

@@ -19,6 +19,11 @@ export class TravelDoc extends React.Component {
 		return `https://www.countryflags.io/${country}/shiny/64.png`;
 	};
 
+	addDefaultSrc = ev => {
+		ev.target.src =
+			"https://cdn4.iconfinder.com/data/icons/navigation-43/32/18_travel_map_worldwide_planet_earth_world_grid_placeholder_maps_and_flags-512.png";
+	};
+
 	render() {
 		return (
 			<div className="wrapper ">
@@ -51,13 +56,13 @@ export class TravelDoc extends React.Component {
 												key={index}
 												className="row py-2 my-4 d-flex justify-content-between bg-white shadow">
 												<div className="col-sm-2 col-md-2 pageEntry ml-3 px-2 h-1 mt-4">
-													<h3 className="align-middle">{item.label}</h3>
+													<h4 className="align-middle">{item.label}</h4>
 												</div>
 
 												<div className="col-sm-2 col-md-4 d-flex justify-content-center">
 													<img
 														className="stamp-prev navbar-brand mb-0 h1 img-fluid"
-														onError="this.style.display='none'"
+														onError={this.addDefaultSrc}
 														src={item.photo}
 													/>
 												</div>
@@ -69,10 +74,10 @@ export class TravelDoc extends React.Component {
 														src={this.getImage(item.value)}
 													/>
 												</div>
-                                                
-												<div className=" mr-2">
+
+												<div className="col-sm-1 col-md-1 mr-2">
 													<button
-														className="smallDelete px-2 mx-1"
+														className="smallDelete mt-4 px-2 mx-1"
 														type="button"
 														onClick={() => {
 															actions.removeDoc(item.id);

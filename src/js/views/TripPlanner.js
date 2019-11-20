@@ -19,8 +19,8 @@ export const TripPlanner = props => (
 					</div>
 
 					<div className="row mt-4 mb-1 pl-0 d-flex flex-row">
-						<div className="col-md-4 text-center pl-0">
-							<h1 className="underTitle text-left pl-0 pt-2 pr-4">Trips:</h1>
+						<div className="col-md-4 text-left pl-0">
+							<h1 className="underTitle text-left pl-0 pt-2">Trips</h1>
 						</div>
 					</div>
 
