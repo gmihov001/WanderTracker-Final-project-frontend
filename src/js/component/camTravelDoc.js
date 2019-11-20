@@ -44,6 +44,11 @@ export class camTravelDoc extends React.Component {
 		return `https://www.countryflags.io/${country}/shiny/64.png`;
 	};
 
+	addDefaultSrc = ev => {
+		ev.target.src =
+			"https://cdn4.iconfinder.com/data/icons/navigation-43/32/18_travel_map_worldwide_planet_earth_world_grid_placeholder_maps_and_flags-512.png";
+	};
+
 	render() {
 		console.log("Typeof: " + typeof this.state.traveldoc.photo);
 		return (
@@ -78,6 +83,7 @@ export class camTravelDoc extends React.Component {
 								<div className="col">
 									<img
 										className="stamp-prev navbar-brand mb-0 h1 img-fluid"
+										onError={this.addDefaultSrc}
 										src={this.state.traveldoc.photo}
 									/>
 								</div>

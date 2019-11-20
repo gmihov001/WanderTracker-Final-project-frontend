@@ -30,32 +30,31 @@ export class EmergContacts extends React.Component {
 						<Context.Consumer>
 							{({ store, actions }) => {
 								return (
-									<div className="container ">
-										<form className="  w-100">
-											<div className="  w-100 col-md-12 col-lg-12  mb-2">
-												<div className="col d-flex justify-content-center py-2">
+									<div className="container col-sm-12 col-md-12 col-lg-10">
+										<form className="w-100">
+											<div className="w-100 col-sm-12 col-md-12 col-lg-12 d-sm-block d-lg-flex justify-content-center mb-2">
+												<div className="col-sm-10 col-md-6 col-lg-4 py-2">
 													<input
 														type="text"
-														className="textfield col-md-4"
+														className="textfield w-100"
 														name="name"
 														onChange={this.handleChangeContacts}
 														placeholder="Contact name..."
 													/>
 												</div>
-
-												<div className="col d-flex justify-content-center py-2">
+												<div className="col-sm-10 col-md-6 col-lg-4 py-2">
 													<input
 														type="text"
-														className="textfield col-md-4"
+														className="textfield w-100"
 														name="number"
 														onChange={this.handleChangeContacts}
 														placeholder="Contact number..."
 													/>
 												</div>
-												<div className="col d-flex justify-content-center py-2">
+												<div className="col-sm-10 col-md-4 col-lg-2 py-2 text-center">
 													<button
 														type="button"
-														className="addButton bg-white px-2 mx-2"
+														className="addButton w-75 bg-white px-2 mx-2"
 														onClick={() => {
 															actions.addEmergContact({ ...this.state });
 														}}>
@@ -70,17 +69,15 @@ export class EmergContacts extends React.Component {
 												<div
 													key={index}
 													className="row entry-row px-3 d-flex justify-content-center">
-													<div className="col-md-5 px-0 d-flex justify-content-left">
+													<div className="col-sm-10 col-md-8 col-lg-6 px-0 d-flex justify-content-between">
 														<span type="text" className="entry px-1 ">
 															{item.name} , {item.number}
 														</span>
-													</div>
-													<div
-														className="col-md-2 col-lg-1 x pt-1 w-100 ml-auto"
-														onClick={() => {
-															actions.removeEmergContact(item.name);
-														}}>
-														<span className="deleteEntry ">
+														<span
+															className="deleteEntry x px-5"
+															onClick={() => {
+																actions.removeEmergContact(item.name);
+															}}>
 															<i className="far fa-calendar-times"></i>
 														</span>
 													</div>

@@ -20,7 +20,7 @@ export class TripDetails extends React.Component {
 				<Context.Consumer>
 					{({ store }) => {
 						return (
-							<div className="container pb-5 pt-3">
+							<div className="container pb-5">
 								{store.trips.map((thisTrip, index) => {
 									if (`${thisTrip.id}` === this.props.match.params.id) {
 										return (
