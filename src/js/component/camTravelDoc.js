@@ -118,7 +118,7 @@ export class camTravelDoc extends React.Component {
 					</div>
 					<Context.Consumer>
 						{({ actions }) => (
-							<div className="row my-5 mx-1 d-sm-block d-flex justify-content-center">
+							<div className="row my-5 d-flex justify-content-center">
 								<div className="col-md-4 justify-content-center">
 									<h2
 										className="xlButton glass text-center py-2 px-3 m-auto"
