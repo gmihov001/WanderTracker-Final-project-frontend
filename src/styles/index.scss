@@ -5,7 +5,6 @@
     font-weight: 400;
 }
 
-
 .row {
     border-radius: 10px;
 }
@@ -37,7 +36,7 @@
 .xlButton {
     background-color: #fe5000;
     color:white;
-    //border: solid 1px white;
+    border: solid 1px white;
     border-radius: 15px;
     text-decoration: none;
     width: 60% !important;
@@ -103,6 +102,7 @@ a:hover {
 
 .underTitle {
     font-weight: 1000;
+    font-size: 50px;
     color: rgb(228, 228, 228);
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -232,13 +232,18 @@ a {
     font-size: 1.1em;
 }
 
+.emergCont {
+    background-color: rgb(245,245,245);
+    border: solid 1px lightgray;
+    border-radius: 10px;
+}
+
 a:link {
     color: rgb(254,80,0);
 }
 
 a:hover {
-    color: rgb(107,202,186);
-    text-shadow: 1px 0px 2px darkslategray;
+    color: rgb(66, 209, 185);
 }
 
 hr {

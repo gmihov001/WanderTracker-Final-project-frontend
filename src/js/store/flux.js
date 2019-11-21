@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		passport_number: "23456789",
 		passport_expiry: "12.10.2029",
 		store: {
+			users: [],
 			countries: [
 				{
 					label: "France",
@@ -19,14 +20,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					id: "232",
 					photo: "Document image",
-					label: "Bulgaria",
-					value: "bg"
+					country_label: "Bulgaria",
+					country_value: "bg"
 				},
 				{
 					id: "565",
 					photo: "Document image",
-					label: "Honduras",
-					value: "hn"
+					country_label: "Honduras",
+					country_value: "hn"
 				}
 			],
 			stamps: [
@@ -252,21 +253,60 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ stamps: change });
 			},
 
-			addDoc: object => {
-				const store = getStore();
-				object.id = Math.ceil((Math.random() + 1) * 100000);
+			// addDoc: object => {
+			// 	const store = getStore();
+			// 	object.id = Math.ceil((Math.random() + 1) * 100000);
 
-				const updatedDocs = store.traveldocs.concat([object]);
-				setStore({ traveldocs: updatedDocs });
+			// 	const updatedDocs = store.traveldocs.concat([object]);
+			// 	setStore({ traveldocs: updatedDocs });
+			// 	return true;
+			// },
+
+			addDoc: object => {
+				console.log("addDoc:" + object);
+				fetch("https://3000-c365cd7d-ea0e-4445-a2c0-0130685ce181.ws-us02.gitpod.io/documents", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(object)
+				})
+					.then(res => res.json())
+					.then(data => {
+						console.log(data);
+						fetch("https://3000-c365cd7d-ea0e-4445-a2c0-0130685ce181.ws-us02.gitpod.io/users")
+							.then(response => response.json())
+							.then(data => {
+								setStore({ users: data });
+							});
+					});
 				return true;
 			},
 
-			removeDoc: id => {
+			/* removeDoc: id => {
 				const store = getStore();
 				const change = store.traveldocs.filter(item => {
 					return item.id != id;
 				});
 				setStore({ traveldocs: change });
+            },*/
+
+			removeDoc: id => {
+				const store = getStore();
+				fetch("https://3000-c365cd7d-ea0e-4445-a2c0-0130685ce181.ws-us02.gitpod.io/user/1/document/" + id, {
+					method: "DELETE"
+				})
+					.then(res => res.json())
+					.then(() => {
+						fetch("https://3000-c365cd7d-ea0e-4445-a2c0-0130685ce181.ws-us02.gitpod.io/users")
+							.then(response => response.json())
+							.then(data => {
+								setStore({ users: data });
+							});
+					});
+
+				/*const change = store.traveldocs.filter(item => {
+					return item.id != id;
+				});
+				setStore({ traveldocs: change });*/
 			},
 
 			addContact: (tripID, newContact) => {

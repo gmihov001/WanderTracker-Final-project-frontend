@@ -73,17 +73,18 @@ export class HomePage extends React.Component {
 											</div>
 										</form>
 									</div>
-									<Link to="/EmergContacts">
-										<p className="text py-2">
-											<strong className="text emergCont">Emergency Contacts + </strong>
-										</p>
-									</Link>
+
+									<p className="text py-2">
+										<Link to="/EmergContacts">
+											<strong className="text emergCont p-2"> + Emergency Contacts </strong>
+										</Link>
+									</p>
 								</div>
 							)}
 						</Context.Consumer>
 						<div>
 							<Link to="/">
-								<button type="button" className="logout btn ml-3 px-4 py-3">
+								<button type="button" className="logout btn px-4 py-2">
 									Log Out
 								</button>
 							</Link>
@@ -92,7 +93,7 @@ export class HomePage extends React.Component {
 				</div>
 
 				<div className="container mb-5">
-					<div className="row my-4 d-flex flex-row">
+					<div className="row mt-4 mb-0 d-flex flex-row">
 						<div className="col-md-4 text-center">
 							<h1 className="underTitle text-left pl-0 pt-2 pr-4">Travel Tips</h1>
 						</div>

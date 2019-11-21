@@ -51,42 +51,43 @@ export class TravelDoc extends React.Component {
 							{({ store, actions }) => {
 								return (
 									<div className="container d-block">
-										{store.traveldocs.map((item, index) => (
-											<div
-												key={index}
-												className="row py-2 my-4 d-flex justify-content-between bg-white shadow">
-												<div className="col-sm-2 col-md-2 pageEntry ml-3 px-2 h-1 mt-4">
-													<h4 className="align-middle">{item.label}</h4>
-												</div>
+										{store.users[0] &&
+											store.users[0].documents.map((item, index) => (
+												<div
+													key={index}
+													className="row py-2 my-4 d-flex justify-content-between bg-white shadow">
+													<div className="col-sm-2 col-md-2 pageEntry ml-3 px-2 h-1 mt-4">
+														<h4 className="align-middle">{item.country_label}</h4>
+													</div>
 
-												<div className="col-sm-2 col-md-4 d-flex justify-content-center">
-													<img
-														className="stamp-prev navbar-brand mb-0 h1 img-fluid"
-														onError={this.addDefaultSrc}
-														src={item.photo}
-													/>
-												</div>
+													<div className="col-sm-2 col-md-4 d-flex justify-content-center">
+														<img
+															className="stamp-prev navbar-brand mb-0 h1 img-fluid"
+															onError={this.addDefaultSrc}
+															src={item.photo}
+														/>
+													</div>
 
-												<div className="col-sm-2 col-md-2 mt-3 text-center">
-													<img
-														className="flag mr-0"
-														onError="this.style.display='none'"
-														src={this.getImage(item.value)}
-													/>
-												</div>
+													<div className="col-sm-2 col-md-2 mt-3 text-center">
+														<img
+															className="flag mr-0"
+															onError="this.style.display='none'"
+															src={this.getImage(item.country_value)}
+														/>
+													</div>
 
-												<div className="col-sm-1 col-md-1 mr-2">
-													<button
-														className="smallDelete mt-4 px-2 mx-1"
-														type="button"
-														onClick={() => {
-															actions.removeDoc(item.id);
-														}}>
-														Delete
-													</button>
+													<div className="col-sm-1 col-md-1 mr-2">
+														<button
+															className="smallDelete mt-4 px-2 mx-1"
+															type="button"
+															onClick={() => {
+																actions.removeDoc(item.id);
+															}}>
+															Delete
+														</button>
+													</div>
 												</div>
-											</div>
-										))}
+											))}
 									</div>
 								);
 							}}

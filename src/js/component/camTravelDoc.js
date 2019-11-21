@@ -1,30 +1,49 @@
 import React from "react";
 import Camera from "react-html5-camera-photo";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { Navbar2 } from "./Navbar2";
-import passport from "../../img/passport.jpg";
+//import passport from "../../img/passport.jpg";
 import countries from "../constants/countries";
 import "react-html5-camera-photo/build/css/index.css";
 import CameraImport, { FACING_MODES } from "react-html5-camera-photo";
 import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
-import { ImagePreview } from "./ImagePreview";
+//import { ImagePreview } from "./ImagePreview";
+import firebase from "../firebase";
 
 export class camTravelDoc extends React.Component {
 	constructor() {
 		super();
 		this.state = {
 			traveldoc: {
-				photo: null,
-				label: "",
-				value: ""
+				photo: "",
+				country_label: "",
+				country_value: "",
+				user_id: 1
 			}
 		};
 	}
 
 	onTakePhoto = photo => {
 		//const newTraveldoc = Object.assign(this.state.traveldoc, photo);
-		this.setState({ traveldoc: { ...this.state.traveldoc, photo: photo } });
+		//this.setState({ traveldoc: { ...this.state.traveldoc, photo: photo } });
+		const date = new Date();
+
+		const storageRef = firebase.storage().ref();
+		const uploader = storageRef
+			.child("/" + date.toString() + ".jpeg")
+			.putString(photo.split(",")[1], "base64", { contentType: "image/jpeg" });
+		uploader.on(
+			"state_changed",
+			snapshot => {},
+			error => console.log(error),
+			() => {
+				uploader.snapshot.ref.getDownloadURL().then(url => {
+					console.log(url);
+					this.setState({ traveldoc: { ...this.state.traveldoc, photo: url } });
+				});
+			}
+		);
 	};
 
 	onChange = e => {
@@ -34,8 +53,9 @@ export class camTravelDoc extends React.Component {
 
 		this.setState({
 			traveldoc: {
-				label: split[0],
-				value: split[1]
+				...this.state.traveldoc,
+				country_label: split[0],
+				country_value: split[1]
 			}
 		});
 	};
@@ -78,7 +98,7 @@ export class camTravelDoc extends React.Component {
 						{this.state.traveldoc ? (
 							<div className="row d-flex justify-content-between py-4 my-4 bg-white shadow">
 								<div className="col pageEntry ml-3 px-2 h-1 mt-4">
-									<h3 className="country-name align-middle">{this.state.traveldoc.label}</h3>
+									<h3 className="country-name align-middle">{this.state.traveldoc.country_label}</h3>
 								</div>
 								<div className="col">
 									<img
@@ -90,7 +110,7 @@ export class camTravelDoc extends React.Component {
 								<div>
 									<img
 										className="stamp-prev navbar-brand mr-5 h-1"
-										src={this.getImage(this.state.traveldoc.value)}
+										src={this.getImage(this.state.traveldoc.country_value)}
 									/>
 								</div>
 							</div>
