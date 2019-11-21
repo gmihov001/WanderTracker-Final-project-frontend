@@ -83,7 +83,7 @@ export class HomePage extends React.Component {
 						</Context.Consumer>
 						<div>
 							<Link to="/">
-								<button type="button" className="logout btn ml-3 px-4 py-3">
+								<button type="button" className="logout btn ml-3 px-3 py-3">
 									Log Out
 								</button>
 							</Link>
