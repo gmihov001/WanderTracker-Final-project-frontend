@@ -33,9 +33,9 @@ export class TripDetails extends React.Component {
 													</div>
 												</div>
 
-												<div className="row py-3 my-2 bg-white shadow">
-													<div id="module" className="container">
-														<div className="col-md-11 mb-3">
+												<div className="row py-3 mx-1 d-sm-block d-md-flex mx-1 my-2 bg-white shadow">
+													<div id="module" className="container px-1">
+														<div className="col-md-12 mb-3">
 															<h4 className="pageEntry">Contacts</h4>
 														</div>
 														<p
@@ -57,9 +57,9 @@ export class TripDetails extends React.Component {
 													</div>
 												</div>
 
-												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
-													<div id="module" className="container">
-														<div className="col-md-4 mb-3">
+												<div className="row d-sm-block d-md-flex mx-1 pb-3 pt-2 my-4 bg-white shadow">
+													<div id="module" className="container px-1">
+														<div className="col-md-12 mb-3">
 															<h4 className="pageEntry">Places of Interest</h4>
 														</div>
 
@@ -82,9 +82,9 @@ export class TripDetails extends React.Component {
 													</div>
 												</div>
 
-												<div className="row pb-3 pt-2 my-4 d-flex bg-white shadow">
-													<div id="module" className="container">
-														<div className="col-md-4 mb-3">
+												<div className="row d-sm-block d-md-flex mx-1 pb-3 pt-2 my-4 d-flex bg-white shadow">
+													<div id="module" className="container px-1">
+														<div className="col-md-12 mb-3">
 															<h4 className="pageEntry">Itinerary</h4>
 														</div>
 

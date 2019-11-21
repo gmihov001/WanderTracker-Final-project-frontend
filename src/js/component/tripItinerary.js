@@ -29,10 +29,10 @@ export class TripItinerary extends React.Component {
 										<div key={index} className="container d-block">
 											<form className="form-inline d-flex justify-content-between w-100">
 												<div className="form-group w-100 col-md-12 col-lg-12 d-flex justify-content-between mb-2">
-													<div className="col d-flex justify-content-center py-2">
+													<div className="col-sm-12 d-sm-block d-md-flex justify-content-center py-2">
 														<input
 															type="text"
-															className="textfield col-md-4"
+															className="textfield my-2 col-sm-8 col-md-4"
 															//value={this.state.userInput.itinerary.date}
 															name="date"
 															onChange={this.handleChangeItinerary}
@@ -40,25 +40,29 @@ export class TripItinerary extends React.Component {
 														/>
 														<input
 															type="text"
-															className="textfield col-md-4"
+															className="textfield my-2 col-sm-8 col-md-4"
 															//value={this.state.userInput.itinerary.content}
 															name="content"
 															onChange={this.handleChangeItinerary}
 															placeholder="Activity details..."
 														/>
-														<button
-															type="button"
-															className="addButton bg-white px-2 mx-2"
-															onClick={() => {
-																actions.addItinerary(thisTrip.id, { ...this.state });
-															}}>
-															Add
-														</button>
+														<div className="text-center my-1 col-sm-4 col-md-2">
+															<button
+																type="button"
+																className="addButton w-50 bg-white px-2 mx-2"
+																onClick={() => {
+																	actions.addItinerary(thisTrip.id, {
+																		...this.state
+																	});
+																}}>
+																Add
+															</button>
+														</div>
 													</div>
 												</div>
 											</form>
 
-											<div className="d-block entry-block col-md-12 justify-content-end">
+											<div className="d-block entry-block col-md-12 my-2 mx-0">
 												{thisTrip.itinerary.map((item, index) => (
 													<div
 														key={index}
@@ -67,13 +71,11 @@ export class TripItinerary extends React.Component {
 															<span type="text" className="entry px-1 ">
 																{item.date} , {item.content}
 															</span>
-														</div>
-														<div
-															className="col-md-2 col-lg-1 x pt-1 w-100 d-flex justify-content-center text-center"
-															onClick={() => {
-																actions.removeItinerary(thisTrip.id, item.itinid);
-															}}>
-															<span className="deleteEntry d-flex justify-content-center">
+															<span
+																className="deleteEntry x text-center"
+																onClick={() => {
+																	actions.removeItinerary(thisTrip.id, item.itinid);
+																}}>
 																<i className="far fa-calendar-times"></i>
 															</span>
 														</div>
