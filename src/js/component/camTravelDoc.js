@@ -5,7 +5,7 @@ import { Navbar2 } from "./Navbar2";
 //import passport from "../../img/passport.jpg";
 import countries from "../constants/countries";
 import "react-html5-camera-photo/build/css/index.css";
-import CameraImport, { FACING_MODES } from "react-html5-camera-photo";
+import { FACING_MODES } from "react-html5-camera-photo";
 import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
 //import { ImagePreview } from "./ImagePreview";
@@ -65,8 +65,7 @@ export class camTravelDoc extends React.Component {
 	};
 
 	addDefaultSrc = ev => {
-		ev.target.src =
-			"https://cdn4.iconfinder.com/data/icons/navigation-43/32/18_travel_map_worldwide_planet_earth_world_grid_placeholder_maps_and_flags-512.png";
+		ev.target.src = "https://i.ytimg.com/vi/YecyKnQUcBY/maxresdefault.jpg";
 	};
 
 	render() {
@@ -96,20 +95,21 @@ export class camTravelDoc extends React.Component {
 					</div>
 					<div>
 						{this.state.traveldoc ? (
-							<div className="row d-flex justify-content-between py-4 my-4 bg-white shadow">
-								<div className="col pageEntry ml-3 px-2 h-1 mt-4">
+							<div className="row d-sm-block d-md-flex mx-1 justify-content-between py-4 my-4 bg-white shadow">
+								<div className="col-sm-4 col-md-3 pageEntry ml-3 px-2 h-1 mt-4">
 									<h3 className="country-name align-middle">{this.state.traveldoc.country_label}</h3>
 								</div>
-								<div className="col">
+								<div className="col-sm-4 col-md-4 text-center">
 									<img
-										className="stamp-prev navbar-brand mb-0 h1 img-fluid"
+										className="stamp-prev navbar-brand mb-0 img-fluid"
 										onError={this.addDefaultSrc}
 										src={this.state.traveldoc.photo}
 									/>
 								</div>
-								<div>
+								<div className="col-sm-4 col-md-3 text-center">
 									<img
-										className="stamp-prev navbar-brand mr-5 h-1"
+										className="stamp-prev navbar-brand flag img-fluid"
+										onError={this.addDefaultSrc}
 										src={this.getImage(this.state.traveldoc.country_value)}
 									/>
 								</div>
@@ -118,7 +118,7 @@ export class camTravelDoc extends React.Component {
 					</div>
 					<Context.Consumer>
 						{({ actions }) => (
-							<div className="row my-5 d-flex justify-content-center">
+							<div className="row my-5 mx-1 d-sm-block d-flex justify-content-center">
 								<div className="col-md-4 justify-content-center">
 									<h2
 										className="xlButton glass text-center py-2 px-3 m-auto"

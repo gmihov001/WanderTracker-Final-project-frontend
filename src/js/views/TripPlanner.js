@@ -25,7 +25,9 @@ export const TripPlanner = props => (
 					</div>
 
 					{store.trips.map((item, index) => (
-						<div key={index} className="row py-4 mt-0 mb-4 d-flex justify-content-between bg-white shadow">
+						<div
+							key={index}
+							className="row py-4 mt-0 mb-4 mx-1 d-flex justify-content-between bg-white shadow">
 							<div className="col d-flex justify-content-between">
 								<h4 className="pageEntry">
 									{item.name} {item.year}

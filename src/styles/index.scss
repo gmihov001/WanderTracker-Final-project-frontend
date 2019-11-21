@@ -137,6 +137,22 @@ select {
     border: solid 1px white;
 }
 
+.smallShare {
+    background-color: white !important;
+    color: rgb(107,202,186);
+    border-radius: 15px;
+    border: solid 1px rgb(107,202,186);
+    box-shadow: 1px 1px 5px gray;
+}
+
+.smallShare:hover {
+    color: white !important;
+    background-color: rgb(107,202,186) !important;
+    box-shadow: 0px 1px 15px rgb(107,202,186);
+    font-weight: 500;
+    border: solid 1px white;
+}
+
 .smallDelete {
     background-color: white !important;
     color: orangered;
@@ -192,6 +208,8 @@ select {
     color: white;
     border-radius: 10px;
     box-shadow: 1px 3px 5px gray, inset 2px 3px 3px rgba(255, 255, 255, 0.808);
+    font-weight: 500 !important;
+    font-size: 1.2rem !important;
 }
 
 .entry {
@@ -295,11 +313,8 @@ hr {
 }
 
 .country-name{
-    font-size: 18px;
+    font-size: 20px;
 }
-
-
-
 
 /*------Navigation--------*/
 
