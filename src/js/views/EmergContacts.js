@@ -32,7 +32,7 @@ export class EmergContacts extends React.Component {
 								return (
 									<div className="container col-sm-12 col-md-12 col-lg-10">
 										<form className="w-100">
-											<div className="w-100 col-sm-12 col-md-12 col-lg-12 d-sm-block d-lg-flex justify-content-center mb-2">
+											<div className="w-100 col-sm-12 col-md-12 col-lg-12 d-sm-block d-md-flex justify-content-center mb-2">
 												<div className="col-sm-10 col-md-6 col-lg-4 py-2">
 													<input
 														type="text"

@@ -20,8 +20,7 @@ export class TravelDoc extends React.Component {
 	};
 
 	addDefaultSrc = ev => {
-		ev.target.src =
-			"https://cdn4.iconfinder.com/data/icons/navigation-43/32/18_travel_map_worldwide_planet_earth_world_grid_placeholder_maps_and_flags-512.png";
+		ev.target.src = "https://i.ytimg.com/vi/YecyKnQUcBY/maxresdefault.jpg";
 	};
 
 	render() {
@@ -55,7 +54,7 @@ export class TravelDoc extends React.Component {
 											store.users[0].documents.map((item, index) => (
 												<div
 													key={index}
-													className="row py-2 my-4 d-flex justify-content-between bg-white shadow">
+													className="row py-2 my-4 mx-1 d-sm-block d-md-flex justify-content-between bg-white shadow">
 													<div className="col-sm-2 col-md-2 pageEntry ml-3 px-2 h-1 mt-4">
 														<h4 className="align-middle">{item.country_label}</h4>
 													</div>
@@ -70,15 +69,15 @@ export class TravelDoc extends React.Component {
 
 													<div className="col-sm-2 col-md-2 mt-3 text-center">
 														<img
-															className="flag mr-0"
-															onError="this.style.display='none'"
+															className="stamp-prev navbar-brand mb-0 h1 img-fluid flag mr-0"
+															onError={this.addDefaultSrc}
 															src={this.getImage(item.country_value)}
 														/>
 													</div>
 
-													<div className="col-sm-1 col-md-1 mr-2">
+													<div className="col-sm-2 col-md-2 text-center">
 														<button
-															className="smallDelete mt-4 px-2 mx-1"
+															className="smallDelete my-4 px-2 mx-1"
 															type="button"
 															onClick={() => {
 																actions.removeDoc(item.id);
