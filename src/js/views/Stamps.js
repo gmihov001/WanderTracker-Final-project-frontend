@@ -57,7 +57,6 @@ export class Stamps extends React.Component {
 												<div className="col-xs-4 col-sm-2 col-md-2 pageEntry ml-3 px-2 h-1 mt-4">
 													<h4 className="align-middle center-block">{item.label}</h4>
 												</div>
-
 												<div className="col-sm-3 col-md-4 text-center">
 													<img
 														className="stamp-prev navbar-brand mb-0 img-fluid"
@@ -65,8 +64,7 @@ export class Stamps extends React.Component {
 														src={item.photo}
 													/>
 												</div>
-
-												<div className="col-sm-3 col-md-2 mt-3 text-center">
+												<div className="col-sm-3 col-md-2 text-center">
 													<img
 														className="stamp-prev navbar-brand flag img-fluid"
 														onError={this.addDefaultSrc}

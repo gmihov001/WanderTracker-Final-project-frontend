@@ -76,19 +76,19 @@ export class camStamps extends React.Component {
 					<div>
 						{this.state.stamp ? (
 							<div className="row d-sm-block d-md-flex mx-1 justify-content-between py-4 my-4 bg-white shadow">
-								<div className="col-sm-4 pageEntry ml-3 px-2 h-1 mt-4">
+								<div className="col-sm-4 col-md-3 pageEntry ml-3 px-2 mt-4">
 									<h3 className="country-name align-middle">{this.state.stamp.label}</h3>
 								</div>
-								<div className="col-sm-4 text-center">
+								<div className="col-sm-4 col-md-4 text-center">
 									<img
 										className="stamp-prev navbar-brand mb-0 h-1 img-fluid"
 										onError={this.addDefaultSrc}
 										src={this.state.stamp.photo}
 									/>
 								</div>
-								<div className="col-sm-4">
+								<div className="col-sm-4 col-md-3">
 									<img
-										className="stamp-prev navbar-brand mr-5 text-center"
+										className="stamp-prev navbar-brand flag mr-5 text-center"
 										onError={this.addDefaultSrc}
 										src={this.getImage(this.state.stamp.value)}
 									/>

@@ -5,7 +5,7 @@ import { Navbar2 } from "./Navbar2";
 //import passport from "../../img/passport.jpg";
 import countries from "../constants/countries";
 import "react-html5-camera-photo/build/css/index.css";
-import CameraImport, { FACING_MODES } from "react-html5-camera-photo";
+import { FACING_MODES } from "react-html5-camera-photo";
 import { Context } from "../store/appContext.js";
 import PropTypes from "prop-types";
 //import { ImagePreview } from "./ImagePreview";
@@ -96,17 +96,17 @@ export class camTravelDoc extends React.Component {
 					<div>
 						{this.state.traveldoc ? (
 							<div className="row d-sm-block d-md-flex mx-1 justify-content-between py-4 my-4 bg-white shadow">
-								<div className="col-sm-4 pageEntry ml-3 px-2 h-1 mt-4">
+								<div className="col-sm-4 col-md-3 pageEntry ml-3 px-2 h-1 mt-4">
 									<h3 className="country-name align-middle">{this.state.traveldoc.country_label}</h3>
 								</div>
-								<div className="col-sm-4 text-center">
+								<div className="col-sm-4 col-md-4 text-center">
 									<img
 										className="stamp-prev navbar-brand mb-0 img-fluid"
 										onError={this.addDefaultSrc}
 										src={this.state.traveldoc.photo}
 									/>
 								</div>
-								<div className="col-sm-4 text-center">
+								<div className="col-sm-4 col-md-3 text-center">
 									<img
 										className="stamp-prev navbar-brand flag img-fluid"
 										onError={this.addDefaultSrc}

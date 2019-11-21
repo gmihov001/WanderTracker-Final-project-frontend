@@ -67,9 +67,9 @@ export class TravelDoc extends React.Component {
 														/>
 													</div>
 
-													<div className="col-sm-2 col-md-2 mt-3 text-center">
+													<div className="col-sm-2 col-md-2 text-center">
 														<img
-															className="stamp-prev navbar-brand mb-0 h1 img-fluid flag mr-0"
+															className="stamp-prev navbar-brand mb-0 img-fluid flag mr-0"
 															onError={this.addDefaultSrc}
 															src={this.getImage(item.country_value)}
 														/>
