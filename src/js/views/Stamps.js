@@ -8,11 +8,15 @@ import AddIcon from "../../img/addbutton.png";
 import CamIcon from "../../img/Image.png";
 import countries from "../constants/countries";
 import { Context } from "../store/appContext.js";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 export class Stamps extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			isOpen: false
+		};
 	}
 
 	getImage = country => {
@@ -24,6 +28,7 @@ export class Stamps extends React.Component {
 	};
 
 	render() {
+		const { isOpen } = this.state;
 		return (
 			<div className="wrapper">
 				<Navbar2 />
@@ -59,10 +64,18 @@ export class Stamps extends React.Component {
 												</div>
 												<div className="col-sm-3 col-md-4 text-center">
 													<img
+														onClick={() => this.setState({ isOpen: true })}
 														className="stamp-prev navbar-brand mb-0 img-fluid"
 														onError={this.addDefaultSrc}
 														src={item.photo}
 													/>
+
+													{isOpen && (
+														<Lightbox
+															mainSrc={item.photo}
+															onCloseRequest={() => this.setState({ isOpen: false })}
+														/>
+													)}
 												</div>
 												<div className="col-sm-3 col-md-2 text-center">
 													<img
