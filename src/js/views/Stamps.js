@@ -27,6 +27,7 @@ export class Stamps extends React.Component {
 		return (
 			<div className="wrapper">
 				<Navbar2 />
+
 				<div className="container">
 					<div className="row my-4 d-flex justify-content-center">
 						<div className="col-md-4 text-center">
