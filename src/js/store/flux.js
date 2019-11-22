@@ -1,9 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
-		passport_number: "23456789",
-		passport_expiry: "12.10.2029",
 		store: {
 			users: [],
+			passport_number: "23456789",
+			passport_expiry: "12.10.2029",
 			countries: [
 				{
 					label: "France",

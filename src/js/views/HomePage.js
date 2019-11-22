@@ -44,10 +44,10 @@ export class HomePage extends React.Component {
 													<input
 														type="text"
 														className="form-control"
-														value="56784937856"
+														//value={this.state.value}
 														name="passportNum"
 														id="passportNum"
-														placeholder="Number..."
+														placeholder={store.passport_number}
 														onChange={this.handleChange}
 													/>
 												</div>
@@ -63,10 +63,10 @@ export class HomePage extends React.Component {
 													<input
 														type="text"
 														className="form-control"
-														value="12.10.2029"
+														//value="12.10.2029"
 														name="passportExp"
 														id="passportExp"
-														placeholder="Expiry date..."
+														placeholder={store.passport_expiry}
 														onChange={this.handleChange}
 													/>
 												</div>
