@@ -67,12 +67,12 @@ export class Stamps extends React.Component {
 														onClick={() => this.setState({ isOpen: true })}
 														className="stamp-prev navbar-brand mb-0 img-fluid"
 														onError={this.addDefaultSrc}
-														src={item.photo}
+														src={StampPic}
 													/>
 
 													{isOpen && (
 														<Lightbox
-															mainSrc={item.photo}
+															mainSrc={StampPic}
 															onCloseRequest={() => this.setState({ isOpen: false })}
 														/>
 													)}

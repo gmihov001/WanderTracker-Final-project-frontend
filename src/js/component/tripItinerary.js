@@ -32,7 +32,7 @@ export class TripItinerary extends React.Component {
 													<div className="col-sm-12 d-sm-block d-md-flex justify-content-center py-2">
 														<input
 															type="text"
-															className="textfield my-2 col-sm-8 col-md-4"
+															className="textfield my-2 col-sm-10 col-md-4"
 															//value={this.state.userInput.itinerary.date}
 															name="date"
 															onChange={this.handleChangeItinerary}
@@ -40,7 +40,7 @@ export class TripItinerary extends React.Component {
 														/>
 														<input
 															type="text"
-															className="textfield my-2 col-sm-8 col-md-4"
+															className="textfield my-2 col-sm-10 col-md-6"
 															//value={this.state.userInput.itinerary.content}
 															name="content"
 															onChange={this.handleChangeItinerary}
@@ -67,12 +67,12 @@ export class TripItinerary extends React.Component {
 													<div
 														key={index}
 														className="row entry-row px-3 d-flex justify-content-center">
-														<div className="col-md-5 px-0 d-flex justify-content-left">
+														<div className="col-sm-10 col-md-8 col-lg-6 px-0 d-flex justify-content-between">
 															<span type="text" className="entry px-1 ">
 																{item.date} , {item.content}
 															</span>
 															<span
-																className="deleteEntry x text-center"
+																className="deleteEntry px-4 text-center"
 																onClick={() => {
 																	actions.removeItinerary(thisTrip.id, item.itinid);
 																}}>

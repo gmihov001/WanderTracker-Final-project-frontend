@@ -23,17 +23,17 @@ export class TripContacts extends React.Component {
 			<Context.Consumer>
 				{({ store, actions }) => {
 					return (
-						<div className="container pb-1 pt-3 px-0">
+						<div className="container pb-1 pt-3">
 							{store.trips.map((thisTrip, index) => {
 								if (thisTrip.id === this.props.tripID) {
 									return (
-										<div key={index} className="container px-0 d-block">
+										<div key={index} className="container d-block">
 											<form className="form-inline d-flex justify-content-between w-100">
 												<div className="form-group w-100 col-md-12 col-lg-12 justify-content-between mb-2">
 													<div className="col-sm-12 d-sm-block d-md-flex justify-content-center py-2">
 														<input
 															type="text"
-															className="textfield my-2 col-sm-8 col-md-4"
+															className="textfield my-2 col-sm-8 col-md-3"
 															//value={this.state.userInput.contacts.contact}
 															name="contact"
 															onChange={this.handleChangeContacts}
@@ -49,7 +49,7 @@ export class TripContacts extends React.Component {
 														/>
 														<input
 															type="text"
-															className="textfield my-2 col-sm-4 col-md-4"
+															className="textfield my-2 col-sm-4 col-md-3"
 															//value={this.state.userInput.contacts.phone}
 															name="phone"
 															onChange={this.handleChangeContacts}
@@ -69,17 +69,17 @@ export class TripContacts extends React.Component {
 												</div>
 											</form>
 
-											<div className="d-block entry-block col-sm-12 col-md-12 my-2 mx-0">
+											<div className="d-block entry-block col-sm-12 col-md-12">
 												{thisTrip.contacts.map((item, index) => (
 													<div
 														key={index}
 														className="row entry-row px-3 d-flex justify-content-center">
-														<div className="col-sm-10 col-md-6 px-0 d-flex justify-content-left">
+														<div className="col-sm-10 col-md-8 col-lg-6 px-0 d-flex justify-content-between">
 															<span type="text" className="entry px-1 mx-0">
 																{item.contact} , {item.address} , {item.phone}
 															</span>
 															<span
-																className="deleteEntry x text-center"
+																className="deleteEntry px-4 text-center"
 																onClick={() => {
 																	actions.removeContact(thisTrip.id, item.contid);
 																}}>

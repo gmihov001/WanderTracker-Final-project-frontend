@@ -66,7 +66,6 @@ export class TravelDoc extends React.Component {
 															src={item.photo}
 														/>
 													</div>
-
 													<div className="col-sm-2 col-md-2 text-center">
 														<img
 															className="stamp-prev navbar-brand mb-0 img-fluid flag mr-0"
@@ -74,7 +73,6 @@ export class TravelDoc extends React.Component {
 															src={this.getImage(item.country_value)}
 														/>
 													</div>
-
 													<div className="col-sm-2 col-md-2 text-center">
 														<button
 															className="smallDelete my-4 px-2 mx-1"

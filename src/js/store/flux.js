@@ -34,14 +34,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{
 					id: "897",
 					photo: "Stamp image",
-					label: "Honduras",
-					value: "hn"
-				},
-				{
-					id: "997",
-					photo: "Stamp image",
-					label: "Bulgaria",
-					value: "bg"
+					label: "Costa Rica",
+					value: "cr"
 				}
 			],
 			emergency_contacts: [
