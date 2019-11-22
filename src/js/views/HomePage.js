@@ -20,8 +20,8 @@ export class HomePage extends React.Component {
 			<div className="wrapper">
 				<Navbar2 />
 				<div className="container">
-					<div className="row my-4 d-flex justify-content-center text-center">
-						<div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 px-0 ">
+					<div className="row my-4 d-sm-block d-md-flex justify-content-between text-center">
+						<div className="col-lg-3 col-md-3 col-sm-6 px-0 mx-3">
 							<img
 								src="https://images.unsplash.com/photo-1549986432-5060067864b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 								className="profile-pic mx-auto d-block img-fluid"
@@ -32,13 +32,13 @@ export class HomePage extends React.Component {
 						</div>
 						<Context.Consumer>
 							{({ store, actions }) => (
-								<div className="col mt-3 text-left">
-									<div className="row d-block">
+								<div className="col-sm-6 col-md-6 mt-3 m-3 d-flex justify-content-center">
+									<div className="row d-block text-left">
 										<form
 											onSubmit={() => {
 												actions.addPasNum(this.state.value);
 											}}>
-											<div className="col-md-6">
+											<div className="w-100 mx-0">
 												<div className="md-form d-flex justify-content-between mt-0">
 													<label htmlFor="passportNum">Passport Number:</label>
 													<input
@@ -57,7 +57,7 @@ export class HomePage extends React.Component {
 											onSubmit={() => {
 												actions.addPasExp(this.state.value);
 											}}>
-											<div className="col-md-6">
+											<div className="w-100 mx-0">
 												<div className="md-form mt-0 d-flex justify-content-between">
 													<label htmlFor="passportExp">Passport Expiry:</label>
 													<input
@@ -72,17 +72,16 @@ export class HomePage extends React.Component {
 												</div>
 											</div>
 										</form>
+										<span className="w-100 py-0 mx-0 px-0 d-flex justify-content-center">
+											<Link to="/EmergContacts">
+												<strong className="emergCont p-2">Emergency Contacts + </strong>
+											</Link>
+										</span>
 									</div>
-
-									<p className="text py-2">
-										<Link to="/EmergContacts">
-											<strong className="text emergCont p-2"> + Emergency Contacts </strong>
-										</Link>
-									</p>
 								</div>
 							)}
 						</Context.Consumer>
-						<div>
+						<div className="col-sm-6 col-md-2 text-center">
 							<Link to="/">
 								<button type="button" className="logout btn px-4 py-2">
 									Log Out
@@ -179,6 +178,67 @@ export class HomePage extends React.Component {
 									target="_blank"
 									rel="noopener noreferrer">
 									ordinarytraveler.com
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div className="row mt-4 mb-0 d-flex flex-row">
+						<div className="col-md-8 col-md-6 text-center">
+							<h1 className="underTitle text-left pl-0 pt-2 pr-4">Important Links</h1>
+						</div>
+					</div>
+
+					<div className="card-deck mb-5">
+						<div className="card">
+							<div className="card-body">
+								<h5 className="card-title">
+									<strong>Cureent Local Times Around the World:</strong>
+								</h5>
+								<p className="card-text"></p>
+							</div>
+							<div className="card-footer">
+								<a
+									className="link"
+									href="https://www.timeanddate.com/worldclock/"
+									target="_blank"
+									rel="noopener noreferrer">
+									timeanddate.com/worldclock/
+								</a>
+							</div>
+						</div>
+
+						<div className="card">
+							<div className="card-body">
+								<h5 className="card-title">
+									<strong>State Department Travel Information: </strong>
+								</h5>
+								<p className="card-text"></p>
+							</div>
+							<div className="card-footer">
+								<a
+									href="https://travel.state.gov/content/travel/en/international-travel.html"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="link">
+									travel.state.gov/content/travel/
+								</a>
+							</div>
+						</div>
+						<div className="card">
+							<div className="card-body">
+								<h5 className="card-title">
+									<strong>Flight Tracker Around the World</strong>
+								</h5>
+								<p className="card-text"></p>
+							</div>
+							<div className="card-footer">
+								<a
+									className="link"
+									href="https://www.flightstats.com/v2/flight-tracker/search"
+									target="_blank"
+									rel="noopener noreferrer">
+									www.flightstats.com/v2/flight-tracker/
 								</a>
 							</div>
 						</div>
